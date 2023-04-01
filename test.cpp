@@ -30,5 +30,6 @@ int main()
 
 	item.Show_Str();
 
+	system("pause");
 	return 0;
 }
