@@ -21,5 +21,5 @@ void fraction::Show() {
 }
 
 double fraction::distance() {
-	return sqrt(pow(first) + pow(second)); 
+	return sqrt(first * first + second * second); 
 }
