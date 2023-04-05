@@ -1,5 +1,6 @@
 #include "Apartment.cpp"
 #include <iostream>
+#include <windows.h>
 #include <string>
 using namespace std;
 
@@ -22,6 +23,8 @@ void print_apartment(Apartment apart) {
 }
 
 int main() {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	Apartment apartment_1; // Конструктор без параметров
 	apartment_1.show();
 	Apartment apartment_2("Адрес 2-ой квартиры", 32, 2); // Конструктор с параметрами
