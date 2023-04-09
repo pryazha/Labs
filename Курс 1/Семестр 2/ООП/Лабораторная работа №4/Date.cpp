@@ -1,5 +1,4 @@
 #include "Date.h"
-#include "Triad.h"
 
 Date::Date() : Triad() {
 }
@@ -34,19 +33,41 @@ bool Date::operator !=(const Date& other) {
 }
 
 bool Date::operator >(const Date& other) {
-	return (first > other.first && second > other.second && third > other.third);
+	if (third < other.third)
+		return false;
+	else if (second < other.second)
+		return false;
+	else if (first <= other.first)
+		return false;
+	else
+		return true;
 }
 
 bool Date::operator <(const Date& other) {
-	return (first < other.first && second < other.second && third < other.third);
+	if (third > other.third)
+		return false;
+	else if (second > other.second)
+		return false;
+	else if (third >= other.third)
+		return false;
+	else
+		return true;
 }
 
 istream& operator>>(istream&in, Date& d) {
 	cout << "\nDay: ";
 	cin >> d.first;
-	cout << "\nMonth: ";
+	while (d.first > 31) {
+		cout << "this day does not exist, please enter a new value: ";
+		cin >> d.first;
+	}
+	cout << "Month: ";
 	cin >> d.second;
-	cout << "\nYear: ";
+	while (d.second > 12) {
+		cout << "this month does not exist, please enter a new value: ";
+		cin >> d.second;
+	}
+	cout << "Year: ";
 	cin >> d.third;
 	return in;
 }

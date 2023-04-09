@@ -1,0 +1,9 @@
+﻿  Source.cpp
+C:\Pryazha\Programs\C++ programs\Информатика\1 курс\Семестр 2\Хеш-таблица\Хеш\Хеш\Source.cpp(124,59): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Pryazha\Programs\C++ programs\Информатика\1 курс\Семестр 2\Хеш-таблица\Хеш\Хеш\Source.cpp(125,20): warning C4305: *=: усечение из "double" в "float"
+C:\Pryazha\Programs\C++ programs\Информатика\1 курс\Семестр 2\Хеш-таблица\Хеш\Хеш\Source.cpp(217,22): warning C4101: pos: неиспользованная локальная переменная
+C:\Pryazha\Programs\C++ programs\Информатика\1 курс\Семестр 2\Хеш-таблица\Хеш\Хеш\Source.cpp(216,12): warning C4101: pep: неиспользованная локальная переменная
+C:\Pryazha\Programs\C++ programs\Информатика\1 курс\Семестр 2\Хеш-таблица\Хеш\Хеш\Source.cpp(212,30): warning C4101: number: неиспользованная локальная переменная
+C:\Pryazha\Programs\C++ programs\Информатика\1 курс\Семестр 2\Хеш-таблица\Хеш\Хеш\Source.cpp(212,38): warning C4101: count: неиспользованная локальная переменная
+C:\Pryazha\Programs\C++ programs\Информатика\1 курс\Семестр 2\Хеш-таблица\Хеш\Хеш\Source.cpp(262,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Хеш.vcxproj -> C:\Pryazha\Programs\C++ programs\Информатика\1 курс\Семестр 2\Хеш-таблица\Хеш\x64\Debug\Хеш.exe

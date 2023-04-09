@@ -1,4 +1,4 @@
-#include "Triad.h"
+#include "Triad.cpp"
 
 class Date : public Triad {
 public:

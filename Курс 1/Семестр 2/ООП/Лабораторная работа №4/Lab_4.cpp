@@ -1,11 +1,7 @@
 #include <iostream>
-#include "Triad.cpp"
 #include "Date.cpp"
 using namespace std;
 
-void f1(Triad& t) {
-	t.
-}
 
 int main() {
 	Triad a;
@@ -16,12 +12,19 @@ int main() {
 	a = b;
 	cout << a;
 
-	Date d_1;
-	Date d_2(22, 03, 2003);
-	Date d_3;
-	cin >> d_1;
-	cout << d_1;
-	cin >> d_3;
-	cout << d_3;
+	Date d1;
+	Date d2(22, 03, 2003);
+	Date d3;
+	cin >> d1;
+	cin >> d3;
+	cout << "\nDate 1: " << d1 << endl;
+	cout << "Date 2: " << d2 << endl;
+	cout << "Date 3: " << d3 << endl;
+
+	cout << "\nd1 == d2: " << (d1 == d2) << endl;
+	cout << "d1 != d3: " << (d1 != d3) << endl;
+	cout << "d2 > d3: " << (d2 > d3) << endl;
+	cout << "d3 < d1: " << (d3 < d1) << endl;
+
 	return 0;
 }
