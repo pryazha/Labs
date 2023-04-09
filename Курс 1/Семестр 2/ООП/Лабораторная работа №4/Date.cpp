@@ -33,25 +33,37 @@ bool Date::operator !=(const Date& other) {
 }
 
 bool Date::operator >(const Date& other) {
-	if (third < other.third)
-		return false;
-	else if (second < other.second)
-		return false;
-	else if (first <= other.first)
-		return false;
-	else
+	if (third > other.third)
 		return true;
+	else
+		return false;
+
+	if (second > other.second)
+		return true;
+	else
+		return false;
+
+	if (first > other.first)
+		return true;
+	else
+		return false;
 }
 
 bool Date::operator <(const Date& other) {
-	if (third > other.third)
-		return false;
-	else if (second > other.second)
-		return false;
-	else if (third >= other.third)
-		return false;
-	else
+	if (third < other.third)
 		return true;
+	else
+		return false;
+
+	if (second < other.second)
+		return true;
+	else
+		return false;
+
+	if (first < other.first)
+		return true;
+	else
+		return false;
 }
 
 istream& operator>>(istream&in, Date& d) {
