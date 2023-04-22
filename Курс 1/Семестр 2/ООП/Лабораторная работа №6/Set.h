@@ -1,6 +1,6 @@
 class Set {
 public:
-	Set(int size, int k = 0);
+	Set(int minElement, int maxElement);
 	Set(const Set& other);
 	~Set();
 
@@ -13,7 +13,7 @@ public:
 	friend istream& operator >>(istream& in, const Set& other);
 
 private:
-	int minNumber;
-	int maxNUmber;
-	int* element;
+	int minElement;
+	int maxElement;
+	int* elements;
 };
