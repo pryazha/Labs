@@ -1,19 +1,21 @@
+#include <iostream>
+using namespace std;
+
 class Set {
 public:
-	Set(int minElement, int maxElement);
-	Set(const Set& other);
+	Set(int s);
+	Set();
 	~Set();
 
+	Set& operator |=(int n);
 	Set& operator =(const Set& other);
-	int& operator [](int index);
 	bool operator !=(const Set& other);
-	bool operator <(int key);
+	bool operator <(int key) const;
+	int& operator [](int index);
 
 	friend ostream& operator <<(ostream& out, const Set& other);
-	friend istream& operator >>(istream& in, const Set& other);
 
 private:
-	int minElement;
-	int maxElement;
 	int* elements;
+	int size;
 };
