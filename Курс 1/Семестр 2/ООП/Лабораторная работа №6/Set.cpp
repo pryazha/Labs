@@ -5,11 +5,16 @@ Set::Set(int s) {
 	elements = new int[size];
 	for (int i = 0; i < size; i++)
 		elements[i] = 0;
+	begin.elem = &elements[0];
+	end.elem = &elements[size];
 }
 
 Set::Set() {
 	size = 0;
 	elements = new int[size];
+
+	begin.elem = &elements[0];
+	end.elem = &elements[size];
 }
 
 Set::~Set() {
@@ -28,6 +33,9 @@ Set& Set::operator =(const Set& other) {
 	elements = new int[size];
 	for (int i = 0; i < size; i++)
 		elements[i] = other.elements[i];
+
+	begin = other.begin;
+	end = other.end;
 
 	return *this;
 }
@@ -48,6 +56,13 @@ bool Set::operator <(int key) const {
 	return false;
 }
 
+int& Set::operator [](int index) {
+	if (index < size)
+		return elements[index];
+	else
+		throw out_of_range("Index doesn't exist");
+}
+
 Set& Set::operator |=(int key) {
 	for (int i = 0; i < size; i++)
 		if (key == elements[i])
@@ -63,6 +78,9 @@ Set& Set::operator |=(int key) {
 		elements[k] = key;
 	}
 	size++;
+
+	end.elem = &elements[size];
+	
 	return *this;
 }
 
@@ -72,12 +90,4 @@ ostream& operator <<(ostream& out, const Set& set) {
 		out << set.elements[i] << " ";
 	out << "]\n";
 	return out;
-}
-
-int& Set::operator [](int index) {
-	if (index < size) {
-		return elements[index];
-	}
-	else
-		cout << "Index doesn't exist";
 }

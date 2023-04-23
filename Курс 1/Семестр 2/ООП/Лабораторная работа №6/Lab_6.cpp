@@ -19,7 +19,26 @@ int main() {
 	else
 		cout << "s2 != 4\n";
 	
-	s1[3] = 1;
+	if (s1 != s2)
+		cout << "s1 != s2\n";
+	else
+		cout << "s1 == s2\n";
+
+	cout << "s1[2]: " << s1[2] << "\n";
+
+	Set s;
+
+	((s |= 2) |= 5) |= 10;
+	cout << "s: " << s;
+
+	cout << *(s.first()) << "\n";
+
+	Iterator i = a.first();
+	i + 2;
+	cout << *i << "\n";
+
+	for (i = s.first(); i != s.last(); i++)
+		cout << *i << " ";
 
 	return 0;
 }
