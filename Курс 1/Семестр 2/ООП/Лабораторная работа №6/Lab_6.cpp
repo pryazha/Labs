@@ -27,11 +27,10 @@ int main() {
 	cout << "s1[2]: " << s1[2] << "\n";
 
 	Set s;
-
 	((s |= 2) |= 5) |= 10;
 	cout << "s: " << s;
 
-	cout << "s.fist: " << *(s.first()) << "\n";
+	cout << "s.first: " << *(s.first()) << "\n";
 
 	Iterator i = s.first();
 	++i;
