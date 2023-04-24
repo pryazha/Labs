@@ -20,11 +20,7 @@ public:
 	int& operator *() const {
 		return *elem;
 	}
-	void operator +(int n) const {
-		while (elem + n > size) {
-			cout << "Index doesn't exist, please enter new value: ";
-			cin >> n;
-		}
+	void operator +(int n) {
 		elem += n;
 	}
 private:

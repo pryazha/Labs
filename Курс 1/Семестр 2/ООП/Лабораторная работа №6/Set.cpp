@@ -77,10 +77,8 @@ Set& Set::operator |=(int key) {
 			elements[i] = elements[i - 1];
 		elements[k] = key;
 	}
-	size++;
-
 	end.elem = &elements[size];
-	
+	size++;
 	return *this;
 }
 

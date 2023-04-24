@@ -31,14 +31,18 @@ int main() {
 	((s |= 2) |= 5) |= 10;
 	cout << "s: " << s;
 
-	cout << *(s.first()) << "\n";
+	cout << "s.fist: " << *(s.first()) << "\n";
 
-	Iterator i = a.first();
-	i + 2;
+	Iterator i = s.first();
+	++i;
 	cout << *i << "\n";
 
-	for (i = s.first(); i != s.last(); i++)
-		cout << *i << " ";
+	cout << "s.last: " << *(s.last()) << "\n";
 
+	i = s1.first();
+	cout << "s1.first: " << *i << "\n";
+	i+2;
+	cout << "i: " << *i << "\n";
+ 
 	return 0;
 }
