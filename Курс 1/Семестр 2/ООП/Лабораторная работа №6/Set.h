@@ -11,6 +11,13 @@ public:
 		elem = it.elem;
 	}
 
+	bool operator ==(const Iterator &it) {
+		return elem == it.elem;
+	}
+    bool operator !=(const Iterator &it) {
+    	return elem != it.elem;
+    }
+
 	void operator++() {
 		++elem;
 	}

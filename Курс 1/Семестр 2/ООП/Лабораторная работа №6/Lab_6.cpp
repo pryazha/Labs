@@ -42,6 +42,10 @@ int main() {
 	cout << "s1.first: " << *i << "\n";
 	i+2;
 	cout << "i: " << *i << "\n";
+
+	cout << "s: ";
+	for (i = s.first(); i != s.last(); ++i)
+		cout << *i << " ";
  
 	return 0;
 }
