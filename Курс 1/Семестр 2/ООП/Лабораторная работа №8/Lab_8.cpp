@@ -1,8 +1,12 @@
-#include "Person.cpp"
+#include "Abiturient.cpp"
 
 int main() {
-	Person A("Ivan", 18);
-	A.Show();
+	Person *A = new Person;
+	A->Input();
+	A->Show();
 
+	Abiturient *B = new Abiturient;
+	B->Input();
+	B->Show();
 	return 0;
 }

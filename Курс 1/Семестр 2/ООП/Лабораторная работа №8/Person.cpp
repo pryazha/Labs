@@ -31,6 +31,7 @@ void Person::Show() {
 void Person::Input() {
 	cout << "Name: ";
 	cin >> name;
-	cout << "\nAge: ";
+	cout << "Age: ";
 	cin >> age;
+	cout << "\n";
 }
