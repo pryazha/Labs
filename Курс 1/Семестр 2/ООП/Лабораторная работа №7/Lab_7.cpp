@@ -40,8 +40,8 @@ int main() {
 
 	cout << m1 + m2 << "\n";
 
-	Set<Money> C(1, m1);
-	Set<Money> D(1, m2);
+	Set<Money> C(2, m1);
+	Set<Money> D(2, m2);
 	cout << "\nC: " << C << "\n";
 	cout << "D: " << D << "\n";
 
