@@ -7,15 +7,22 @@ int main() {
 		s1 |= 2;
 		cout << "s1 : " << s1;
 		// s1 |= 6;
+		// cout << "s1 : " << s1;
 
 		int i;
 		cout << "Index: ";
 		cin >> i;
 
 		cout << s1[i] << "\n";
+
+		Set s2;
+		((((s2 |= 3) |= 2) |= 6) |= 5) |= 7;
+		cout << "s2 : " << s2;
+
+		s2 |= 1;
 	}
-	catch(int) {
-		cout << "ERROR!" << endl;
+	catch(Error& e) {
+		e.what();
 	}
 
 	return 0;

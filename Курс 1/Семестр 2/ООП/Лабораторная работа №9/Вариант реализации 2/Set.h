@@ -16,7 +16,8 @@ public:
 	bool operator <(int key) const;
 	int& operator [](int index);
  
-	friend ostream& operator << (ostream&, const Set& s);
+	friend ostream& operator <<(ostream&, const Set& s);
+	
 private:
 	int* elements;
 	int size;
