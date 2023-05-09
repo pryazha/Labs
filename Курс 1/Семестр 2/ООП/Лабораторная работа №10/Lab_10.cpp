@@ -18,7 +18,7 @@ int main() {
 	// 	cout << "A == B\n";
 
 	int k, switch_op;
-	Money m1, m2;
+	Money m1, m2, k1, k2;
 	char file_name[30];
 	do {
 		cout << "\n1. Make file";
@@ -27,6 +27,7 @@ int main() {
 		cout << "\n4. Add record to file";
 		cout << "\n5. Change record in file";
 		cout << "\n6. Delete records in the range from k1 to k2";
+		cout << "\n7. Add K records to begin";
 		cout << "\n0. Exit\n";
 		cin >> switch_op;
 		switch(switch_op) {
@@ -83,7 +84,24 @@ int main() {
 					cout << "Not such record\n";
 				break;
 			case 6:
-				
+				cout << "File name: ";
+				cin >> file_name;
+				cout << "k1:\n";
+				cin >> k1;
+				cout << "k2:\n";
+				cin >> k2;
+				k = delete_range(file_name, k1, k2);
+				if (k < 0)
+					cout << "Can't read file\n";
+				break;
+			case 7:
+				cout << "File name: ";
+				cin >> file_name;
+				cout << "Number of elements: ";
+				cin >> num;
+				k = add_begin(file_name, num);
+				if (k < 0)
+					cout << "Can't read file\n";
 				break;
 		}
 	}

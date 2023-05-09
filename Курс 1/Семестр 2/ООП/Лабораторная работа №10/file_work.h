@@ -30,27 +30,6 @@ int print_file(const char* fname) {
 	return i;
 }
 
-int del_file(const char* fname, int K) {
-	fstream temp("temp.txt", ios::out);
-	fstream stream(fname, ios::in);
-	if (!stream)
-		return -1;
-	int i = 0;
-	Money m;
-	while (stream >> m) {
-		if (stream.eof())
-			break;
-		i++;
-		if (i != K)
-			temp << m;
-	}
-	stream.close();
-	temp.close();
-	remove(fname);
-	rename("temp.txt", fname);
-	return i;
-}
-
 int add_file(const char* fname, int K, Money newM) {
 	fstream temp("temp.txt", ios::out);
 	fstream stream(fname, ios::in);
@@ -74,13 +53,35 @@ int add_file(const char* fname, int K, Money newM) {
 	rename("temp.txt", fname);
 	return count;
 }
-
 int add_end(const char* fname, Money newM) {
 	fstream stream(fname, ios::app);
 	if (!stream)
 		return -1;
 	stream << newM;
 	return 1;
+}
+int add_begin(const char* fname, int K) {
+	fstream temp("temp.txt", ios::out);
+	fstream stream(fname, ios::in);
+	if (!stream)
+		return -1;
+	Money m;
+	int count = 0;
+	for (int i = 0; i < K; i++) {
+		cin >> m;
+		temp << m;
+		count++;
+	}
+	while (stream >> m) {
+		if (stream.eof())
+			break;
+		temp << m;
+	}
+	stream.close();
+	temp.close();
+	remove(fname);
+	rename("temp.txt", fname);
+	return count;
 }
 
 int change_file(const char* fname, int K, Money newM) {
@@ -113,7 +114,27 @@ int change_file(const char* fname, int K, Money newM) {
 	return count;
 }
 
-int delete_range(const char* fname, const Money& k1, const  Money& k2) {
+int del_file(const char* fname, int K) {
+	fstream temp("temp.txt", ios::out);
+	fstream stream(fname, ios::in);
+	if (!stream)
+		return -1;
+	int i = 0;
+	Money m;
+	while (stream >> m) {
+		if (stream.eof())
+			break;
+		i++;
+		if (i != K)
+			temp << m;
+	}
+	stream.close();
+	temp.close();
+	remove(fname);
+	rename("temp.txt", fname);
+	return i;
+}
+int delete_range(const char* fname, const Money& k1, const Money& k2) {
 	fstream temp("temp.txt", ios::out);
 	fstream stream(fname, ios::in);
 	if (!stream)
@@ -123,6 +144,13 @@ int delete_range(const char* fname, const Money& k1, const  Money& k2) {
 	while (stream >> m) {
 		if (stream.eof())
 			break;
-
+		i++;
+		if (m < k1 || m > k2)
+			temp << m;
 	}
+	stream.close();
+	temp.close();
+	remove(fname);
+	rename("temp.txt", fname);
+	return i;
 }
