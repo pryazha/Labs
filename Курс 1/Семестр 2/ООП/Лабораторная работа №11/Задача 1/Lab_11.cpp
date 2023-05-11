@@ -1,6 +1,7 @@
 #include <iostream>
 #include <list>
 #include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -55,14 +56,26 @@ void delete_element(List& lis, double key) {
 }
 
 void element_reduction(List& lis) {
-	double max, min;
+	double max = 0, min = 12;
 	list<double>::iterator it;
-	for (it)
+	for (it = lis.begin(); it != lis.end(); it++) {
+		if (*it > max)
+			max = *it;
+		if (*it < min)
+			min = *it;
+	}
+	cout << "Max: " << max << "\n";
+	cout << "Min: " << min << "\n";
+	double red = max - min;
+	cout << "red: " << red << "\n";
+	for (it = lis.begin(); it != lis.end(); it++)
+		*it -= red;
 }
 
 
 int main() {
 	try {
+		srand(time(NULL));
 		list<double> li;
 		list<double>::iterator it = li.begin();
 		int numberOfElements;
@@ -80,6 +93,9 @@ int main() {
 		cout << "Data of del element: ";
 		cin >> key;
 		delete_element(li, key);
+		print_list(li);
+
+		element_reduction(li);
 		print_list(li);
 	}
 	catch (int) {
