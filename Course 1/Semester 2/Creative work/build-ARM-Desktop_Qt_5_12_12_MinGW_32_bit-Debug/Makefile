@@ -223,7 +223,6 @@ Makefile: ../ARM/ARM.pro C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/win32
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/qt_config.prf \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/win32-g++/qmake.conf \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/exclusive_builds.prf \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/toolchain.prf \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/default_pre.prf \
@@ -412,7 +411,6 @@ C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/qt_functions.prf:
 C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/qt_config.prf:
 C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/win32-g++/qmake.conf:
 C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/spec_post.prf:
-.qmake.stash:
 C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/exclusive_builds.prf:
 C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/toolchain.prf:
 C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/features/default_pre.prf:

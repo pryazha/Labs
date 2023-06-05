@@ -6,6 +6,7 @@
 
 #include <QMainWindow>
 #include <QListWidgetItem>
+#include <QLabel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

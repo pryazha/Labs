@@ -15,6 +15,18 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QLabel" name="test_label">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="0">
      <widget class="QListWidget" name="listWidget">
       <property name="sizePolicy">
@@ -48,18 +60,6 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="font">
-         <font>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Редактировать </string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="delete_patient">
         <property name="font">
          <font>
@@ -79,7 +79,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Кнопочка</string>
+         <string>Редактировать</string>
         </property>
        </widget>
       </item>

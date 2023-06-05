@@ -1,14 +1,20 @@
 #include "patient.h"
 
-Patient::Patient(QString gender, QString name, double height, double weight, QString registration, QString residence, QString work, QString snils) {
+Patient::Patient(QDate birthDate, QString gender, QString name, QString registration, QString residence, QString work, QString snils) {
+    this->birthDate = birthDate;
     this->gender = gender;
     this->name = name;
-    this->height = height;
-    this->weight = weight;
     this->registration_adress = registration;
     this->current_adress = residence;
     this->work = work;
     this->snils = snils;
+}
+
+QDate Patient::getBirthDate() const {
+    return birthDate;
+}
+void Patient::setBirthDate(const QDate &birthDate) {
+    this->birthDate = birthDate;
 }
 
 QString Patient::getGender() const {
@@ -23,20 +29,6 @@ QString Patient::getName() const {
 }
 void Patient::setName(const QString &name) {
     this->name = name;
-}
-
-double Patient::getHeight() const {
-    return height;
-}
-void Patient::setHeight(double height) {
-    this->height = height;
-}
-
-double Patient::getWeight() const {
-    return weight;
-}
-void Patient::setWeight(double weight) {
-    this->weight = weight;
 }
 
 QString Patient::getRegistration() const {

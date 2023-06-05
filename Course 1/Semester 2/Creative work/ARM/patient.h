@@ -3,23 +3,21 @@
 #define PATIENT_H
 
 #include <QString>
+#include <QDate>
 
 class Patient
 {
 public:
-    Patient(QString gender, QString name, double height, double weight, QString registration, QString residence, QString work, QString snils);
+    Patient(QDate birhtDate, QString gender, QString name, QString registration, QString residence, QString work, QString snils);
+
+    QDate getBirthDate() const;
+    void setBirthDate(const QDate &birthDate);
 
     QString getGender() const;
     void setGender(const QString &gender);
 
     QString getName() const;
     void setName(const QString &name);
-
-    double getHeight() const;
-    void setHeight(double height);
-
-    double getWeight() const;
-    void setWeight(double weight);
 
     QString getRegistration() const;
     void setRegistration(const QString &registration_adress);
@@ -34,10 +32,9 @@ public:
     void setSnils(const QString &snils);
 
 private:
+    QDate birthDate;
     QString gender;
     QString name;
-    double height;
-    double weight;
     QString registration_adress;
     QString current_adress;
     QString work;

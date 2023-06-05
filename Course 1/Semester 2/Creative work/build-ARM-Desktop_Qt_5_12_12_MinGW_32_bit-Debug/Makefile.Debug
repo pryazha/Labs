@@ -117,10 +117,10 @@ compiler_moc_header_clean:
 	-$(DEL_FILE) debug\moc_mainwindow.cpp debug\moc_patient_info.cpp
 debug/moc_mainwindow.cpp: ../ARM/mainwindow.h \
 		../ARM/patient_info.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		../ARM/patient.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QString \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qglobal.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig-bootstrapped.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig.h \
@@ -142,33 +142,39 @@ debug/moc_mainwindow.cpp: ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmutex.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnumeric.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qversiontagging.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearray.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qrefcount.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qarraydata.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringliteral.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringalgorithms.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringview.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringbuilder.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QDate \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qdatetime.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qalgorithms.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhashfunctions.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qpair.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearraylist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qregexp.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringmatcher.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qcoreevent.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qscopedpointer.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmetatype.h \
@@ -198,8 +204,6 @@ debug/moc_mainwindow.cpp: ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixelformat.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixmap.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer_impl.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfont.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfontmetrics.h \
@@ -221,21 +225,42 @@ debug/moc_mainwindow.cpp: ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qfiledevice.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtouchdevice.h \
-		../ARM/patient.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QString \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QFile \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QTextStream \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/QCloseEvent \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QMainWindow \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qmainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qicon.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QListWidgetItem \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlistwidget.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlistview.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractitemview.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qframe.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qabstractitemmodel.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qitemselectionmodel.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qstyleoption.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractspinbox.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qvalidator.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qregularexpression.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qslider.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractslider.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qstyle.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtabbar.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qrubberband.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QLabel \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlabel.h \
 		debug/moc_predefs.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/bin/moc.exe
 	C:\Pryazha\Programs\Qt\5.12.12\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Pryazha/Programs/C++ programs/Labs/Course 1/Semester 2/Creative work/build-ARM-Desktop_Qt_5_12_12_MinGW_32_bit-Debug/debug/moc_predefs.h" -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/win32-g++ -I"C:/Pryazha/Programs/C++ programs/Labs/Course 1/Semester 2/Creative work/ARM" -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtANGLE -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore -I. -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\ARM\mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_patient_info.cpp: ../ARM/patient_info.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		../ARM/patient.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QString \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qglobal.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig-bootstrapped.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig.h \
@@ -257,33 +282,39 @@ debug/moc_patient_info.cpp: ../ARM/patient_info.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmutex.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnumeric.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qversiontagging.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearray.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qrefcount.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qarraydata.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringliteral.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringalgorithms.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringview.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringbuilder.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QDate \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qdatetime.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qalgorithms.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhashfunctions.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qpair.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearraylist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qregexp.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringmatcher.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qcoreevent.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qscopedpointer.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmetatype.h \
@@ -313,8 +344,6 @@ debug/moc_patient_info.cpp: ../ARM/patient_info.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixelformat.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixmap.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer_impl.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfont.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfontmetrics.h \
@@ -336,6 +365,9 @@ debug/moc_patient_info.cpp: ../ARM/patient_info.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qfiledevice.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtouchdevice.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QFile \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QTextStream \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/QCloseEvent \
 		debug/moc_predefs.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/bin/moc.exe
 	C:\Pryazha\Programs\Qt\5.12.12\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Pryazha/Programs/C++ programs/Labs/Course 1/Semester 2/Creative work/build-ARM-Desktop_Qt_5_12_12_MinGW_32_bit-Debug/debug/moc_predefs.h" -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/mkspecs/win32-g++ -I"C:/Pryazha/Programs/C++ programs/Labs/Course 1/Semester 2/Creative work/ARM" -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtANGLE -IC:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore -I. -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Pryazha/Programs/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\ARM\patient_info.h -o debug\moc_patient_info.cpp
@@ -369,10 +401,10 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 debug/main.o: ../ARM/main.cpp ../ARM/mainwindow.h \
 		../ARM/patient_info.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		../ARM/patient.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QString \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qglobal.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig-bootstrapped.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig.h \
@@ -394,33 +426,39 @@ debug/main.o: ../ARM/main.cpp ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmutex.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnumeric.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qversiontagging.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearray.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qrefcount.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qarraydata.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringliteral.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringalgorithms.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringview.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringbuilder.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QDate \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qdatetime.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qalgorithms.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhashfunctions.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qpair.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearraylist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qregexp.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringmatcher.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qcoreevent.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qscopedpointer.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmetatype.h \
@@ -450,8 +488,6 @@ debug/main.o: ../ARM/main.cpp ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixelformat.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixmap.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer_impl.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfont.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfontmetrics.h \
@@ -473,20 +509,14 @@ debug/main.o: ../ARM/main.cpp ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qfiledevice.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtouchdevice.h \
-		../ARM/patient.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QString \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QFile \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QTextStream \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/QCloseEvent \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QMainWindow \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qmainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qicon.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QApplication \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QListWidget \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QListWidgetItem \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlistwidget.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlistview.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractitemview.h \
@@ -504,15 +534,24 @@ debug/main.o: ../ARM/main.cpp ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qstyle.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtabbar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qrubberband.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QListWidgetItem
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QLabel \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlabel.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QApplication \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qapplication.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qcoreapplication.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qeventloop.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qguiapplication.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QListWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\ARM\main.cpp
 
 debug/mainwindow.o: ../ARM/mainwindow.cpp ../ARM/mainwindow.h \
 		../ARM/patient_info.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		../ARM/patient.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QString \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qglobal.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig-bootstrapped.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig.h \
@@ -534,33 +573,39 @@ debug/mainwindow.o: ../ARM/mainwindow.cpp ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmutex.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnumeric.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qversiontagging.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearray.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qrefcount.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qarraydata.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringliteral.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringalgorithms.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringview.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringbuilder.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QDate \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qdatetime.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qalgorithms.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhashfunctions.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qpair.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearraylist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qregexp.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringmatcher.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qcoreevent.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qscopedpointer.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmetatype.h \
@@ -590,8 +635,6 @@ debug/mainwindow.o: ../ARM/mainwindow.cpp ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixelformat.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixmap.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer_impl.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfont.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfontmetrics.h \
@@ -613,30 +656,14 @@ debug/mainwindow.o: ../ARM/mainwindow.cpp ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qfiledevice.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtouchdevice.h \
-		../ARM/patient.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QString \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QFile \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QTextStream \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/QCloseEvent \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QMainWindow \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qmainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qicon.h \
-		ui_mainwindow.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QVariant \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QAction \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qaction.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qactiongroup.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QApplication \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QGridLayout \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qgridlayout.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlayout.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlayoutitem.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qboxlayout.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QListWidget \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QListWidgetItem \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlistwidget.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlistview.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractitemview.h \
@@ -654,23 +681,18 @@ debug/mainwindow.o: ../ARM/mainwindow.cpp ../ARM/mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qstyle.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtabbar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qrubberband.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QMenu \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qmenu.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QMenuBar \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qmenubar.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QPushButton \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qpushbutton.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QSpacerItem \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QVBoxLayout \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QWidget \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QLabel \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlabel.h \
+		ui_mainwindow.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QInputDialog \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qinputdialog.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlineedit.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtextcursor.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtextformat.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpen.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtextoption.h
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtextoption.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QMessageBox \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\ARM\mainwindow.cpp
 
 debug/patient.o: ../ARM/patient.cpp ../ARM/patient.h \
@@ -705,14 +727,27 @@ debug/patient.o: ../ARM/patient.cpp ../ARM/patient.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringliteral.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringalgorithms.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringview.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringbuilder.h
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringbuilder.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QDate \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qdatetime.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qlist.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qalgorithms.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhashfunctions.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qpair.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearraylist.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringlist.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qregexp.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringmatcher.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\patient.o ..\ARM\patient.cpp
 
 debug/patient_info.o: ../ARM/patient_info.cpp ../ARM/patient_info.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		../ARM/patient.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QString \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qglobal.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig-bootstrapped.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qconfig.h \
@@ -734,33 +769,39 @@ debug/patient_info.o: ../ARM/patient_info.cpp ../ARM/patient_info.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmutex.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnumeric.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qversiontagging.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstring.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qchar.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearray.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qrefcount.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qnamespace.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qarraydata.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringliteral.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringalgorithms.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringview.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringbuilder.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QDate \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qdatetime.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qalgorithms.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qiterator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhashfunctions.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qpair.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qbytearraylist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringlist.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qregexp.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qstringmatcher.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialog \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialog.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtguiglobal.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtgui-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qwindowdefs_win.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qobject.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qcoreevent.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qscopedpointer.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qmetatype.h \
@@ -790,8 +831,6 @@ debug/patient_info.o: ../ARM/patient_info.cpp ../ARM/patient_info.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixelformat.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpixmap.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qshareddata.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qhash.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qsharedpointer_impl.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfont.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qfontmetrics.h \
@@ -813,31 +852,21 @@ debug/patient_info.o: ../ARM/patient_info.cpp ../ARM/patient_info.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qfiledevice.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtouchdevice.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QFile \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QTextStream \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/QCloseEvent \
 		ui_patient_info.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QVariant \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QApplication \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QFrame \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QHBoxLayout \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qboxlayout.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlayout.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlayoutitem.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qgridlayout.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QLabel \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QListWidget \
+		../ARM/mainwindow.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QMainWindow \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtabwidget.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qicon.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QListWidgetItem \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlistwidget.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlistview.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractitemview.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qframe.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qabstractitemmodel.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qitemselectionmodel.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
@@ -845,33 +874,15 @@ debug/patient_info.o: ../ARM/patient_info.cpp ../ARM/patient_info.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractspinbox.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qvalidator.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/qregularexpression.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qicon.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qslider.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractslider.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qstyle.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtabbar.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qrubberband.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QPushButton \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qpushbutton.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QSpacerItem \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QTextEdit \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtextedit.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtextdocument.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtextoption.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtextcursor.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qtextformat.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtGui/qpen.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QToolBox \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qtoolbox.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QVBoxLayout \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QWidget \
-		../ARM/mainwindow.h \
-		../ARM/patient.h \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtCore/QString \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QMainWindow \
-		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qmainwindow.h
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QLabel \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qlabel.h \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/QMessageBox \
+		C:/Pryazha/Programs/Qt/5.12.12/mingw73_32/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\patient_info.o ..\ARM\patient_info.cpp
 
 debug/moc_mainwindow.o: debug/moc_mainwindow.cpp 
