@@ -1,0 +1,14 @@
+C:\Pryazha\Labs\Course 2\OOP\Lab_1\Lab_1\bin\Debug\Lab_1.exe.config
+C:\Pryazha\Labs\Course 2\OOP\Lab_1\Lab_1\bin\Debug\Lab_1.exe
+C:\Pryazha\Labs\Course 2\OOP\Lab_1\Lab_1\bin\Debug\Lab_1.pdb
+C:\Pryazha\Labs\Course 2\OOP\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.AssemblyReference.cache
+C:\Pryazha\Labs\Course 2\OOP\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.CoreCompileInputs.cache
+C:\Pryazha\Labs\Course 2\OOP\Lab_1\Lab_1\obj\Debug\Lab_1.exe
+C:\Pryazha\Labs\Course 2\OOP\Lab_1\Lab_1\obj\Debug\Lab_1.pdb
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\Lab_1\Lab_1\bin\Debug\Lab_1.exe.config
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\Lab_1\Lab_1\bin\Debug\Lab_1.exe
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\Lab_1\Lab_1\bin\Debug\Lab_1.pdb
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.AssemblyReference.cache
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.CoreCompileInputs.cache
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\Lab_1\Lab_1\obj\Debug\Lab_1.exe
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\Lab_1\Lab_1\obj\Debug\Lab_1.pdb
