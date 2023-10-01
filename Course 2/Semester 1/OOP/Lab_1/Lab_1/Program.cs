@@ -74,14 +74,14 @@ namespace Lab_1
             m = Input.IntInput();
             Console.Write("Введите x: ");
             x = Input.DoubleInput();
-            while (x == 0)
+            
+            while (x <= 0 && x >= -1)
             {
-                Console.Write("x не может быть равно 0, введите новое значение: ");
+                Console.Write("x не может быть в диапазоне от -1 до 0, введите новое значение: ");
                 x = Input.DoubleInput();
             }
 
-            double rootExpr = Math.Pow((double)1 / Math.Pow(x, 2) + (double)1 / Math.Pow(x, 3), (double)1 / 5);
-            double fourExprResult = 5 * Math.Pow(x, 3) * rootExpr;
+            double fourExprResult = 5 * Math.Pow(x, 3) * Math.Pow(1/Math.Pow(x, 2) + 1/Math.Pow(x, 3), (double)1/5);
 
             Console.WriteLine($"\n1) n = {n}, m = {m}, n++*--m = {n++ * --m}");
             Console.WriteLine($"2) n = {n}, m = {m}, n--<m++ = {n-- < m++}");
