@@ -1,0 +1,5 @@
+﻿  SetCalculator.cpp
+C:\Pryazha\Учеба\Дискретная математика\Калькулятор множеств\Set calculator\Set calculator\MySet.h(10,30): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Pryazha\Учеба\Дискретная математика\Калькулятор множеств\Set calculator\Set calculator\SetCalculator.cpp(31,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Pryazha\Учеба\Дискретная математика\Калькулятор множеств\Set calculator\Set calculator\SetCalculator.cpp(301): warning C4715: 'SetCalculator::ApplyOp': not all control paths return a value
+  Set calculator.vcxproj -> C:\Pryazha\Учеба\Дискретная математика\Калькулятор множеств\Set calculator\x64\Debug\Set calculator.exe
