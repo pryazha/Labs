@@ -1,0 +1,28 @@
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.exe
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.deps.json
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.runtimeconfig.json
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.dll
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.pdb
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.AssemblyInfoInputs.cache
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.AssemblyInfo.cs
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.csproj.CoreCompileInputs.cache
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.dll
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\obj\Debug\net6.0\refint\lab_3.dll
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.pdb
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.genruntimeconfig.cache
+C:\Pryazha\Labs\Course 2\OOP\lab_3\lab_3\obj\Debug\net6.0\ref\lab_3.dll
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.exe
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.deps.json
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.runtimeconfig.json
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.dll
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\bin\Debug\net6.0\lab_3.pdb
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.AssemblyInfoInputs.cache
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.AssemblyInfo.cs
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.csproj.CoreCompileInputs.cache
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.dll
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\obj\Debug\net6.0\refint\lab_3.dll
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.pdb
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\obj\Debug\net6.0\lab_3.genruntimeconfig.cache
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_3\lab_3\obj\Debug\net6.0\ref\lab_3.dll

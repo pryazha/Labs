@@ -1,0 +1,7 @@
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\bin\Debug\lab_5.exe.config
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\bin\Debug\lab_5.exe
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\bin\Debug\lab_5.pdb
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\obj\Debug\lab_5.csproj.AssemblyReference.cache
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\obj\Debug\lab_5.csproj.CoreCompileInputs.cache
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\obj\Debug\lab_5.exe
+C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\obj\Debug\lab_5.pdb
