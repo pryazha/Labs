@@ -83,9 +83,9 @@ namespace Lab_1
 
             double fourExprResult = 5 * Math.Pow(x, 3) * Math.Pow(1/Math.Pow(x, 2) + 1/Math.Pow(x, 3), (double)1/5);
 
-            Console.WriteLine($"\n1) n = {n}, m = {m}, n++*--m = {n++ * --m}");
-            Console.WriteLine($"2) n = {n}, m = {m}, n--<m++ = {n-- < m++}");
-            Console.WriteLine($"3) n = {n}, m = {m}, --n>--m = {--n > --m}");
+            Console.WriteLine($"\n1) n++*--m = {n++ * --m},  n = {n}, m = {m}");
+            Console.WriteLine($"2) n--<m++ = {n-- < m++},  n = {n}, m = {m}");           
+            Console.WriteLine($"3) --n>--m = {--n > --m},  n = {n}, m = {m}");
             Console.WriteLine($"4) 5x^3(1/x^2 + 1/x^3)^1/5 = {fourExprResult}");
         }
 

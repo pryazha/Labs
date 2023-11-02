@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Pryazha\\Labs\\Course 2\\Semester 1\\OOP\\lab_3\\lab_3\\lab_3.csproj": {}
+    "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_3\\lab_3\\lab_3.csproj": {}
   },
   "projects": {
-    "C:\\Pryazha\\Labs\\Course 2\\Semester 1\\OOP\\lab_3\\lab_3\\lab_3.csproj": {
+    "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_3\\lab_3\\lab_3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pryazha\\Labs\\Course 2\\Semester 1\\OOP\\lab_3\\lab_3\\lab_3.csproj",
+        "projectUniqueName": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_3\\lab_3\\lab_3.csproj",
         "projectName": "lab_3",
-        "projectPath": "C:\\Pryazha\\Labs\\Course 2\\Semester 1\\OOP\\lab_3\\lab_3\\lab_3.csproj",
+        "projectPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_3\\lab_3\\lab_3.csproj",
         "packagesPath": "C:\\Users\\pryad\\.nuget\\packages\\",
-        "outputPath": "C:\\Pryazha\\Labs\\Course 2\\Semester 1\\OOP\\lab_3\\lab_3\\obj\\",
+        "outputPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_3\\lab_3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pryad\\AppData\\Roaming\\NuGet\\NuGet.Config",

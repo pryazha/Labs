@@ -23,6 +23,13 @@ namespace lab_5
         }
     }
 
+    class Menu
+    {
+        public static string GetMainMenu()
+        {
+        }
+    }
+
     class Program
     {
         static void Main()
@@ -319,18 +326,14 @@ namespace lab_5
         {
             Console.WriteLine("1. Ввести значения вручную");
             Console.WriteLine("2. Заполнить случайными числами");
+
             int choose = Input.IntInput("> ");
             choose = CheckSelection(choose, 1, 2);
             int rows = Input.IntInput("Введите количество строк: ");
-            while (rows <= 0)
-            {
-                rows = Input.IntInput("Количество строк не может быть меньше или равено 0: ");
-            }
+            rows = CheckSelection(rows, 0, 100);
             int columns = Input.IntInput("Введите количество столбцов: ");
-            while (columns <= 0)
-            {
-                columns = Input.IntInput("Количество столбцов не может быть меньше или равено 0: ");
-            }
+            columns = CheckSelection(columns, 0, 100);
+
 
             int[,] newArr = new int[rows, columns];
 
