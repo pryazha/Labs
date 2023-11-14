@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Pryazha\Labs\course_2\semester_1\discrete_math\lab_3\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Pryazha\Labs\course_2\semester_1\discrete_math\lab_3\src\minimizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Pryazha\Labs\course_2\semester_1\discrete_math\lab_3\src\minimizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Pryazha\Labs\course_2\semester_1\discrete_math\lab_3\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B4C081DA-246C-310F-B05A-E3F595A61A85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4C545B81-6210-3677-98C0-71ACF0331EEB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
