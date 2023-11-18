@@ -4,6 +4,7 @@
 #include <string>
 using std::cout;
 using std::cin;
+using std::getline;
 using std::string;
 
 int main() {
@@ -11,11 +12,11 @@ int main() {
 
     string str;
     cout << "Enter input string: ";
-    cin >> str;
+    getline(cin, str);
 
     while (!minimizer.IsValid(str)) {
         cout << "String is not valid, please enter new string: ";
-        cin >> str;
+        getline(cin, str);
     }
 
     return 0;
