@@ -37,5 +37,3 @@ TIMESTAMPDIFF(YEAR, employment_day, CURRENT_DATE()) as 'Опыт работы'
 FROM table_прядеин
 WHERE TIMESTAMPDIFF(YEAR, employment_day, CURRENT_DATE()) > 4;
 
-Test for push
-
