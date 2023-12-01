@@ -1,35 +1,86 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibraryTest\\DiapasonLibraryTest.csproj": {}
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibraryTest/DiapasonLibraryTest.csproj": {}
   },
   "projects": {
-    "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibraryTest\\DiapasonLibraryTest.csproj": {
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibrary/DiapasonLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibraryTest\\DiapasonLibraryTest.csproj",
-        "projectName": "DiapasonLibraryTest",
-        "projectPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibraryTest\\DiapasonLibraryTest.csproj",
-        "packagesPath": "C:\\Users\\pryad\\.nuget\\packages\\",
-        "outputPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibraryTest\\obj\\",
+        "projectUniqueName": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibrary/DiapasonLibrary.csproj",
+        "projectName": "DiapasonLibrary",
+        "projectPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibrary/DiapasonLibrary.csproj",
+        "packagesPath": "/home/pryazha/.nuget/packages/",
+        "outputPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibrary/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pryad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/pryazha/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibraryTest/DiapasonLibraryTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibraryTest/DiapasonLibraryTest.csproj",
+        "projectName": "DiapasonLibraryTest",
+        "projectPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibraryTest/DiapasonLibraryTest.csproj",
+        "packagesPath": "/home/pryazha/.nuget/packages/",
+        "outputPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibraryTest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/pryazha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj": {
-                "projectPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj"
+              "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibrary/DiapasonLibrary.csproj": {
+                "projectPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibrary/DiapasonLibrary.csproj"
               }
             }
           }
@@ -81,62 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj",
-        "projectName": "DiapasonLibrary",
-        "projectPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj",
-        "packagesPath": "C:\\Users\\pryad\\.nuget\\packages\\",
-        "outputPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\pryad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
         }
       }
     }

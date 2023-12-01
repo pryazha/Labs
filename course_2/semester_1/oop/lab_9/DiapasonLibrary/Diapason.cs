@@ -34,6 +34,11 @@ public class Diapason
         _objectsCount++;
     }
 
+    ~Diapason()
+    {
+        _objectsCount--;
+    }
+
     public void Print()
     {
         Console.WriteLine($"[{x}, {y}]");
@@ -49,5 +54,45 @@ public class Diapason
         return num >= x && num <= y;
     }
 
+    public static double operator !(Diapason d) => d.y - d.x;
+    
+    public static Diapason operator ++(Diapason d) => new Diapason(d.x + 1, d.y + 1);
+
+    public static explicit operator int(Diapason d) => (int)d.x;
+
+    public static implicit operator double(Diapason d) => d.y;
+
+    public static Diapason operator +(Diapason d, double num) => new Diapason(d.x + num, d.y + num);
+
+    public static bool operator <(double num, Diapason d) => num >= d.x && num <= d.y;
+
+    public static bool operator >(double num, Diapason d) => num < d.x || num > d.y;
+
     private static int _objectsCount;
+}
+
+public class DiapasonArray
+{
+    DiapasonArray()
+    {
+        _arr = new Diapason[0];
+    }
+
+    DiapasonArray(int size) 
+    {
+        if (size <= 0)
+        {
+            _arr = new Diapason[0];
+            return;
+        }
+        Random rnd = new Random();
+        _arr = new Diapason[size];
+        for (int i = 0; i < size; i++)
+        {
+            Diapason diap = new Diapason(rnd.Next(0, 20), rnd.Next(0, 20));
+            _arr[i] = diap;
+        }
+    }
+
+    private Diapason[] _arr;
 }
