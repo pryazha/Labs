@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\Program.csproj": {}
+    "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\Program.csproj": {}
   },
   "projects": {
-    "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj": {
+    "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj",
+        "projectUniqueName": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj",
         "projectName": "DiapasonLibrary",
-        "projectPath": "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj",
+        "projectPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj",
         "packagesPath": "C:\\Users\\pryad\\.nuget\\packages\\",
-        "outputPath": "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\obj\\",
+        "outputPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pryad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\Program.csproj": {
+    "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\Program.csproj",
+        "projectUniqueName": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\Program.csproj",
+        "projectPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\Program.csproj",
         "packagesPath": "C:\\Users\\pryad\\.nuget\\packages\\",
-        "outputPath": "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\obj\\",
+        "outputPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\Program\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pryad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj": {
-                "projectPath": "c:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj"
+              "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj": {
+                "projectPath": "C:\\Pryazha\\Labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj"
               }
             }
           }

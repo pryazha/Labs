@@ -5,3 +5,17 @@ C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\obj\Debug\lab_5.csproj.Assem
 C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\obj\Debug\lab_5.csproj.CoreCompileInputs.cache
 C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\obj\Debug\lab_5.exe
 C:\Pryazha\Labs\Course 2\Semester 1\OOP\lab_5\lab_5\obj\Debug\lab_5.pdb
+C:\Pryazha\dev\cs_projects\unit_testing\lab_5_with_tests\lab_5\bin\Debug\lab_5.exe.config
+C:\Pryazha\dev\cs_projects\unit_testing\lab_5_with_tests\lab_5\bin\Debug\lab_5.exe
+C:\Pryazha\dev\cs_projects\unit_testing\lab_5_with_tests\lab_5\bin\Debug\lab_5.pdb
+C:\Pryazha\dev\cs_projects\unit_testing\lab_5_with_tests\lab_5\obj\Debug\lab_5.csproj.AssemblyReference.cache
+C:\Pryazha\dev\cs_projects\unit_testing\lab_5_with_tests\lab_5\obj\Debug\lab_5.csproj.CoreCompileInputs.cache
+C:\Pryazha\dev\cs_projects\unit_testing\lab_5_with_tests\lab_5\obj\Debug\lab_5.exe
+C:\Pryazha\dev\cs_projects\unit_testing\lab_5_with_tests\lab_5\obj\Debug\lab_5.pdb
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\lab_5\bin\Debug\lab_5.exe.config
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\lab_5\bin\Debug\lab_5.exe
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\lab_5\bin\Debug\lab_5.pdb
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\lab_5\obj\Debug\lab_5.csproj.AssemblyReference.cache
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\lab_5\obj\Debug\lab_5.csproj.CoreCompileInputs.cache
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\lab_5\obj\Debug\lab_5.exe
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\lab_5\obj\Debug\lab_5.pdb

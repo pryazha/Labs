@@ -2,7 +2,7 @@
 
 namespace lab_5
 {
-    class Input
+    public class Input
     {
         public static int IntInput(string message)
         {
@@ -16,7 +16,7 @@ namespace lab_5
                 isConvert = int.TryParse(buf, out number);
                 if (!isConvert)
                 {
-                    Console.Write("Неверный формат данных, введите новое значение: ");
+                    Console.WriteLine("Неверный формат данных");
                 }
             } while (!isConvert);
             return number;
@@ -27,17 +27,51 @@ namespace lab_5
     {
         public static string GetMainMenu()
         {
+            return "\n1. Работа с одномерными массивами\n" +
+                "2. Работа с двумерными массивами\n" +
+                "3. Работа с рваными массивами\n" +
+                "4. Выход\n> ";
+        }
+
+        public static string GetFirstTaskMenu()
+        {
+            return "\n1. Создать массив\n" +
+                "2. Напечатать массив\n" +
+                "3. Удалить элемент с заданным номером\n" +
+                "4. Назад\n> ";
+        }
+        
+        public static string GetSecondTaskMenu()
+        {
+            return "\n1. Создать массив\n" +
+                "2. Напечатать массив\n" +
+                "3. Добавить строки после каждой четной строки матрицы\n" +
+                "4. Назад\n> ";
+        }
+
+        public static string GetThirdTaskMenu()
+        {
+            return "\n1. Создать массив\n" +
+                "2. Напечатать массив\n" +
+                "3. Добавить строку в конец массива\n" +
+                "4. Назад\n> ";
+        }
+
+        public static string GetCreatingArrayMenu()
+        {
+            return "\n1. Ввести значения вручную\n" +
+                "2. Заполнить случайными числами\n> ";
         }
     }
 
-    class Program
+    public class Program
     {
         static void Main()
         {
             int choose;
             do
             {
-                choose = Input.IntInput(GetMainMenu());
+                choose = Input.IntInput(Menu.GetMainMenu());
                 choose = CheckSelection(choose, 1, 4);
                 int secondChoose;
                 switch (choose)
@@ -46,34 +80,29 @@ namespace lab_5
                         int[] arr = new int[0];
                         do
                         {
-                            Console.WriteLine("\n1. Создать массив");
-                            Console.WriteLine("2. Напечатать массив");
-                            Console.WriteLine("3. Удалить элемент с заданным номером");
-                            Console.Write("4. Назад");
-                            secondChoose = Input.IntInput("\n> ");
+                            secondChoose = Input.IntInput(Menu.GetFirstTaskMenu());
                             secondChoose = CheckSelection(secondChoose, 1, 4);
                             switch (secondChoose)
                             {
                                 case 1:
                                     arr = CreateOneDimArray();
+                                    PrintArray(arr);
                                     break;
 
                                 case 2:
-                                    if (arr.Length == 0)
-                                        Console.WriteLine("Размер массива равен 0!");
-                                    else
-                                        PrintArray(arr);
+                                    PrintArray(arr);
                                     break;
 
                                 case 3:
                                     if (arr.Length == 0)
                                     {
-                                        Console.WriteLine("Размер массива равено 0!");
+                                        Console.WriteLine("Размер массива равен 0!");
                                     }
                                     else
                                     {
-                                        int pos = Input.IntInput("Введите номер удаляемого элемента: ");
+                                        int pos = Input.IntInput("Введите номер удаляемого элемента\n> ");
                                         arr = DeleteWithPos(arr, pos);
+                                        PrintArray(arr);
                                     }
                                     break;
                             }
@@ -84,23 +113,17 @@ namespace lab_5
                         int[,] twoDimArr = new int[0, 0];
                         do
                         {
-                            Console.WriteLine("1. Создать массив");
-                            Console.WriteLine("2. Напечатать массив");
-                            Console.WriteLine("3. Добавить строки после каждой четной строки матрицы");
-                            Console.Write("4. Назад");
-                            secondChoose = Input.IntInput("\n> ");
+                            secondChoose = Input.IntInput(Menu.GetSecondTaskMenu());
                             secondChoose = CheckSelection(secondChoose, 1, 4);
                             switch (secondChoose)
                             {
                                 case 1:
                                     twoDimArr = CreateTwoDimArray();
+                                    PrintArray(twoDimArr);
                                     break;
 
                                 case 2:
-                                    if (twoDimArr.GetLength(0) == 0)
-                                        Console.WriteLine("Размер массива равен 0!");
-                                    else
-                                        PrintArray(twoDimArr);
+                                    PrintArray(twoDimArr);
                                     break;
 
                                 case 3:
@@ -111,6 +134,7 @@ namespace lab_5
                                     else
                                     {
                                         twoDimArr = InsertRows(twoDimArr);
+                                        PrintArray(twoDimArr);
                                     }
                                     break;
                             }
@@ -121,23 +145,17 @@ namespace lab_5
                         int[][] tornArr = new int[0][];
                         do
                         {
-                            Console.WriteLine("1. Создать массив");
-                            Console.WriteLine("2. Напечатать массив");
-                            Console.WriteLine("3. Добавить строку в конец массива");
-                            Console.Write("4. Назад");
-                            secondChoose = Input.IntInput("\n> ");
+                            secondChoose = Input.IntInput(Menu.GetThirdTaskMenu());
                             secondChoose = CheckSelection(secondChoose, 1, 4);
                             switch (secondChoose)
                             {
                                 case 1:
                                     tornArr = CreateTornArray();
+                                    PrintArray(tornArr);
                                     break;
 
                                 case 2:
-                                    if (tornArr.GetLength(0) == 0)
-                                        Console.WriteLine("Размер массива равен 0!");
-                                    else
-                                        PrintArray(tornArr);
+                                    PrintArray(tornArr);
                                     break;
 
                                 case 3:
@@ -147,7 +165,10 @@ namespace lab_5
                                     }
                                     else
                                     {
-                                        tornArr = AddRowAtEnd(tornArr);
+                                        int columns = Input.IntInput("Введите количество столбцов\n> ");
+                                        columns = CheckSelection(columns, 1, 100);
+                                        tornArr = AddRowAtEnd(tornArr, columns);
+                                        PrintArray(tornArr);
                                     }
                                     break;
                             }
@@ -157,13 +178,22 @@ namespace lab_5
             } while (choose != 4);
         }
 
-        static int[] DeleteWithPos(int[] arr, int pos)
+        public static int[] DeleteWithPos(int[] arr, int pos)
         {
-            while (pos <= 0 || pos > arr.Length)
+            if (arr.Length == 0)
             {
-                pos = Input.IntInput("Неверный номер элемента, введите новое значение: ");
+                Console.WriteLine("Размер массива равен 0!");
+                return arr;
             }
+
+            if (pos < 1 || pos > arr.Length)
+            {
+                Console.WriteLine("Неверный номер!");
+                return arr;
+            }
+
             int[] newArr = new int[arr.Length - 1];
+
             int j = 0;
             for (int i = 0; i < arr.Length; i++)
             {
@@ -173,23 +203,21 @@ namespace lab_5
                     j++;
                 }
             }
+
             return newArr;
         }
 
-        static int[,] InsertRows(int[,] arr)
+        public static int[,] InsertRows(int[,] arr)
         {
-            int newRows = 0;
-            if (arr.GetLength(0) % 2 == 1)
+            if (arr.Length == 0)
             {
-                newRows = arr.GetLength(0) / 2 + 1 + arr.GetLength(0);
-            }
-            else
-            {
-                newRows = arr.GetLength(0) / 2 + arr.GetLength(0);
+                Console.WriteLine("Размер массива равен 0!");
+                return arr;
             }
 
+            int newRows = arr.GetLength(0) / 2 + arr.GetLength(0);
             int[,] newArr = new int[newRows, arr.GetLength(1)];
-            Random rnd = new Random();
+
             int row = 0;
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -199,20 +227,27 @@ namespace lab_5
                 }
                 row++;
 
-                if ((i + 1) % 2 == 1)
+                if ((i + 1) % 2 == 0)
                 {
                     for (int j = 0; j < arr.GetLength(1); j++)
                     {
-                        newArr[row, j] = rnd.Next(0, 20);
+                        newArr[row, j] = 1;
                     }
                     row++;
                 }
             }
+
             return newArr;
         }
 
-        static int[][] AddRowAtEnd(int[][] arr)
+        public static int[][] AddRowAtEnd(int[][] arr, int columns)
         {
+            if (arr.Length == 0)
+            {
+                Console.WriteLine("Размер массива равен 0!");
+                return arr;
+            }
+
             int[][] newArr = new int[arr.Length + 1][];
             Random rnd = new Random();
 
@@ -225,11 +260,6 @@ namespace lab_5
                 }
             }
 
-            int columns = Input.IntInput("Введите количество столбцов: ");
-            while (columns <= 0)
-            {
-                columns = Input.IntInput("Количество столбцов не может быть меньше или равно 0, введите новое значение: ");
-            }
             newArr[newArr.Length - 1] = new int[columns];
             for (int i = 0; i < columns; i++)
             {
@@ -239,45 +269,47 @@ namespace lab_5
             return newArr;
         }
 
-        static int CheckSelection(int number, int min, int max)
+        public static int CheckSelection(int number, int min, int max)
         {
             while (number < min || number > max)
-            {
-                number = Input.IntInput("Такого выбора не существует, введите новое значение:\n> ");
-            }
+                number = Input.IntInput("Неверное значение\n> ");
             return number;
         }
 
-        static string GetMainMenu()
+        public static void PrintArray(int[] arr)
         {
-            string menu = "1. Работа с одномерными массивами\n" +
-                "2. Работа с двумерными массивами\n" +
-                "3. Работа с рваными массивами\n" +
-                "4. Выход\n> ";
-            return menu;
-        }
-
-        static void PrintArray(int[] arr)
-        {
+            if (arr.Length == 0)
+            {
+                Console.WriteLine("Размер массива равен 0!");
+                return;
+            }
             foreach (int i in arr)
                 Console.Write(i + " ");
             Console.WriteLine();
         }
 
-        static void PrintArray(int[,] arr)
+        public static void PrintArray(int[,] arr)
         {
+            if (arr.Length == 0)
+            {
+                Console.WriteLine("Размер массива равен 0!");
+                return;
+            }
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
-                {
                     Console.Write(arr[i, j] + " ");
-                }
                 Console.WriteLine();
             }
         }
 
-        static void PrintArray(int[][] arr)
+        public static void PrintArray(int[][] arr)
         {
+            if (arr.Length == 0)
+            {
+                Console.WriteLine("Размер массива равен 0!");
+                return;
+            }
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr[i].Length; j++)
@@ -288,17 +320,13 @@ namespace lab_5
             }
         }
 
-        static int[] CreateOneDimArray()
+        public static int[] CreateOneDimArray()
         {
-            Console.WriteLine("1. Ввести значения вручную");
-            Console.WriteLine("2. Заполнить случайными числами");
-            int choose = Input.IntInput("> ");
+            int choose = Input.IntInput(Menu.GetCreatingArrayMenu());
             choose = CheckSelection(choose, 1, 2);
-            int size = Input.IntInput("Введите размер массива: ");
-            while (size <= 0)
-            {
-                size = Input.IntInput("Размер массива не может быть меньше или равен 0, введите новое значение: ");
-            }
+
+            int size = Input.IntInput("Введите размер массива\n> ");
+            size = CheckSelection(size, 1, 100);
 
             int[] newArr = new int[size];
 
@@ -306,34 +334,28 @@ namespace lab_5
             {
                 Console.WriteLine("Введите элементы массива:");
                 for (int i = 0; i < size; i++)
-                {
                     newArr[i] = Input.IntInput("");
-                }
             }
             if (choose == 2)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < size; i++)
-                {
                     newArr[i] = rnd.Next(0, 20);
-                }
             }
 
             return newArr;
         }
 
-        static int[,] CreateTwoDimArray()
+        public static int[,] CreateTwoDimArray()
         {
-            Console.WriteLine("1. Ввести значения вручную");
-            Console.WriteLine("2. Заполнить случайными числами");
-
-            int choose = Input.IntInput("> ");
+            int choose = Input.IntInput(Menu.GetCreatingArrayMenu());
             choose = CheckSelection(choose, 1, 2);
-            int rows = Input.IntInput("Введите количество строк: ");
-            rows = CheckSelection(rows, 0, 100);
-            int columns = Input.IntInput("Введите количество столбцов: ");
-            columns = CheckSelection(columns, 0, 100);
 
+            int rows = Input.IntInput("Введите количество строк\n> ");
+            rows = CheckSelection(rows, 1, 100);
+
+            int columns = Input.IntInput("Введите количество столбцов\n> ");
+            columns = CheckSelection(columns, 1, 100);
 
             int[,] newArr = new int[rows, columns];
 
@@ -363,30 +385,22 @@ namespace lab_5
 
             return newArr;
         }
-
-        static int[][] CreateTornArray()
+        
+        public static int[][] CreateTornArray()
         {
-            Console.WriteLine("1. Ввести значения вручную");
-            Console.WriteLine("2. Заполнить случайными числами");
-            int choose = Input.IntInput("> ");
+            int choose = Input.IntInput(Menu.GetCreatingArrayMenu());
             choose = CheckSelection(choose, 1, 2);
 
-            int rows = Input.IntInput("Введите количество строк: ");
-            while (rows <= 0)
-            {
-                rows = Input.IntInput("Количество строк не может быть меньше или равено 0: ");
-            }
+            int rows = Input.IntInput("Введите количество строк\n> ");
+            rows = CheckSelection(rows, 1, 100);
 
             int[][] newTornArr = new int[rows][];
             Random rnd = new Random();
 
             for (int i = 0; i < rows; i++)
             {
-                int columns = Input.IntInput("Введите количество столбцов: ");
-                while (columns <= 0)
-                {
-                    columns = Input.IntInput("Количество столбцов не может быть меньше или равно 0: ");
-                }
+                int columns = Input.IntInput("Введите количество столбцов\n> ");
+                columns = CheckSelection(columns, 1, 100);
                 newTornArr[i] = new int[columns];
                 for (int j = 0; j < columns; j++)
                 {

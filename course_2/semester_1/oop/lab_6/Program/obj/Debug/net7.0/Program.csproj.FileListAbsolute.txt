@@ -1,0 +1,14 @@
+c:\Pryazha\dev\cs_projects\lab_6\Program\bin\Debug\net7.0\Program.exe
+c:\Pryazha\dev\cs_projects\lab_6\Program\bin\Debug\net7.0\Program.deps.json
+c:\Pryazha\dev\cs_projects\lab_6\Program\bin\Debug\net7.0\Program.runtimeconfig.json
+c:\Pryazha\dev\cs_projects\lab_6\Program\bin\Debug\net7.0\Program.dll
+c:\Pryazha\dev\cs_projects\lab_6\Program\bin\Debug\net7.0\Program.pdb
+c:\Pryazha\dev\cs_projects\lab_6\Program\obj\Debug\net7.0\Program.GeneratedMSBuildEditorConfig.editorconfig
+c:\Pryazha\dev\cs_projects\lab_6\Program\obj\Debug\net7.0\Program.AssemblyInfoInputs.cache
+c:\Pryazha\dev\cs_projects\lab_6\Program\obj\Debug\net7.0\Program.AssemblyInfo.cs
+c:\Pryazha\dev\cs_projects\lab_6\Program\obj\Debug\net7.0\Program.csproj.CoreCompileInputs.cache
+c:\Pryazha\dev\cs_projects\lab_6\Program\obj\Debug\net7.0\Program.dll
+c:\Pryazha\dev\cs_projects\lab_6\Program\obj\Debug\net7.0\refint\Program.dll
+c:\Pryazha\dev\cs_projects\lab_6\Program\obj\Debug\net7.0\Program.pdb
+c:\Pryazha\dev\cs_projects\lab_6\Program\obj\Debug\net7.0\Program.genruntimeconfig.cache
+c:\Pryazha\dev\cs_projects\lab_6\Program\obj\Debug\net7.0\ref\Program.dll

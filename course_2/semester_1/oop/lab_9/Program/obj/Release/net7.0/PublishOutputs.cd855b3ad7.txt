@@ -1,0 +1,7 @@
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\Program\bin\Release\net7.0\publish\Program.exe
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\Program\bin\Release\net7.0\publish\Program.dll
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\Program\bin\Release\net7.0\publish\Program.deps.json
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\Program\bin\Release\net7.0\publish\Program.runtimeconfig.json
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\Program\bin\Release\net7.0\publish\Program.pdb
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\Program\bin\Release\net7.0\publish\DiapasonLibrary.dll
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\Program\bin\Release\net7.0\publish\DiapasonLibrary.pdb

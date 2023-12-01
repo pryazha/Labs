@@ -1,0 +1,6 @@
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\DiapasonLibraryTest\bin\Release\net7.0\CoverletSourceRootsMapping
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\DiapasonLibraryTest\obj\Release\net7.0\DiapasonLibraryTest.csproj.AssemblyReference.cache
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\DiapasonLibraryTest\obj\Release\net7.0\DiapasonLibraryTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\DiapasonLibraryTest\obj\Release\net7.0\DiapasonLibraryTest.AssemblyInfoInputs.cache
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\DiapasonLibraryTest\obj\Release\net7.0\DiapasonLibraryTest.AssemblyInfo.cs
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\DiapasonLibraryTest\obj\Release\net7.0\DiapasonLibraryTest.csproj.CoreCompileInputs.cache

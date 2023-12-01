@@ -1,19 +1,53 @@
-﻿namespace UtilityLibraries;
+﻿namespace DiapasonLibrary;
 
-public class DiapasonLibrary
+public class Diapason
 {
-    public DiapasonLibrary() {
+    public double x { get; }
+    public double y { get; }
+
+    public int ObjectsCount => _objectsCount;
+
+    public Diapason()
+    {
+        x = 0;
+        y = 0;
+        _objectsCount++;
     }
 
-    public DiapasonLibrary(int minRange, int maxRange) {
+    public Diapason(double x, double y)
+    {
+        if (x > y)
+        {
+            double temp = x;
+            x = y;
+            y = temp;
+        }
+        this.x = x;
+        this.y = y;
+        _objectsCount++;
     }
 
-    ~DiapasonLibrary() {
+    public Diapason(Diapason d)
+    {
+        x = d.x;
+        y = d.y;
+        _objectsCount++;
     }
 
-    public static bool InRange(int number, int minRange, int maxRange) {
-        return number > minRange && number < maxRange;
+    public void Print()
+    {
+        Console.WriteLine($"[{x}, {y}]");
     }
 
-    private int minRange, maxRange;
+    public bool InRange(double num)
+    {
+        return num >= x && num <= y;
+    }
+
+    public static bool InRange(double num, double x, double y) 
+    {
+        return num >= x && num <= y;
+    }
+
+    private static int _objectsCount;
 }

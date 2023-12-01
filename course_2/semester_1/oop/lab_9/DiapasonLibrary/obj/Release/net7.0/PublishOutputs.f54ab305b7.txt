@@ -1,0 +1,3 @@
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\DiapasonLibrary\bin\Release\net7.0\publish\DiapasonLibrary.dll
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\DiapasonLibrary\bin\Release\net7.0\publish\DiapasonLibrary.deps.json
+C:\Pryazha\Labs\course_2\semester_1\oop\lab_9\DiapasonLibrary\bin\Release\net7.0\publish\DiapasonLibrary.pdb
