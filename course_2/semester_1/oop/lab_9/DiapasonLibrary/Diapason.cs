@@ -5,13 +5,13 @@ public class Diapason
     public double x { get; }
     public double y { get; }
 
-    public int ObjectsCount => _objectsCount;
+    public int ObjectsCount => s_objectsCount;
 
     public Diapason()
     {
         x = 0;
         y = 0;
-        _objectsCount++;
+        s_objectsCount++;
     }
 
     public Diapason(double x, double y)
@@ -24,19 +24,19 @@ public class Diapason
         }
         this.x = x;
         this.y = y;
-        _objectsCount++;
+        s_objectsCount++;
     }
 
     public Diapason(Diapason d)
     {
         x = d.x;
         y = d.y;
-        _objectsCount++;
+        s_objectsCount++;
     }
 
     ~Diapason()
     {
-        _objectsCount--;
+        s_objectsCount--;
     }
 
     public void Print()
@@ -68,17 +68,19 @@ public class Diapason
 
     public static bool operator >(double num, Diapason d) => num < d.x || num > d.y;
 
-    private static int _objectsCount;
+    private static int s_objectsCount;
 }
 
 public class DiapasonArray
 {
-    DiapasonArray()
+    public int Length => _arr.Length;
+
+    public DiapasonArray()
     {
         _arr = new Diapason[0];
     }
 
-    DiapasonArray(int size) 
+    public DiapasonArray(int size) 
     {
         if (size <= 0)
         {
@@ -92,6 +94,34 @@ public class DiapasonArray
             Diapason diap = new Diapason(rnd.Next(0, 20), rnd.Next(0, 20));
             _arr[i] = diap;
         }
+    }
+
+    public DiapasonArray(Diapason[] darr)
+    {
+        _arr = new Diapason[darr.Length];
+        for (int i = 0; i < darr.Length; i++)
+        {
+            _arr[i] = darr[i];
+        }
+    }
+
+    public void Print()
+    {
+        if (_arr.Length == 0)
+        {
+            Console.WriteLine("Размер массива равен 0!");
+            return;
+        }
+        for (int i = 0; i < _arr.Length; i++)
+        {
+            _arr[i].Print();
+        }
+    }
+
+    public Diapason this[int index]
+    {
+        get => _arr[index];
+        set => _arr[index] = value;
     }
 
     private Diapason[] _arr;

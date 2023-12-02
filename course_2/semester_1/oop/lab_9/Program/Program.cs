@@ -2,6 +2,15 @@
 
 class Program
 {
+    static double Max(DiapasonArray darr)
+    {
+        double max = -1;
+        for (int i = 0; i < darr.Length; i++)
+            if (darr[i] > max)
+                max = darr[i];
+        return max;
+    }
+
     static void Main()
     {
         Console.WriteLine("Часть 1:");
@@ -26,5 +35,22 @@ class Program
         Console.WriteLine($"6.6 < diap3 = {6.6 < diap3}");
 
         Console.WriteLine("\nЧасть 3");
+        DiapasonArray darr1 = new DiapasonArray();
+        Console.WriteLine("darr1:"); darr1.Print();
+        DiapasonArray darr2 = new DiapasonArray(5);
+        Console.WriteLine("darr2:"); darr2.Print();
+        darr1 = new DiapasonArray(4);
+        Console.WriteLine("darr1:"); darr1.Print();
+        darr1[2] = new Diapason(4, 100.4);
+        Console.WriteLine("darr1:"); darr1.Print();
+        try 
+        {
+            darr1[5] = new Diapason(5, 10);
+        } catch(IndexOutOfRangeException e) 
+        {
+            Console.WriteLine("Обращение к элементу за границами массива");
+        }
+        Console.Write("darr2[4]: "); darr2[4].Print();
+        Console.WriteLine($"Max(darr1) = {Max(darr1)}");
     }
 }
