@@ -23,7 +23,7 @@ class Program
         Console.WriteLine($"Число 5 находится в диапазоне diap2: {diap2.InRange(5)}");
         Console.WriteLine($"Число 12.1 находится в диапазоне diap2: {diap2.InRange(12.1)}");
         Console.WriteLine($"Число 3.53 находится в диапазоне [3.52, 4]: {Diapason.InRange(3.53, 3.52, 4)}");
-        Console.WriteLine($"Количество созданных объектов: diap1.ObjectsCount = {diap1.ObjectsCount}");
+        Console.WriteLine($"Количество созданных объектов: diap1.ObjectsCount = {Diapason.s_objectsCount}");
         
         Console.WriteLine("\nЧасть 2:");
         Console.WriteLine($"Длина диапазона !diap3 = {!diap3}");
@@ -52,5 +52,11 @@ class Program
         }
         Console.Write("darr2[4]: "); darr2[4].Print();
         Console.WriteLine($"Max(darr1) = {Max(darr1)}");
+        Console.WriteLine($"Количество созданных объектов diapason: {Diapason.s_objectsCount}");
+        Diapason diap4 = new Diapason(6.5, 13); 
+        Diapason diap = new Diapason();
+        Console.Write("diap3: "); diap3.Print();
+        Console.Write("diap4: "); diap4.Print();
+        Console.WriteLine(Diapason.Equals(diap3, diap4));
     }
 }

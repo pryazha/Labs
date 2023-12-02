@@ -4,8 +4,7 @@ public class Diapason
 {
     public double x { get; }
     public double y { get; }
-
-    public int ObjectsCount => s_objectsCount;
+    public static int s_objectsCount;
 
     public Diapason()
     {
@@ -68,7 +67,25 @@ public class Diapason
 
     public static bool operator >(double num, Diapason d) => num < d.x || num > d.y;
 
-    private static int s_objectsCount;
+    public override bool Equals(object? obj) 
+    {
+        var item = obj as Diapason;
+        if (item == null)
+            return false;
+        return Equals(item);
+    }
+
+    public bool Equals(Diapason other)
+    {
+        return other != null &&
+               x == other.x &&
+               y == other.y;
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(x, y);
+    }
 }
 
 public class DiapasonArray
