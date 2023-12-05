@@ -4,13 +4,13 @@ public class Diapason
 {
     public double x { get; }
     public double y { get; }
-    public static int s_objectsCount;
+    public static int objectsCount;
 
     public Diapason()
     {
         x = 0;
         y = 0;
-        s_objectsCount++;
+        objectsCount++;
     }
 
     public Diapason(double x, double y)
@@ -23,19 +23,19 @@ public class Diapason
         }
         this.x = x;
         this.y = y;
-        s_objectsCount++;
+        objectsCount++;
     }
 
     public Diapason(Diapason d)
     {
         x = d.x;
         y = d.y;
-        s_objectsCount++;
+        objectsCount++;
     }
 
     ~Diapason()
     {
-        s_objectsCount--;
+        objectsCount--;
     }
 
     public void Print()
