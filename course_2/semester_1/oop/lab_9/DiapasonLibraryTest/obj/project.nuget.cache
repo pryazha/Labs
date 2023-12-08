@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oEiCFksFoTmOA9vse1pWX/OwT+NlP7njShwVi5IvMf6rkkkvRU722aQ1qrF/UWsCl4bWPblwDb3y++f5drhQ6A==",
+  "dgSpecHash": "s/AwumSdaxocjnwBAgeQkHJTJ+n66R2HV6OkH3l7hQ06Cdir66rUpiwlK7nqE4KpfHWcrNvnaPLNyZYjqesHJA==",
   "success": true,
   "projectFilePath": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibraryTest/DiapasonLibraryTest.csproj",
   "expectedPackageFiles": [
@@ -92,7 +92,8 @@
     "/home/pryazha/.nuget/packages/xunit.core/2.4.2/xunit.core.2.4.2.nupkg.sha512",
     "/home/pryazha/.nuget/packages/xunit.extensibility.core/2.4.2/xunit.extensibility.core.2.4.2.nupkg.sha512",
     "/home/pryazha/.nuget/packages/xunit.extensibility.execution/2.4.2/xunit.extensibility.execution.2.4.2.nupkg.sha512",
-    "/home/pryazha/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    "/home/pryazha/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512",
+    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

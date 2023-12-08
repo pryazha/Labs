@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0uOfrO28PvwMSbyWJc43YlZmY/jUzo6dwrpm6XRuechoukeiPoMYSqo4LtiT+FhYfWQh1G9gu8JJnq5CBVco4g==",
+  "dgSpecHash": "M3RhyUKbCJ80YfPu8gGMVesL+Icp2+WJv86sL2Ol3FJdztjuEX9WMFbndXVYE2xZm9vpJSGoHFy/nS5Hi53SZg==",
   "success": true,
   "projectFilePath": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/Program/Program.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
