@@ -72,14 +72,7 @@ public class Diapason
         var item = obj as Diapason;
         if (item == null)
             return false;
-        return Equals(item);
-    }
-
-    public bool Equals(Diapason other)
-    {
-        return other != null &&
-               x == other.x &&
-               y == other.y;
+        return x == item.x && y == item.y;
     }
 
     public override int GetHashCode()

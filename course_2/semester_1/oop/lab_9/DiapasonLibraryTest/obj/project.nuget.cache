@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "s/AwumSdaxocjnwBAgeQkHJTJ+n66R2HV6OkH3l7hQ06Cdir66rUpiwlK7nqE4KpfHWcrNvnaPLNyZYjqesHJA==",
+  "dgSpecHash": "kVJ26dG+9CaSYUbLp9vm8w1nKvfRvJSPUbqmXgYhRa0jX/4POAyOytC+05QxoWcJUGI1pM32DGpKoTzn19/7Hw==",
   "success": true,
   "projectFilePath": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibraryTest/DiapasonLibraryTest.csproj",
   "expectedPackageFiles": [
     "/home/pryazha/.nuget/packages/coverlet.collector/3.2.0/coverlet.collector.3.2.0.nupkg.sha512",
+    "/home/pryazha/.nuget/packages/coverlet.msbuild/6.0.0/coverlet.msbuild.6.0.0.nupkg.sha512",
     "/home/pryazha/.nuget/packages/microsoft.codecoverage/17.6.0/microsoft.codecoverage.17.6.0.nupkg.sha512",
     "/home/pryazha/.nuget/packages/microsoft.net.test.sdk/17.6.0/microsoft.net.test.sdk.17.6.0.nupkg.sha512",
     "/home/pryazha/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
