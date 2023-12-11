@@ -1,4 +1,4 @@
 #include "minterms.h"
 
-minterm::minterm(vector<char> bits) {
+minterm::minterm(const std::string& str) {
 }

@@ -39,7 +39,8 @@ namespace ProgramTests
         }
 
         [Fact]
-        public void Program_FindShortestId_ReturnsEmptyString() {
+        public void Program_FindShortestId_ReturnsEmptyString()
+        {
             // Arrange
             string input = "";
 
@@ -56,7 +57,8 @@ namespace ProgramTests
         [InlineData("Some text. _s", "_s")]
         [InlineData("Variable1, _var, size, _Column_Count_", "_var")]
         [InlineData(".9840 435 328u9", "")]
-        public void Program_FindShortestId_ReturnsValidId(string input, string expected) {
+        public void Program_FindShortestId_ReturnsValidId(string input, string expected)
+        {
             // Arrange
 
             // Act
@@ -67,7 +69,8 @@ namespace ProgramTests
         }
 
         [Fact]
-        public void Program_FindLastMinColumn_ReturnsErr() {
+        public void Program_FindLastMinColumn_ReturnsErr()
+        {
             // Arrange
             int[,] input = {};
             int expected = -1;
@@ -80,7 +83,8 @@ namespace ProgramTests
         }
 
         [Fact]
-        public void Program_FindLastMinColumn_ReturnsValidColumn() {
+        public void Program_FindLastMinColumn_ReturnsValidColumn()
+        {
             // Arrange
             int[,] input1 = { { 1 } };
             int expected1 = 0;
@@ -97,41 +101,31 @@ namespace ProgramTests
         }
 
         [Fact]
-        public void Program_PrintArray_PrintErr() {
+        public void Program_GenerateRandomString_ReturnsEmptyString()
+        {
             // Arrange
-            int[,] input = {};
-            string expected = "Размер массива равен 0!\r\n";
-            
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
+            Random rnd = new Random();
+            int size = 0;
 
             // Act
-            Program.PrintArray(input);
-            
-            var output = stringWriter.ToString();
-            
+            string result = Program.GenerateRandomString(rnd, size);
+
             // Assert
-            Assert.Equal(expected, output);
+            Assert.Equal("", result);
         }
 
         [Fact]
-        public void Program_PrintArray_PrintValidArr() {
+        public void Program_GenerateRandomString_ReturnsValidString()
+        {
             // Arrange
-            int[,] input1 = { { 1 } };
-            int[,] input2 = { { 4, 6, 3 }, { 4, 2, 9 } };
-            string expected = "1\t\r\n4\t6\t3\t\r\n4\t2\t9\t\r\n";
-
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
+            Random rnd = new Random();
+            int size = 5;
 
             // Act
-            Program.PrintArray(input1);
-            Program.PrintArray(input2);
-
-            var output = stringWriter.ToString();
+            string result = Program.GenerateRandomString(rnd, size);
 
             // Assert
-            Assert.Equal(expected, output);
+            Assert.Equal(size, result.Length);
         }
     }
 }

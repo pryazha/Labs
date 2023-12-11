@@ -40,7 +40,8 @@ namespace lab_6
         public static string GetSecondTaskMenu()
         {
             return "\n1. Ввести строку\n" +
-                "2. Вывести самый короткий идентификатор\n" +
+                "2. Создать случайную строку\n" +
+                "3. Вывести самый короткий идентификатор\n" +
                 "0. Назад\n> ";
         }
     }
@@ -89,9 +90,10 @@ namespace lab_6
                     do
                     {
                         secondChoose = Input.IntInput(Menu.GetSecondTaskMenu());
-                        secondChoose = CheckSelection(secondChoose, 0, 2);
+                        secondChoose = CheckSelection(secondChoose, 0, 3);
                         if (secondChoose == 1)
                         {
+
                             Console.Write("Введите строку: ");
                             str = Console.ReadLine()??string.Empty;
                             if (str == "")
@@ -102,11 +104,34 @@ namespace lab_6
                         }
                         if (secondChoose == 2)
                         {
+                            int length = Input.IntInput("Введите длину строки\n> ");
+                            Random rnd = new Random();
+                            str = GenerateRandomString(rnd, length);
+                            Console.WriteLine(str);
+                        }
+                        if (secondChoose == 3)
+                        {
                             Console.WriteLine(FindShortestId(str));
                         }
                     } while (secondChoose != 0);
                 }
             } while (choose != 0);
+        }
+
+        public static string GenerateRandomString(Random rnd, int length)
+        {
+            if (length <= 0)
+            {
+                Console.WriteLine("Неверная длина строки");
+                return "";
+            }
+            string legalCharacters = " _,.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            char[] letters = new char[length];
+            for (int i = 0; i < length; i++)
+            {
+                letters[i] = legalCharacters[rnd.Next(0, legalCharacters.Length)];
+            }
+            return new string(letters);
         }
 
         public static string FindShortestId(string str)
@@ -117,7 +142,7 @@ namespace lab_6
                 return "";
             }
 
-            string pattern = @"\b[a-zA-Z_][a-zA-Z0-9][a-zA-Z0-9_]*\b";
+            string pattern = @"\b[a-zA-Z_][a-zA-Z0-9_]*\b";
             Regex regex = new Regex(pattern);
             MatchCollection matches = regex.Matches(str);
 

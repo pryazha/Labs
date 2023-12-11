@@ -19,5 +19,7 @@ int main() {
         getline(cin, str);
     }
 
+    minimizer.StringToMintermGroups(str);
+
     return 0;
 }

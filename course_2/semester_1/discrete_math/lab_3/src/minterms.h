@@ -1,11 +1,13 @@
 #pragma once
 #include <vector>
+#include <string>
 using std::vector;
 
-class minterm
-{
+class minterm {
 public:
-    minterm(vector<char> bits);
+    minterm(unsigned int number);
+
+    minterm operator +(const minterm& other);
 
 private:
     int ones;
@@ -13,8 +15,7 @@ private:
     bool combined;
 };
 
-class mintermGroup
-{
+class mintermGroup {
 public:
     mintermGroup(int ones, vector<minterm> minterms);
 
