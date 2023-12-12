@@ -130,8 +130,25 @@ public class DiapasonArray
 
     public Diapason this[int index]
     {
-        get => _arr[index];
-        set => _arr[index] = value;
+        get {
+            try 
+            {
+                return _arr[index];
+            } catch(IndexOutOfRangeException) 
+            {
+                Console.WriteLine("Обращение к элементу за границами массива!");
+                return new Diapason();
+            }
+        }
+        set {
+            try 
+            {
+                _arr[index] = value;
+            } catch(IndexOutOfRangeException) 
+            {
+                Console.WriteLine("Обращение к элементу за границами массива!");
+            }
+        }
     }
 
     private Diapason[] _arr;

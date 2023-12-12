@@ -4,6 +4,47 @@ namespace DiapasonLibraryTest;
 
 public class DiapasonTest
 {
+    [Fact]
+    public void Diapason_ConstructorWithoutParam_ReturnsValidDiap()
+    {
+        // Arrange
+        Diapason diap = new Diapason();
+        
+        // Act
+
+        // Assert
+        Assert.Equal(0, diap.x);
+        Assert.Equal(0, diap.y);
+    }
+
+    [Fact]
+    public void Diapason_ConstructorWithXY_ReturnsValidDiap()
+    {
+        // Arrange
+        Diapason diap1 = new Diapason(1, 2);
+        Diapason diap2 = new Diapason(2, 1);
+        Diapason expected = new Diapason(1, 2);
+        
+        // Act
+
+        // Assert
+        Assert.Equal(expected, diap1);
+        Assert.Equal(expected, diap2);
+    }
+
+    [Fact]
+    public void Diapason_ConstructorCopy_ReturnsValidDiap()
+    {
+        // Arrange
+        Diapason diap_temp = new Diapason(1, 5);
+        Diapason diap = new Diapason(diap_temp);
+
+        // Act
+
+        // Assert
+        Assert.Equal(diap_temp, diap);
+    }
+
     [Theory]
     [InlineData(3.3, 1.4, 5)]
     [InlineData(0, -1.4, 0.4)]
@@ -140,7 +181,7 @@ public class DiapasonTest
     [InlineData(1, 5, 1)]
     [InlineData(1, 5, 3)]
     [InlineData(1, 5, 5)]
-    public void Diapason_OperatorGreaterThan_ReturnsTrue(double x, double y, double num)
+    public void Diapason_OperatorLessThan_ReturnsTrue(double x, double y, double num)
     {
         // Arrange
         Diapason diap = new Diapason(x, y);
@@ -155,13 +196,88 @@ public class DiapasonTest
     [Theory]
     [InlineData(1, 5, 0)]
     [InlineData(1, 5, 6)]
-    public void Diapason_OperatorGreaterThan_ReturnsFalse(double x, double y, double num)
+    public void Diapason_OperatorLessThan_ReturnsFalse(double x, double y, double num)
     {
         // Arrange
         Diapason diap = new Diapason(x, y);
 
         // Act
         var result = num < diap;
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Theory]
+    [InlineData(1, 5, 0)]
+    [InlineData(1, 5, 6)]
+    public void Diapason_OperatorGreaterThan_ReturnsTrue(double x, double y, double num)
+    {
+        // Arrange
+        Diapason diap = new Diapason(x, y);
+
+        // Act
+        var result = num > diap;
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Theory]
+    [InlineData(1, 5, 1)]
+    [InlineData(1, 5, 3)]
+    [InlineData(1, 5, 5)]
+    public void Diapason_OperatorGreaterThan_ReturnsFalse(double x, double y, double num)
+    {
+        // Arrange
+        Diapason diap = new Diapason(x, y);
+
+        // Act
+        var result = num > diap;
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void Diapason_Equals_ReturnsTrue()
+    {
+        // Arrange
+        Diapason diap1 = new Diapason(1, 5);
+        Diapason diap2 = new Diapason(1, 5);
+
+        // Act
+        var result = Equals(diap1, diap2);
+        
+        // Assert
+        Assert.True(result);
+    }
+
+    [Theory]
+    [InlineData(1, 2, 1, 3)]
+    [InlineData(1, 2, 2, 3)]
+    public void Diapason_Equals_ReturnsFalse(double x1, double y1, double x2, double y2)
+    {
+        // Arrange
+        Diapason diap1 = new Diapason(x1, y1);
+        Diapason diap2 = new Diapason(x2, y2);
+
+        // Act
+        var result = Equals(diap1, diap2);
+        
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void Diapason_EqualsWithNull_ReturnsFalse()
+    {
+        // Arrange
+        Diapason diap1 = new Diapason(1, 5);
+        int number = 1;
+
+        // Act
+        bool result = diap1.Equals(number);
 
         // Assert
         Assert.False(result);

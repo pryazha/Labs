@@ -221,8 +221,8 @@ var assemblies = [
   {
     "name": "DiapasonLibrary",
     "classes": [
-      { "name": "DiapasonLibrary.Diapason", "rp": "DiapasonLibrary_Diapason.html", "cl": 29, "ucl": 25, "cal": 54, "tl": 138, "cb": 9, "tb": 14, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "DiapasonLibrary.DiapasonArray", "rp": "DiapasonLibrary_DiapasonArray.html", "cl": 9, "ucl": 30, "cal": 39, "tl": 138, "cb": 2, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "DiapasonLibrary.Diapason", "rp": "DiapasonLibrary_Diapason.html", "cl": 45, "ucl": 6, "cal": 51, "tl": 150, "cb": 14, "tb": 14, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "DiapasonLibrary.DiapasonArray", "rp": "DiapasonLibrary_DiapasonArray.html", "cl": 43, "ucl": 10, "cal": 53, "tl": 150, "cb": 6, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
