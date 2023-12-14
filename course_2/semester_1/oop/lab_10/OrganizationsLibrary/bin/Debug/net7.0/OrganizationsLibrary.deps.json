@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "OrganizationsLibrary/1.0.0": {
+        "dependencies": {
+          "InputLibrary": "1.0.0"
+        },
+        "runtime": {
+          "OrganizationsLibrary.dll": {}
+        }
+      },
+      "InputLibrary/1.0.0": {
+        "runtime": {
+          "InputLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OrganizationsLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InputLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/bin/Debug/net7.0/OrganizationsLibrary.deps.json
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/bin/Debug/net7.0/OrganizationsLibrary.dll
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/bin/Debug/net7.0/OrganizationsLibrary.pdb
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/OrganizationsLibrary.csproj.AssemblyReference.cache
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/OrganizationsLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/OrganizationsLibrary.AssemblyInfoInputs.cache
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/OrganizationsLibrary.AssemblyInfo.cs
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/OrganizationsLibrary.csproj.CoreCompileInputs.cache
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/OrganizationsLibrary.dll
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/refint/OrganizationsLibrary.dll
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/OrganizationsLibrary.pdb
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/ref/OrganizationsLibrary.dll
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/bin/Debug/net7.0/InputLibrary.dll
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/bin/Debug/net7.0/InputLibrary.pdb
+/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/obj/Debug/net7.0/OrganizationsLibrary.csproj.CopyComplete
