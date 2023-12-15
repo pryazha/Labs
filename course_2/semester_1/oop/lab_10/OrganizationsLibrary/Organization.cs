@@ -6,8 +6,9 @@ public class Organization
 {
     string name;
     string address;
+    int employeesCount;
 
-    string Name
+    public string Name
     {
         get => name;
         set
@@ -19,7 +20,7 @@ public class Organization
         }
     }
 
-    string Address
+    public string Address
     {
         get => address;
         set
@@ -31,10 +32,23 @@ public class Organization
         }
     }
 
-    public Organization(string name, string address)
+    public int EmployeesCount
+    {
+        get => employeesCount;
+        set
+        {
+            if (value < 0)
+                Console.WriteLine("Количество работников не может быть отрицательным.");
+            else
+                employeesCount = value;
+        }
+    }
+
+    public Organization(string name, string address, int employeesCount)
     {
         Name = name;
         Address = address;
+        EmployeesCount = employeesCount;
     }
 
     public Organization() => RandomInit();
@@ -42,13 +56,22 @@ public class Organization
     public virtual void Show()
     {
         Console.WriteLine($"Название организации: {Name}\n" +
-                          $"Адрес организации: {Address}");
+                          $"Адрес организации: {Address}\n" +
+                          $"Количество сотрудников: {EmployeesCount}");
+    }
+
+    public void NotVirtualShow()
+    {
+        Console.WriteLine($"Название организации: {Name}\n" +
+                          $"Адрес организации: {Address}\n" +
+                          $"Количество сотрудников: {EmployeesCount}");
     }
 
     public virtual void Init()
     {
         Name = Input.StringInput("Введите название организации: ");
         Address = Input.StringInput("Введите адресс организации: ");
+        EmployeesCount = Input.IntInput("Введите количество сотрудников: ");
     }
 
     public virtual void RandomInit()
@@ -56,6 +79,7 @@ public class Organization
         Random rnd = new Random();
         Name = "Организация №" + rnd.Next(1, 100);
         Address = "Адрес №" + rnd.Next(1, 100);
+        EmployeesCount = rnd.Next(10, 200);
     }
 
     public override bool Equals(object? obj) 
@@ -63,11 +87,13 @@ public class Organization
         var item = obj as Organization;
         if (item == null)
             return false;
-        return Name == item.Name && Address == item.Address;
+        return Name == item.Name &&
+               Address == item.Address &&
+               EmployeesCount == item.EmployeesCount;
     }
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(Name, Address);
+        return HashCode.Combine(Name, Address, EmployeesCount);
     }
 }

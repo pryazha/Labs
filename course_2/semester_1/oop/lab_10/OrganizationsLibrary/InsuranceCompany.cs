@@ -6,8 +6,8 @@ public class InsuranceCompany : Organization
 {
     string InsuranceType { get; set; }
     
-    public InsuranceCompany(string name, string address, string insuranceType)
-        : base(name, address)
+    public InsuranceCompany(string name, string address, int employeesCount, string insuranceType)
+        : base(name, address, employeesCount)
     {
         InsuranceType = insuranceType;
     }
@@ -20,6 +20,14 @@ public class InsuranceCompany : Organization
         Console.WriteLine($"Тип страхования: {InsuranceType}");
     }
 
+    public void NotVirtualShow()
+    {
+        Console.WriteLine($"Название организации: {Name}\n" +
+                          $"Адрес организации: {Address}\n" +
+                          $"Количество сотрудников: {EmployeesCount}\n" +
+                          $"Тип страхования: {InsuranceType}");
+    }
+
     public override void Init()
     {
         base.Init();
@@ -28,6 +36,7 @@ public class InsuranceCompany : Organization
 
     public override void RandomInit()
     {
+        base.RandomInit();
         Random rnd = new Random();
         InsuranceType = "Тип страхования №" + rnd.Next(1, 100);
     }
