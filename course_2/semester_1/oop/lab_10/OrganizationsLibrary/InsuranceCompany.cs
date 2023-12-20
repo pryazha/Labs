@@ -2,7 +2,7 @@ using InputLibrary;
 
 namespace OrganizationsLibrary;
 
-public class InsuranceCompany : Organization
+public class InsuranceCompany : Organization, IInit, IComparable, ICloneable
 {
     string InsuranceType { get; set; }
     
@@ -39,5 +39,15 @@ public class InsuranceCompany : Organization
         base.RandomInit();
         Random rnd = new Random();
         InsuranceType = "Тип страхования №" + rnd.Next(1, 100);
+    }
+
+    public override InsuranceCompany ShallowCopy()
+    {
+        return (InsuranceCompany)this.MemberwiseClone();
+    }
+
+    public override object Clone()
+    {
+        return new InsuranceCompany(Name, Address, EmployeesCount, InsuranceType);
     }
 }

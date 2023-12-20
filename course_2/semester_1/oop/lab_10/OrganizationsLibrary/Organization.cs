@@ -2,7 +2,7 @@
 
 namespace OrganizationsLibrary;
 
-public class Organization
+public class Organization : IInit, IComparable, ICloneable
 {
     string name;
     string address;
@@ -95,5 +95,26 @@ public class Organization
     public override int GetHashCode()
     {
         return HashCode.Combine(Name, Address, EmployeesCount);
+    }
+
+    public int CompareTo(object? obj)
+    {
+        if (obj is null) return 1;
+        Organization other = (Organization)obj;
+        if (String.Compare(Name, other.Name) > 0) return 1;
+        if (String.Compare(Name, other.Name) < 0) return -1;
+        if (EmployeesCount > other.EmployeesCount) return 1;
+        if (EmployeesCount < other.EmployeesCount) return -1;
+        return 0;
+    }
+
+    public virtual Organization ShallowCopy()
+    {
+        return (Organization)this.MemberwiseClone();
+    }
+
+    public virtual object Clone()
+    {
+        return new Organization(Name, Address, EmployeesCount);
     }
 }

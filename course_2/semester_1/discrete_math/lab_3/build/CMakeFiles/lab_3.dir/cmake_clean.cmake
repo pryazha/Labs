@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lab_3.dir/src/conjunction.cpp.o"
+  "CMakeFiles/lab_3.dir/src/conjunction.cpp.o.d"
   "CMakeFiles/lab_3.dir/src/main.cpp.o"
   "CMakeFiles/lab_3.dir/src/main.cpp.o.d"
-  "CMakeFiles/lab_3.dir/src/minimizer.cpp.o"
-  "CMakeFiles/lab_3.dir/src/minimizer.cpp.o.d"
-  "CMakeFiles/lab_3.dir/src/minterms.cpp.o"
-  "CMakeFiles/lab_3.dir/src/minterms.cpp.o.d"
+  "CMakeFiles/lab_3.dir/src/quine_minimization.cpp.o"
+  "CMakeFiles/lab_3.dir/src/quine_minimization.cpp.o.d"
   "lab_3"
   "lab_3.pdb"
 )

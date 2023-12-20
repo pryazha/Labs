@@ -2,7 +2,7 @@ using InputLibrary;
 
 namespace OrganizationsLibrary;
 
-public class Library : Organization
+public class Library : Organization, IInit, IComparable, ICloneable
 {
     int booksCount;
 
@@ -52,5 +52,15 @@ public class Library : Organization
         base.RandomInit();
         Random rnd = new Random();
         BooksCount = rnd.Next(500, 10000);
+    }
+
+    public override Library ShallowCopy()
+    {
+        return (Library)this.MemberwiseClone();
+    }
+
+    public override object Clone()
+    {
+        return new Library(Name, Address, EmployeesCount, BooksCount);
     }
 }

@@ -1,8 +1,8 @@
 CMakeFiles/lab_3.dir/src/main.cpp.o: \
  /home/pryazha/labs/course_2/semester_1/discrete_math/lab_3/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/pryazha/labs/course_2/semester_1/discrete_math/lab_3/src/minimizer.h \
- /home/pryazha/labs/course_2/semester_1/discrete_math/lab_3/src/minterms.h \
+ /home/pryazha/labs/course_2/semester_1/discrete_math/lab_3/src/quine_minimization.h \
+ /home/pryazha/labs/course_2/semester_1/discrete_math/lab_3/src/conjunction.h \
  /usr/include/c++/13.2.1/vector \
  /usr/include/c++/13.2.1/bits/requires_hosted.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -151,4 +151,14 @@ CMakeFiles/lab_3.dir/src/main.cpp.o: \
  /usr/include/c++/13.2.1/bits/uniform_int_dist.h \
  /usr/include/c++/13.2.1/bits/stl_tempbuf.h \
  /usr/include/c++/13.2.1/pstl/glue_algorithm_defs.h \
- /usr/include/c++/13.2.1/pstl/execution_defs.h
+ /usr/include/c++/13.2.1/pstl/execution_defs.h \
+ /usr/include/c++/13.2.1/iomanip /usr/include/c++/13.2.1/locale \
+ /usr/include/c++/13.2.1/bits/locale_facets_nonio.h \
+ /usr/include/c++/13.2.1/ctime \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/time_members.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13.2.1/bits/codecvt.h \
+ /usr/include/c++/13.2.1/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13.2.1/bits/locale_conv.h \
+ /usr/include/c++/13.2.1/bits/quoted_string.h \
+ /usr/include/c++/13.2.1/sstream /usr/include/c++/13.2.1/bits/sstream.tcc

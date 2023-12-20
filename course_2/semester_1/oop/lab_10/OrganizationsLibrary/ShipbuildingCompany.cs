@@ -2,7 +2,7 @@ using InputLibrary;
 
 namespace OrganizationsLibrary;
 
-public class ShipbuildingCompany : Organization
+public class ShipbuildingCompany : Organization, IInit, IComparable, ICloneable
 {
     int shipsCount;
 
@@ -54,5 +54,15 @@ public class ShipbuildingCompany : Organization
         Random rnd = new Random();
         base.RandomInit();
         ShipsCount = rnd.Next(1, 100);
+    }
+
+    public override ShipbuildingCompany ShallowCopy()
+    {
+        return (ShipbuildingCompany)this.MemberwiseClone();
+    }
+
+    public override object Clone()
+    {
+        return new ShipbuildingCompany(Name, Address, EmployeesCount, ShipsCount);
     }
 }

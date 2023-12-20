@@ -1,4 +1,5 @@
-﻿using OrganizationsLibrary;
+﻿using InputLibrary;
+using OrganizationsLibrary;
 
 namespace lab_10
 {
@@ -8,7 +9,7 @@ namespace lab_10
         {
             Console.WriteLine("Часть 1.");
 
-            Organization[] arr = CreateArray(10);
+            Organization[] arr = CreateRandomArray(10);
             PrintArrNotVirtual(arr);
             PrintArrVirtual(arr);
             int count = 0;
@@ -32,6 +33,30 @@ namespace lab_10
                 min.Show();
 
             Console.WriteLine($"Суммарное количество книг в библиотеках: {GetBooksCount(arr)}");
+
+            Console.WriteLine("\nОтсортированный массив:");
+            Array.Sort(arr);
+            PrintArrVirtual(arr);
+
+            Console.WriteLine("\nСортировка по количеству сотрудников:");
+            Array.Sort(arr, new SortByEmployeesCount());
+            PrintArrVirtual(arr);
+
+            int employeesCount;
+            do
+            {
+                employeesCount = Input.IntInput("Введите количество сотрудников (0 - выйти)\n> ");
+                if (count != 0)
+                {
+                    var result = BinarySearchByEmployeesCount(arr, employeesCount);
+                    if (result != null)
+                        result.Show();
+                    else 
+                        Console.WriteLine("Организации с таким количеством сотрудников не существует.");
+                }
+            } while (employeesCount != 0);
+
+            DisplayIInit();
         }
 
         static void PrintArrVirtual(Organization[] organizations)
@@ -54,7 +79,7 @@ namespace lab_10
             }
         }
 
-        static Organization[] CreateArray(int size)
+        static Organization[] CreateRandomArray(int size)
         {
             Organization[] organizations = new Organization[size];
 
@@ -144,6 +169,50 @@ namespace lab_10
             }
 
             return booksCount;
+        }
+
+        static Organization? BinarySearchByEmployeesCount(Organization[] organizations, int target)
+        {
+            int left = 0;
+            int right = organizations.Length - 1;
+
+            while (left <= right)
+            {
+                int mid = (left + right) / 2;
+                int diff = organizations[mid].EmployeesCount.CompareTo(target);
+                if (diff == 0)
+                    return organizations[mid];
+
+                if (diff < 0)
+                    left = mid + 1;
+                else
+                    right = mid - 1;
+            }
+
+            return null;
+        }
+
+        static void DisplayIInit()
+        {
+            IInit[] objects = new IInit[]
+            {
+                new Organization(),
+                new InsuranceCompany(),
+                new ShipbuildingCompany(),
+                new Factory(),
+                new Library(),
+                new NotHierarchicalClass()
+            };
+
+            Console.WriteLine("\nМассив типа IInit: состоит из объектов Organization, InsuranceCompany, ShipbuildingCompany, Factory, Library, NonHierarhicalClass");
+
+            int count = 1;
+            foreach (var item in objects)
+            {
+                Console.WriteLine($"Создается объект под номером {count++}: {item.GetType()}");
+                item.RandomInit();
+                Console.WriteLine(item + "\n");
+            }
         }
     }
 }

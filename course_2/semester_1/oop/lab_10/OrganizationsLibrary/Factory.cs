@@ -2,7 +2,7 @@ using InputLibrary;
 
 namespace OrganizationsLibrary;
 
-public class Factory : Organization
+public class Factory : Organization, IInit, IComparable, ICloneable
 {
     int createdProducts;
 
@@ -54,5 +54,15 @@ public class Factory : Organization
         base.RandomInit();
         Random rnd = new Random();
         CreatedProducts = rnd.Next(1, 100);
+    }
+
+    public override Factory ShallowCopy()
+    {
+        return (Factory)this.MemberwiseClone();
+    }
+
+    public override object Clone()
+    {
+        return new Factory(Name, Address, EmployeesCount, CreatedProducts);
     }
 }

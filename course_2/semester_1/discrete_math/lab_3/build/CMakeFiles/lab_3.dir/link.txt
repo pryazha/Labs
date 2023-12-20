@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/lab_3.dir/src/main.cpp.o CMakeFiles/lab_3.dir/src/minimizer.cpp.o CMakeFiles/lab_3.dir/src/minterms.cpp.o -o lab_3 
+/usr/bin/c++ CMakeFiles/lab_3.dir/src/main.cpp.o CMakeFiles/lab_3.dir/src/quine_minimization.cpp.o CMakeFiles/lab_3.dir/src/conjunction.cpp.o -o lab_3 
