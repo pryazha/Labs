@@ -10,9 +10,9 @@ int main() {
     QuineMinimization minimizer;
     string str1 = "1111 1100 1111 1100";
     string str2 = "1011 0011 0011 1111";
-    string str = "1011 0011 0011 1111";
-    // cout << "Enter input string: ";
-    // getline(cin, str);
+    string str;
+    cout << "Enter input string: ";
+    getline(cin, str);
 
     while (!minimizer.IsValid(str)) {
         cout << "String is not valid, please enter new string: ";
@@ -21,10 +21,9 @@ int main() {
 
     minimizer.StringToConjunctions(str);
     minimizer.PrintMatrix(str);
+    cout << '\n';
     vector<conjunction> implicants = minimizer.GetImplicants();
     minimizer.PrintCoverageTable(implicants);
-    cout << "MDNF: ";
-    minimizer.PrintConjunctions(implicants);
 
     return 0;
 }
