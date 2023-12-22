@@ -49,7 +49,7 @@ void FunctionalCompleteness::isFunctionalComplete() {
 
 void FunctionalCompleteness::InputFunctions(vector<string>& functions) {
     if (!isValidFunctions(functions)) {
-        cout << "Неверный ввод исходных векторов\n";
+        cout << "Invalid vectors input\n";
         return;
     }
 

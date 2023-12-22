@@ -11,6 +11,7 @@ int main() {
     string str1 = "1111 1100 1111 1100";
     string str2 = "1011 0011 0011 1111";
     string str;
+
     cout << "Enter input string: ";
     getline(cin, str);
 

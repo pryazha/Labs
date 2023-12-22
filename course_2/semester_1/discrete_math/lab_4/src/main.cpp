@@ -8,9 +8,9 @@ using std::vector;
 
 int main() {
     vector<string> functions = {
-        "1101 0010",
-        "1001",
-        "01"
+        "1",
+        "1110 0011",
+        "0001"
     };
     
     FunctionalCompleteness com;
