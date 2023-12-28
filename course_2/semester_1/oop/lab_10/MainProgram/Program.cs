@@ -7,37 +7,32 @@ namespace lab_10
     {
         static void Main()
         {
-            Console.WriteLine("Часть 1.");
+            String[] menu = new String[] { "Часть 1.", "Часть. 2", "Часть. 3" };
 
             Organization[] arr = CreateRandomArray(10);
             PrintArrNotVirtual(arr);
             PrintArrVirtual(arr);
             int count = 0;
             foreach (var item in arr)
-            {
                 if (item is Library)
                     count++;
-            }
             Console.WriteLine("В массиве " + count + " объектов типа Library");
 
             Console.WriteLine("\nЧасть 2.");
-
             Console.WriteLine($"Организация с наибольшим количеством сотрудников:");
             var max = MaxEmployeesOrg(arr);
             if (max != null)
                 max.Show();
-
             Console.WriteLine($"Организация с наименьшим количеством сотрудников:");
             var min = MinEmployeesOrg(arr);
             if (min != null)
                 min.Show();
-
             Console.WriteLine($"Суммарное количество книг в библиотеках: {GetBooksCount(arr)}");
-
             Console.WriteLine("\nОтсортированный массив:");
             Array.Sort(arr);
             PrintArrVirtual(arr);
 
+            Console.WriteLine("\nЧасть 3.");
             Console.WriteLine("\nСортировка по количеству сотрудников:");
             Array.Sort(arr, new SortByEmployeesCount());
             PrintArrVirtual(arr);
@@ -57,6 +52,11 @@ namespace lab_10
             } while (employeesCount != 0);
 
             DisplayIInit();
+        }
+
+        static void MainMenu(String[] menu) {
+            for (int i = 0; i < menu.Length; i++)
+                Console.WriteLine($"{i + 1} : {menu[i]}");
         }
 
         static void PrintArrVirtual(Organization[] organizations)
@@ -213,6 +213,13 @@ namespace lab_10
                 item.RandomInit();
                 Console.WriteLine(item + "\n");
             }
+        }
+
+        static void DisplayDiffCopy()
+        {
+            var origOrg = CreateRandomArray(5);
+            var copyOrg = (Organization) origOrg.Clone();
+
         }
     }
 }
