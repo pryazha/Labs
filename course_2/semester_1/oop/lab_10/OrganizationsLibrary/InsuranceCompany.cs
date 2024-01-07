@@ -38,6 +38,7 @@ public class InsuranceCompany : Organization, IInit, IComparable, ICloneable
     {
         base.RandomInit();
         Random rnd = new Random();
+        Name = "Страховая компания №" + rnd.Next(1, 100);
         InsuranceType = "Тип страхования №" + rnd.Next(1, 100);
     }
 

@@ -51,8 +51,9 @@ public class ShipbuildingCompany : Organization, IInit, IComparable, ICloneable
 
     public override void RandomInit()
     {
-        Random rnd = new Random();
         base.RandomInit();
+        Random rnd = new Random();
+        Name = "Судостроительная компания №" + rnd.Next(1, 100);
         ShipsCount = rnd.Next(1, 100);
     }
 

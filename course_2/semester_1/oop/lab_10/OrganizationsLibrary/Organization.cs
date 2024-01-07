@@ -8,6 +8,8 @@ public class Organization : IInit, IComparable, ICloneable
     string address;
     int employeesCount;
 
+    public Manager manager { get; set; }
+
     public string Name
     {
         get => name;
@@ -49,6 +51,7 @@ public class Organization : IInit, IComparable, ICloneable
         Name = name;
         Address = address;
         EmployeesCount = employeesCount;
+        manager = new Manager("");
     }
 
     public Organization() => RandomInit();
@@ -58,6 +61,14 @@ public class Organization : IInit, IComparable, ICloneable
         Console.WriteLine($"Название организации: {Name}\n" +
                           $"Адрес организации: {Address}\n" +
                           $"Количество сотрудников: {EmployeesCount}");
+    }
+
+    public void ShowWithManager()
+    {
+        Console.WriteLine($"Название организации: {Name}\n" +
+                          $"Адрес организации: {Address}\n" +
+                          $"Количество сотрудников: {EmployeesCount}\n" +
+                          $"Управляющий: {manager.Name}");
     }
 
     public void NotVirtualShow()
@@ -115,6 +126,14 @@ public class Organization : IInit, IComparable, ICloneable
 
     public virtual object Clone()
     {
-        return new Organization(Name, Address, EmployeesCount);
+        var org =  new Organization(Name, Address, EmployeesCount);
+        org.manager = new Manager(manager.Name);
+        return org;
     }
+}
+
+public class Manager
+{
+    public string Name { get; set; }
+    public Manager(string name) => Name = name;
 }

@@ -53,6 +53,7 @@ public class Factory : Organization, IInit, IComparable, ICloneable
     {
         base.RandomInit();
         Random rnd = new Random();
+        Name = "Завод №" + rnd.Next(1, 100);
         CreatedProducts = rnd.Next(1, 100);
     }
 

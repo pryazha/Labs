@@ -18,6 +18,11 @@ public class NotHierarchicalClass : IInit
         }
     }
 
+    public void Show()
+    {
+        Console.WriteLine($"Положительное число: {positiveNumber}");
+    }
+
     public void Init()
     {
         PositiveNumber = Input.IntInput("Введите положительное число: ");

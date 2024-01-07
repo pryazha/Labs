@@ -51,6 +51,7 @@ public class Library : Organization, IInit, IComparable, ICloneable
     {
         base.RandomInit();
         Random rnd = new Random();
+        Name = "Библиотека №" + rnd.Next(1, 100);
         BooksCount = rnd.Next(500, 10000);
     }
 

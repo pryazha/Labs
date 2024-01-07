@@ -6,6 +6,7 @@ public interface IInit
 {
     void Init();
     void RandomInit();
+    void Show();
 }
 
 public class SortByEmployeesCount : IComparer
