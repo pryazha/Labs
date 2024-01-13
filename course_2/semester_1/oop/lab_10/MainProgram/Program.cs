@@ -162,8 +162,6 @@ namespace lab_10
                         var result = BinarySearchByEmployeesCount(arr, employeesCount);
                         if (result != null)
                             result.Show();
-                        else 
-                            Console.WriteLine("Организации с таким количеством сотрудников не существует.");
                         break;
                     case 5:
                         DisplayIInit();
