@@ -4,43 +4,21 @@ namespace OrganizationsLibrary;
 
 public class Organization : IInit, IComparable, ICloneable
 {
-    string name;
-    string address;
+    public string Name { get; set; }
+    public string Address { get; set; }
     int employeesCount;
 
-    public Manager manager { get; set; }
-
-    public string Name
-    {
-        get => name;
-        set
-        {
-            if (value == "")
-                Console.WriteLine("Название не может быть пустым.");
-            else
-                name = value;
-        }
-    }
-
-    public string Address
-    {
-        get => address;
-        set
-        {
-            if (value == "")
-                Console.WriteLine("Адрес не может быть пустым.");
-            else
-                address = value;
-        }
-    }
+    public Manager manager;
 
     public int EmployeesCount
     {
         get => employeesCount;
         set
         {
-            if (value < 0)
+            if (value < 0) {
                 Console.WriteLine("Количество работников не может быть отрицательным.");
+                employeesCount = 0;
+            }
             else
                 employeesCount = value;
         }
@@ -54,7 +32,14 @@ public class Organization : IInit, IComparable, ICloneable
         manager = new Manager("");
     }
 
-    public Organization() => RandomInit();
+    public Organization()
+    {
+        Random rnd = new Random();
+        Name = "Организация №" + rnd.Next(1, 100);
+        Address = "Адрес №" + rnd.Next(1, 100);
+        EmployeesCount = rnd.Next(10, 200);
+        manager = new Manager("");
+    }
 
     public virtual void Show()
     {
@@ -63,20 +48,22 @@ public class Organization : IInit, IComparable, ICloneable
                           $"Количество сотрудников: {EmployeesCount}");
     }
 
-    public void ShowWithManager()
-    {
-        Console.WriteLine($"Название организации: {Name}\n" +
-                          $"Адрес организации: {Address}\n" +
-                          $"Количество сотрудников: {EmployeesCount}\n" +
-                          $"Управляющий: {manager.Name}");
-    }
-
     public void NotVirtualShow()
     {
         Console.WriteLine($"Название организации: {Name}\n" +
                           $"Адрес организации: {Address}\n" +
                           $"Количество сотрудников: {EmployeesCount}");
     }
+    
+    public void ShowWithManager()
+    {
+        Console.WriteLine($"Название организации: {Name}\n" +
+                          $"Адрес организации: {Address}\n" +
+                          $"Количество сотрудников: {EmployeesCount}\n" +
+                          $"Управляющий: {manager.Name}");
+        Console.WriteLine();
+    }
+
 
     public virtual void Init()
     {
@@ -95,9 +82,12 @@ public class Organization : IInit, IComparable, ICloneable
 
     public override bool Equals(object? obj) 
     {
+        if (obj is null) return false;
+
         var item = obj as Organization;
         if (item == null)
             return false;
+
         return Name == item.Name &&
                Address == item.Address &&
                EmployeesCount == item.EmployeesCount;
@@ -121,19 +111,19 @@ public class Organization : IInit, IComparable, ICloneable
 
     public virtual Organization ShallowCopy()
     {
-        return (Organization)this.MemberwiseClone();
+        return (Organization) this.MemberwiseClone();
     }
 
     public virtual object Clone()
     {
-        var org =  new Organization(Name, Address, EmployeesCount);
-        org.manager = new Manager(manager.Name);
-        return org;
+        var other =  new Organization(Name, Address, EmployeesCount);
+        other.manager = new Manager(manager.Name);
+        return other;
     }
 }
 
 public class Manager
 {
-    public string Name { get; set; }
+    public string Name;
     public Manager(string name) => Name = name;
 }

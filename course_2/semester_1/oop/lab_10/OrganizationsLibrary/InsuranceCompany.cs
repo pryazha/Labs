@@ -4,7 +4,7 @@ namespace OrganizationsLibrary;
 
 public class InsuranceCompany : Organization, IInit, IComparable, ICloneable
 {
-    string InsuranceType { get; set; }
+    public string InsuranceType { get; set; }
     
     public InsuranceCompany(string name, string address, int employeesCount, string insuranceType)
         : base(name, address, employeesCount)
@@ -12,7 +12,13 @@ public class InsuranceCompany : Organization, IInit, IComparable, ICloneable
         InsuranceType = insuranceType;
     }
 
-    public InsuranceCompany() => RandomInit();
+    public InsuranceCompany()
+    {
+        base.RandomInit();
+        Random rnd = new Random();
+        Name = "Страховая компания №" + rnd.Next(1, 100);
+        InsuranceType = "Тип страхования №" + rnd.Next(1, 100);
+    }
 
     public override void Show()
     {
@@ -49,6 +55,8 @@ public class InsuranceCompany : Organization, IInit, IComparable, ICloneable
 
     public override object Clone()
     {
-        return new InsuranceCompany(Name, Address, EmployeesCount, InsuranceType);
+        var insComp = new InsuranceCompany(Name, Address, EmployeesCount, InsuranceType);
+        insComp.manager = new Manager(manager.Name);
+        return insComp;
     }
 }

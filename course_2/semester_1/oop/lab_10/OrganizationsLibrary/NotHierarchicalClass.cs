@@ -12,7 +12,10 @@ public class NotHierarchicalClass : IInit
         set
         {
             if (value < 0)
+            {
                 Console.WriteLine("Число не может быть отрицательным.");
+                positiveNumber = 0;
+            }
             else
                 positiveNumber = value;
         }

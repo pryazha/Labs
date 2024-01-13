@@ -14,6 +14,7 @@ public class Factory : Organization, IInit, IComparable, ICloneable
         set {
             if (value < 0) {
                 Console.WriteLine("Количество судов не может быть меньше нуля");
+                createdProducts = 0;
             } else
             {
                 createdProducts = value;
@@ -27,7 +28,13 @@ public class Factory : Organization, IInit, IComparable, ICloneable
         CreatedProducts = createdProducts;
     }
 
-    public Factory() => RandomInit();
+    public Factory()
+    {
+        base.RandomInit();
+        Random rnd = new Random();
+        Name = "Завод №" + rnd.Next(1, 100);
+        CreatedProducts = rnd.Next(1, 100);
+    }
 
     public override void Show()
     {
@@ -64,6 +71,8 @@ public class Factory : Organization, IInit, IComparable, ICloneable
 
     public override object Clone()
     {
-        return new Factory(Name, Address, EmployeesCount, CreatedProducts);
+        var factory = new Factory(Name, Address, EmployeesCount, CreatedProducts);
+        factory.manager = new Manager(manager.Name);
+        return factory;
     }
 }

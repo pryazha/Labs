@@ -8,12 +8,16 @@ public class Library : Organization, IInit, IComparable, ICloneable
 
     public int BooksCount
     {
-        get {
+        get
+        {
             return booksCount;
         }
         set {
-            if (value < 0)
+            if (value < 0) 
+            {
                 Console.WriteLine("Количество книг не может быть отрицательным.");
+                booksCount = 0;
+            }
             else
                 booksCount = value;
         }
@@ -25,7 +29,13 @@ public class Library : Organization, IInit, IComparable, ICloneable
         BooksCount = booksCount;
     }
 
-    public Library() => RandomInit();
+    public Library()
+    {
+        base.RandomInit();
+        Random rnd = new Random();
+        Name = "Библиотека №" + rnd.Next(1, 100);
+        BooksCount = rnd.Next(500, 10000);
+    }
 
     public override void Show()
     {
@@ -62,6 +72,8 @@ public class Library : Organization, IInit, IComparable, ICloneable
 
     public override object Clone()
     {
-        return new Library(Name, Address, EmployeesCount, BooksCount);
+        var library =  new Library(Name, Address, EmployeesCount, BooksCount);
+        library.manager = new Manager(manager.Name);
+        return library;
     }
 }

@@ -14,6 +14,7 @@ public class ShipbuildingCompany : Organization, IInit, IComparable, ICloneable
         set {
             if (value < 0) {
                 Console.WriteLine("Количество судов не может быть меньше нуля");
+                shipsCount = 0;
             } else
             {
                 shipsCount = value;
@@ -27,7 +28,13 @@ public class ShipbuildingCompany : Organization, IInit, IComparable, ICloneable
         ShipsCount = shipsCount;
     }
 
-    public ShipbuildingCompany() => RandomInit();
+    public ShipbuildingCompany()
+    {
+        base.RandomInit();
+        Random rnd = new Random();
+        Name = "Судостроительная компания №" + rnd.Next(1, 100);
+        ShipsCount = rnd.Next(1, 100);
+    }
 
     public override void Show()
     {
@@ -64,6 +71,8 @@ public class ShipbuildingCompany : Organization, IInit, IComparable, ICloneable
 
     public override object Clone()
     {
-        return new ShipbuildingCompany(Name, Address, EmployeesCount, ShipsCount);
+        var shipComp = new ShipbuildingCompany(Name, Address, EmployeesCount, ShipsCount);
+        shipComp.manager = new Manager(manager.Name);
+        return shipComp;
     }
 }

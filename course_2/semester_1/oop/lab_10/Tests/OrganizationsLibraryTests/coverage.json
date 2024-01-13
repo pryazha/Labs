@@ -1,0 +1,1050 @@
+{
+  "OrganizationsLibrary.dll": {
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/Factory.cs": {
+      "OrganizationsLibrary.Factory": {
+        "System.Int32 OrganizationsLibrary.Factory::get_CreatedProducts()": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Factory::set_CreatedProducts(System.Int32)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void OrganizationsLibrary.Factory::Show()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Factory::NotVirtualShow()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Factory::Init()": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Factory::RandomInit()": {
+          "Lines": {
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0
+          },
+          "Branches": []
+        },
+        "OrganizationsLibrary.Factory OrganizationsLibrary.Factory::ShallowCopy()": {
+          "Lines": {
+            "61": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": []
+        },
+        "System.Object OrganizationsLibrary.Factory::Clone()": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "68": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Factory::.ctor(System.String,System.String,System.Int32,System.Int32)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Factory::.ctor()": {
+          "Lines": {
+            "30": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/InsuranceCompany.cs": {
+      "OrganizationsLibrary.InsuranceCompany": {
+        "System.String OrganizationsLibrary.InsuranceCompany::get_InsuranceType()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.InsuranceCompany::Show()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.InsuranceCompany::NotVirtualShow()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.InsuranceCompany::Init()": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.InsuranceCompany::RandomInit()": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        },
+        "OrganizationsLibrary.InsuranceCompany OrganizationsLibrary.InsuranceCompany::ShallowCopy()": {
+          "Lines": {
+            "46": 0,
+            "47": 0,
+            "48": 0
+          },
+          "Branches": []
+        },
+        "System.Object OrganizationsLibrary.InsuranceCompany::Clone()": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "53": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.InsuranceCompany::.ctor(System.String,System.String,System.Int32,System.String)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.InsuranceCompany::.ctor()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/Interfaces.cs": {
+      "OrganizationsLibrary.SortByEmployeesCount": {
+        "System.Int32 OrganizationsLibrary.SortByEmployeesCount::System.Collections.IComparer.Compare(System.Object,System.Object)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 2,
+              "EndOffset": 10,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 13,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 21,
+              "Offset": 51,
+              "EndOffset": 53,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 21,
+              "Offset": 51,
+              "EndOffset": 57,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 75,
+              "EndOffset": 81,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/Library.cs": {
+      "OrganizationsLibrary.Library": {
+        "System.Int32 OrganizationsLibrary.Library::get_BooksCount()": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Library::set_BooksCount(System.Int32)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void OrganizationsLibrary.Library::Show()": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Library::NotVirtualShow()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Library::Init()": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Library::RandomInit()": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0
+          },
+          "Branches": []
+        },
+        "OrganizationsLibrary.Library OrganizationsLibrary.Library::ShallowCopy()": {
+          "Lines": {
+            "59": 0,
+            "60": 0,
+            "61": 0
+          },
+          "Branches": []
+        },
+        "System.Object OrganizationsLibrary.Library::Clone()": {
+          "Lines": {
+            "64": 0,
+            "65": 0,
+            "66": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Library::.ctor(System.String,System.String,System.Int32,System.Int32)": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Library::.ctor()": {
+          "Lines": {
+            "28": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/NotHierarchicalClass.cs": {
+      "OrganizationsLibrary.NotHierarchicalClass": {
+        "System.Int32 OrganizationsLibrary.NotHierarchicalClass::get_PositiveNumber()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.NotHierarchicalClass::set_PositiveNumber(System.Int32)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 14,
+              "Offset": 7,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void OrganizationsLibrary.NotHierarchicalClass::Show()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.NotHierarchicalClass::Init()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.NotHierarchicalClass::RandomInit()": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/Organization.cs": {
+      "OrganizationsLibrary.Organization": {
+        "System.String OrganizationsLibrary.Organization::get_Name()": {
+          "Lines": {
+            "15": 1
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Organization::set_Name(System.String)": {
+          "Lines": {
+            "17": 1,
+            "18": 1,
+            "19": 0,
+            "21": 1,
+            "22": 1
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 14,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.String OrganizationsLibrary.Organization::get_Address()": {
+          "Lines": {
+            "27": 1
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Organization::set_Address(System.String)": {
+          "Lines": {
+            "29": 1,
+            "30": 1,
+            "31": 0,
+            "33": 1,
+            "34": 1
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 14,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Int32 OrganizationsLibrary.Organization::get_EmployeesCount()": {
+          "Lines": {
+            "39": 1
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Organization::set_EmployeesCount(System.Int32)": {
+          "Lines": {
+            "41": 1,
+            "42": 1,
+            "43": 0,
+            "45": 1,
+            "46": 1
+          },
+          "Branches": [
+            {
+              "Line": 42,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 7,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void OrganizationsLibrary.Organization::Show()": {
+          "Lines": {
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Organization::NotVirtualShow()": {
+          "Lines": {
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Organization::ShowWithManager()": {
+          "Lines": {
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Organization::Init()": {
+          "Lines": {
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Organization::RandomInit()": {
+          "Lines": {
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean OrganizationsLibrary.Organization::Equals(System.Object)": {
+          "Lines": {
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0
+          },
+          "Branches": [
+            {
+              "Line": 101,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 14,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 37,
+              "EndOffset": 39,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 56,
+              "EndOffset": 58,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 37,
+              "EndOffset": 74,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 56,
+              "EndOffset": 74,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 OrganizationsLibrary.Organization::GetHashCode()": {
+          "Lines": {
+            "109": 0,
+            "110": 0,
+            "111": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 OrganizationsLibrary.Organization::CompareTo(System.Object)": {
+          "Lines": {
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0
+          },
+          "Branches": [
+            {
+              "Line": 115,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 115,
+              "Offset": 7,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 117,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 117,
+              "Offset": 42,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 118,
+              "Offset": 72,
+              "EndOffset": 74,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 118,
+              "Offset": 72,
+              "EndOffset": 78,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 119,
+              "Offset": 96,
+              "EndOffset": 98,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 119,
+              "Offset": 96,
+              "EndOffset": 102,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 120,
+              "Offset": 120,
+              "EndOffset": 122,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 120,
+              "Offset": 120,
+              "EndOffset": 126,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        },
+        "OrganizationsLibrary.Organization OrganizationsLibrary.Organization::ShallowCopy()": {
+          "Lines": {
+            "125": 0,
+            "126": 0,
+            "127": 0
+          },
+          "Branches": []
+        },
+        "System.Object OrganizationsLibrary.Organization::Clone()": {
+          "Lines": {
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Organization::.ctor(System.String,System.String,System.Int32)": {
+          "Lines": {
+            "49": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.Organization::.ctor()": {
+          "Lines": {
+            "57": 0
+          },
+          "Branches": []
+        }
+      },
+      "OrganizationsLibrary.Manager": {
+        "System.Void OrganizationsLibrary.Manager::.ctor(System.String)": {
+          "Lines": {
+            "140": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_10/OrganizationsLibrary/ShipbuildingCompany.cs": {
+      "OrganizationsLibrary.ShipbuildingCompany": {
+        "System.Int32 OrganizationsLibrary.ShipbuildingCompany::get_ShipsCount()": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.ShipbuildingCompany::set_ShipsCount(System.Int32)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void OrganizationsLibrary.ShipbuildingCompany::Show()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.ShipbuildingCompany::NotVirtualShow()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.ShipbuildingCompany::Init()": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.ShipbuildingCompany::RandomInit()": {
+          "Lines": {
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0
+          },
+          "Branches": []
+        },
+        "OrganizationsLibrary.ShipbuildingCompany OrganizationsLibrary.ShipbuildingCompany::ShallowCopy()": {
+          "Lines": {
+            "61": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": []
+        },
+        "System.Object OrganizationsLibrary.ShipbuildingCompany::Clone()": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "68": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.ShipbuildingCompany::.ctor(System.String,System.String,System.Int32,System.Int32)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrganizationsLibrary.ShipbuildingCompany::.ctor()": {
+          "Lines": {
+            "30": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "InputLibrary.dll": {
+    "/home/pryazha/labs/course_2/semester_1/oop/lab_10/InputLibrary/Input.cs": {
+      "InputLibrary.Input": {
+        "System.Int32 InputLibrary.Input::IntInput(System.String)": {
+          "Lines": {
+            "6": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 50,
+              "EndOffset": 1,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 13,
+              "Offset": 28,
+              "EndOffset": 30,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 13,
+              "Offset": 28,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 50,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String InputLibrary.Input::StringInput(System.String)": {
+          "Lines": {
+            "22": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 66,
+              "EndOffset": 1,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 15,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 37,
+              "EndOffset": 39,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 37,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 66,
+              "EndOffset": 68,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

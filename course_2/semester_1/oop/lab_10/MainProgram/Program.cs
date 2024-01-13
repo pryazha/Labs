@@ -49,11 +49,7 @@ namespace lab_10
             Organization[] arr = new Organization[0];
             do {
                 PrintMenu(menu);
-                do {
-                    choose = Input.IntInput("> ");
-                    if (choose < 0 || choose > menu.Length)
-                        Console.WriteLine("Такого выбора не существует");
-                } while (choose < 0 || choose > menu.Length);
+                choose = Input.IntInput("> ");
                 switch (choose)
                 {
                     case 1:
@@ -78,6 +74,9 @@ namespace lab_10
                                 count++;
                         Console.WriteLine("В массиве " + count + " объектов типа Library");
                         break;
+                    default:
+                        Console.WriteLine("Такого выбора не существует");
+                        break;
                 }
             } while (choose != 0);
         }
@@ -90,13 +89,7 @@ namespace lab_10
             Organization[] arr = new Organization[0];
             do {
                 PrintMenu(menu);
-
-                do {
-                    choose = Input.IntInput("> ");
-                    if (choose < 0 || choose > menu.Length)
-                        Console.WriteLine("Такого выбора не существует");
-                } while (choose < 0 || choose > menu.Length);
-
+                choose = Input.IntInput("> ");
                 switch (choose)
                 {
                     case 1:
@@ -124,6 +117,9 @@ namespace lab_10
                     case 4:
                         Console.WriteLine($"Суммарное количество книг в библиотеках: {GetBooksCount(arr)}");
                         break;
+                    default:
+                        Console.WriteLine("Такого выбора не существует");
+                        break;
                 }
             } while (choose != 0);
         }
@@ -137,13 +133,7 @@ namespace lab_10
             Organization[] arr = new Organization[0];
             do {
                 PrintMenu(menu);
-
-                do {
-                    choose = Input.IntInput("> ");
-                    if (choose < 0 || choose > menu.Length)
-                        Console.WriteLine("Такого выбора не существует");
-                } while (choose < 0 || choose > menu.Length);
-
+                choose = Input.IntInput("> ");
                 switch (choose)
                 {
                     case 1:
@@ -181,6 +171,9 @@ namespace lab_10
                     case 6:
                         DisplayDiffCopy();
                         break;
+                    default:
+                        Console.WriteLine("Такого выбора не существует");
+                        break;
                 }
             } while (choose != 0);
         }
@@ -213,7 +206,7 @@ namespace lab_10
             }
         }
 
-        static Organization[] CreateRandomArray(int size)
+        public static Organization[] CreateRandomArray(int size)
         {
             if (size <= 0) {
                 Console.WriteLine("Размер массива не может быть меньше или равен 0!");
@@ -249,7 +242,7 @@ namespace lab_10
         }
 
         // Организация с наибольшим количеством сотрудников
-        static Organization? MaxEmployeesOrg(Organization[] organizations)
+        public static Organization? MaxEmployeesOrg(Organization[] organizations)
         {
             Organization? max = null;
 
@@ -269,7 +262,7 @@ namespace lab_10
         }
 
         // Организация с наименьшим количеством сотрудников
-        static Organization? MinEmployeesOrg(Organization[] organizations)
+        public static Organization? MinEmployeesOrg(Organization[] organizations)
         {
             Organization? min = null;
 
@@ -289,11 +282,12 @@ namespace lab_10
         }
 
         // Суммарное количество книг во всех библиотеках
-        static int GetBooksCount(Organization[] organizations)
+        public static int GetBooksCount(Organization[] organizations)
         {
             if (organizations is null || organizations.Length == 0)
             {
                 Console.WriteLine("Массив организаций пуст.");
+                return 0;
             }
 
             int booksCount = 0;
@@ -309,8 +303,14 @@ namespace lab_10
             return booksCount;
         }
 
-        static Organization? BinarySearchByEmployeesCount(Organization[] organizations, int target)
+        public static Organization? BinarySearchByEmployeesCount(Organization[] organizations, int target)
         {
+            if (organizations is null || organizations.Length == 0)
+            {
+                Console.WriteLine("Массив организаций пуст.");
+                return null;
+            }
+
             int left = 0;
             int right = organizations.Length - 1;
 
@@ -318,6 +318,7 @@ namespace lab_10
             {
                 int mid = (left + right) / 2;
                 int diff = organizations[mid].EmployeesCount.CompareTo(target);
+
                 if (diff == 0)
                     return organizations[mid];
 
@@ -342,12 +343,25 @@ namespace lab_10
                 new NotHierarchicalClass()
             };
 
+            Console.WriteLine("1. RandomInit.\n2. Init.");
+            int choose = Input.IntInput("> ");
+            foreach (var item in objects) {
+                if (choose == 1)
+                    item.RandomInit();
+                else
+                {
+                    Console.WriteLine($"Объект типа {item}:");
+                    item.Init();
+                    Console.WriteLine();
+                }
+            }
+
             Console.WriteLine("\nМассив типа IInit: состоит из объектов Organization, InsuranceCompany, ShipbuildingCompany, Factory, Library, NonHierarhicalClass");
 
             foreach (var item in objects)
             {
-                item.RandomInit();
                 item.Show();
+                Console.WriteLine();
             }
         }
 
@@ -359,21 +373,21 @@ namespace lab_10
             Console.WriteLine("Оригинальный объект:");
             origOrg.ShowWithManager();
 
-            var cloneOrg = origOrg;
-            Console.WriteLine("Клонирование:");
+            var cloneOrg = (Organization)origOrg.Clone();
+            Console.WriteLine("Глубокое копирование:");
             cloneOrg.ShowWithManager();
 
             Console.WriteLine("Поверхностное копирование:");
             var shallowCopyOrg = origOrg.ShallowCopy();
             shallowCopyOrg.ShowWithManager();
 
-            origOrg.Name = "Новое имя для оригинальной организации";
-            shallowCopyOrg.manager = new Manager("Новый управляющий");
+            origOrg.Name = "Новое имя оригинальной организации";
+            shallowCopyOrg.manager.Name = "Новое имя управляющего";
 
             Console.WriteLine("\nОригинальный объект после изменения:");
             origOrg.ShowWithManager();
 
-            Console.WriteLine("Клонирование:");
+            Console.WriteLine("Глубокое копирование:");
             cloneOrg.ShowWithManager();
 
             Console.WriteLine("Поверхностное копирование:");
