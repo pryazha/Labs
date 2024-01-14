@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ew/vK+K2ogB/Q2EnGnHps++gCJME1ECo1weE29tSoOn/DCU+ve5ZdY+OrOJ9DYGsztFHTfH1ZFpPW/m0a52eKg==",
+  "success": true,
+  "projectFilePath": "/home/pryazha/labs/course_2/semester_1/oop/lab_11/Libs/OrganizationsLibrary/OrganizationsLibrary.csproj",
+  "expectedPackageFiles": [
+    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
