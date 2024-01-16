@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program.Tests/Program.Tests.csproj": {}
+    "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program.Tests\\Program.Tests.csproj": {}
   },
   "projects": {
-    "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program.Tests/Program.Tests.csproj": {
+    "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program.Tests\\Program.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program.Tests/Program.Tests.csproj",
+        "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program.Tests\\Program.Tests.csproj",
         "projectName": "Program.Tests",
-        "projectPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program.Tests/Program.Tests.csproj",
-        "packagesPath": "/home/pryazha/.nuget/packages/",
-        "outputPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program.Tests/obj/",
+        "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program.Tests\\Program.Tests.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/pryazha/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program/Program.csproj": {
-                "projectPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program/Program.csproj"
+              "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program\\Program.csproj": {
+                "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program\\Program.csproj"
               }
             }
           }
@@ -80,37 +82,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program/Program.csproj": {
+    "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program/Program.csproj",
+        "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program/Program.csproj",
-        "packagesPath": "/home/pryazha/.nuget/packages/",
-        "outputPath": "/home/pryazha/labs/course_2/semester_1/oop/lab_6/Program/obj/",
+        "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program\\Program.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_6\\Program\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/pryazha/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -139,18 +137,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

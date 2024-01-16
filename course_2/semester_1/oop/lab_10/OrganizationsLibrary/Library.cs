@@ -6,6 +6,14 @@ public class Library : Organization, IInit, IComparable, ICloneable
 {
     int booksCount;
 
+    public Organization BaseOrganization
+    {
+        get
+        {
+            return new Organization(Name, Address, EmployeesCount);
+        }
+    }
+
     public int BooksCount
     {
         get

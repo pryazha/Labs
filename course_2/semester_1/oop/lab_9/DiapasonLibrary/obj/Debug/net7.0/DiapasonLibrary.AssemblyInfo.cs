@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiapasonLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+042ac5877ab11b46fcd2e0d739e4f38d338a70b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiapasonLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiapasonLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -68,14 +68,20 @@ namespace lab_10
                         PrintArrVirtual(arr);
                         break;
                     case 4:
+                        if (arr.Length == 0)
+                        {
+                            Console.WriteLine("Массив организаций пуст.");
+                            break;
+                        }
                         int count = 0;
                         foreach (var item in arr)
                             if (item is Library)
                                 count++;
-                        Console.WriteLine("В массиве " + count + " объектов типа Library");
+                        Console.WriteLine("Количество объектов типа Library: {0}", count);
                         break;
                     default:
-                        Console.WriteLine("Такого выбора не существует");
+                        if (choose < 0 || choose > 4)
+                            Console.WriteLine("Такого выбора не существует");
                         break;
                 }
             } while (choose != 0);
@@ -102,23 +108,43 @@ namespace lab_10
                         arr = CreateRandomArray(size);
                         PrintArrVirtual(arr);
                         break;
+
                     case 2:
+                        if (arr.Length == 0)
+                        {
+                            Console.WriteLine("Массив организаций пуст.");
+                            break;
+                        }
                         Console.WriteLine($"Организация с наибольшим количеством сотрудников:");
                         var max = MaxEmployeesOrg(arr);
                         if (max != null)
                             max.Show();
                         break;
+
                     case 3:
+                        if (arr.Length == 0)
+                        {
+                            Console.WriteLine("Массив организаций пуст.");
+                            break;
+                        }
                         Console.WriteLine($"Организация с наименьшим количеством сотрудников:");
                         var min = MinEmployeesOrg(arr);
                         if (min != null)
                             min.Show();
                         break;
+
                     case 4:
+                        if (arr.Length == 0)
+                        {
+                            Console.WriteLine("Массив организаций пуст.");
+                            break;
+                        }
                         Console.WriteLine($"Суммарное количество книг в библиотеках: {GetBooksCount(arr)}");
                         break;
+
                     default:
-                        Console.WriteLine("Такого выбора не существует");
+                        if (choose < 0 || choose > 4)
+                            Console.WriteLine("Такого выбора не существует");
                         break;
                 }
             } while (choose != 0);
@@ -146,16 +172,29 @@ namespace lab_10
                         arr = CreateRandomArray(size);
                         PrintArrVirtual(arr);
                         break;
+
                     case 2:
+                        if (arr.Length == 0)
+                        {
+                            Console.WriteLine("Массив организаций пуст.");
+                            break;
+                        }
                         Console.WriteLine("Отсортированный массив:");
                         Array.Sort(arr);
                         PrintArrVirtual(arr);
                         break;
+
                     case 3:
+                        if (arr.Length == 0)
+                        {
+                            Console.WriteLine("Массив организаций пуст.");
+                            break;
+                        }
                         Console.WriteLine("\nСортировка по количеству сотрудников:");
                         Array.Sort(arr, new SortByEmployeesCount());
                         PrintArrVirtual(arr);
                         break;
+
                     case 4:
                         int employeesCount;
                         employeesCount = Input.IntInput("Введите количество сотрудников\n> ");
@@ -163,14 +202,18 @@ namespace lab_10
                         if (result != null)
                             result.Show();
                         break;
+
                     case 5:
                         DisplayIInit();
                         break;
+
                     case 6:
                         DisplayDiffCopy();
                         break;
+
                     default:
-                        Console.WriteLine("Такого выбора не существует");
+                        if (choose < 0 || choose > 6)
+                            Console.WriteLine("Такого выбора не существует");
                         break;
                 }
             } while (choose != 0);
@@ -179,7 +222,7 @@ namespace lab_10
         static void PrintArrVirtual(Organization[] organizations)
         {
             if (organizations.Length == 0) {
-                Console.WriteLine("Размер массива не может быть равен 0!");
+                Console.WriteLine("Массив организаций пуст.");
                 return;
             }
             Console.WriteLine("Виртуальный метод:");
@@ -193,7 +236,7 @@ namespace lab_10
         static void PrintArrNotVirtual(Organization[] organizations)
         {
             if (organizations.Length == 0) {
-                Console.WriteLine("Размер массива не может быть равен 0!");
+                Console.WriteLine("Массив организаций пуст.");
                 return;
             }
             Console.WriteLine("Не виртуальный метод: ");

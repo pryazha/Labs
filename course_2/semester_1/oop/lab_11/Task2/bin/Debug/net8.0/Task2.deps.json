@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Task2/1.0.0": {
+        "dependencies": {
+          "InputLibrary": "1.0.0",
+          "OrganizationsLibrary": "1.0.0"
+        },
+        "runtime": {
+          "Task2.dll": {}
+        }
+      },
+      "InputLibrary/1.0.0": {
+        "runtime": {
+          "InputLibrary.dll": {}
+        }
+      },
+      "OrganizationsLibrary/1.0.0": {
+        "dependencies": {
+          "InputLibrary": "1.0.0"
+        },
+        "runtime": {
+          "OrganizationsLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Task2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InputLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OrganizationsLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

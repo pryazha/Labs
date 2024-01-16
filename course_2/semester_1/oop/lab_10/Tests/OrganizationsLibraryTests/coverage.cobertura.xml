@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.5586" branch-rate="0.5869" version="1.9" timestamp="1705139330" lines-covered="181" lines-valid="324" branches-covered="27" branches-valid="46">
+<coverage line-rate="0.5992999999999999" branch-rate="0.75" version="1.9" timestamp="1705313387" lines-covered="181" lines-valid="302" branches-covered="27" branches-valid="36">
   <sources>
-    <source>/home/pryazha/labs/course_2/semester_1/oop/lab_10/</source>
+    <source>C:\pryazha\labs\course_2\semester_1\oop\lab_10\OrganizationsLibrary\</source>
   </sources>
   <packages>
     <package name="OrganizationsLibrary" line-rate="0.5992999999999999" branch-rate="0.75" complexity="90">
       <classes>
-        <class name="OrganizationsLibrary.Factory" filename="OrganizationsLibrary/Factory.cs" line-rate="0.6078" branch-rate="1" complexity="11">
+        <class name="OrganizationsLibrary.Factory" filename="Factory.cs" line-rate="0.6078" branch-rate="1" complexity="11">
           <methods>
             <method name="get_CreatedProducts" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -162,7 +162,7 @@
             <line number="37" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="OrganizationsLibrary.InsuranceCompany" filename="OrganizationsLibrary/InsuranceCompany.cs" line-rate="0.5" branch-rate="1" complexity="9">
+        <class name="OrganizationsLibrary.InsuranceCompany" filename="InsuranceCompany.cs" line-rate="0.5" branch-rate="1" complexity="9">
           <methods>
             <method name="get_InsuranceType" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -284,7 +284,7 @@
             <line number="21" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="OrganizationsLibrary.SortByEmployeesCount" filename="OrganizationsLibrary/Interfaces.cs" line-rate="0" branch-rate="0" complexity="8">
+        <class name="OrganizationsLibrary.SortByEmployeesCount" filename="Interfaces.cs" line-rate="0" branch-rate="0" complexity="8">
           <methods>
             <method name="System.Collections.IComparer.Compare" signature="(System.Object,System.Object)" line-rate="0" branch-rate="0" complexity="8">
               <lines>
@@ -336,7 +336,7 @@
             <line number="24" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="OrganizationsLibrary.Library" filename="OrganizationsLibrary/Library.cs" line-rate="0.6" branch-rate="1" complexity="11">
+        <class name="OrganizationsLibrary.Library" filename="Library.cs" line-rate="0.6" branch-rate="1" complexity="11">
           <methods>
             <method name="get_BooksCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -490,7 +490,7 @@
             <line number="38" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="OrganizationsLibrary.NotHierarchicalClass" filename="OrganizationsLibrary/NotHierarchicalClass.cs" line-rate="0.42100000000000004" branch-rate="0.5" complexity="6">
+        <class name="OrganizationsLibrary.NotHierarchicalClass" filename="NotHierarchicalClass.cs" line-rate="0.42100000000000004" branch-rate="0.5" complexity="6">
           <methods>
             <method name="get_PositiveNumber" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -562,7 +562,7 @@
             <line number="38" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="OrganizationsLibrary.Organization" filename="OrganizationsLibrary/Organization.cs" line-rate="0.7317" branch-rate="1" complexity="33">
+        <class name="OrganizationsLibrary.Organization" filename="Organization.cs" line-rate="0.7317" branch-rate="1" complexity="33">
           <methods>
             <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -870,7 +870,7 @@
             <line number="42" hits="7" branch="False" />
           </lines>
         </class>
-        <class name="OrganizationsLibrary.Manager" filename="OrganizationsLibrary/Organization.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="OrganizationsLibrary.Manager" filename="Organization.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -882,7 +882,7 @@
             <line number="128" hits="106" branch="False" />
           </lines>
         </class>
-        <class name="OrganizationsLibrary.ShipbuildingCompany" filename="OrganizationsLibrary/ShipbuildingCompany.cs" line-rate="0.6078" branch-rate="1" complexity="11">
+        <class name="OrganizationsLibrary.ShipbuildingCompany" filename="ShipbuildingCompany.cs" line-rate="0.6078" branch-rate="1" complexity="11">
           <methods>
             <method name="get_ShipsCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1036,108 +1036,6 @@
             <line number="35" hits="2" branch="False" />
             <line number="36" hits="2" branch="False" />
             <line number="37" hits="2" branch="False" />
-          </lines>
-        </class>
-      </classes>
-    </package>
-    <package name="InputLibrary" line-rate="0" branch-rate="0" complexity="10">
-      <classes>
-        <class name="InputLibrary.Input" filename="InputLibrary/Input.cs" line-rate="0" branch-rate="0" complexity="10">
-          <methods>
-            <method name="IntInput" signature="(System.String)" line-rate="0" branch-rate="0" complexity="4">
-              <lines>
-                <line number="6" hits="0" branch="False" />
-                <line number="10" hits="0" branch="False" />
-                <line number="11" hits="0" branch="False" />
-                <line number="12" hits="0" branch="False" />
-                <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="28" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="14" hits="0" branch="False" />
-                <line number="15" hits="0" branch="False" />
-                <line number="16" hits="0" branch="False" />
-                <line number="17" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="50" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="18" hits="0" branch="False" />
-                <line number="19" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="StringInput" signature="(System.String)" line-rate="0" branch-rate="0" complexity="6">
-              <lines>
-                <line number="22" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
-                <line number="26" hits="0" branch="False" />
-                <line number="27" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="15" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="37" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="66" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="6" hits="0" branch="False" />
-            <line number="10" hits="0" branch="False" />
-            <line number="11" hits="0" branch="False" />
-            <line number="12" hits="0" branch="False" />
-            <line number="13" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="28" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="14" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="50" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="18" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="15" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="37" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="66" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
           </lines>
         </class>
       </classes>

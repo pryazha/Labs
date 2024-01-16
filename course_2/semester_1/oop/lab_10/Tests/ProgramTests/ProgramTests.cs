@@ -14,7 +14,7 @@ public class ProgramTestsClass
         Organization? result = Program.MaxEmployeesOrg(null);
 
         // Assert
-        Assert.Equal(null, result);
+        Assert.Null(result);
     }
 
     [Fact]
@@ -27,7 +27,7 @@ public class ProgramTestsClass
         Organization? result = Program.MaxEmployeesOrg(organizations);
 
         // Assert
-        Assert.Equal(null, result);
+        Assert.Null(result);
     }
     
     [Fact]
@@ -73,7 +73,7 @@ public class ProgramTestsClass
         Organization? result = Program.MinEmployeesOrg(null);
 
         // Assert
-        Assert.Equal(null, result);
+        Assert.Null(result);
     }
 
     [Fact]
@@ -86,7 +86,7 @@ public class ProgramTestsClass
         Organization? result = Program.MinEmployeesOrg(organizations);
 
         // Assert
-        Assert.Equal(null, result);
+        Assert.Null(result);
     }
     
     [Fact]
@@ -203,7 +203,7 @@ public class ProgramTestsClass
         Organization? result = Program.BinarySearchByEmployeesCount(null, 0);
 
         // Assert
-        Assert.Equal(null, result);
+        Assert.Null(result);
     }
 
     [Fact]
@@ -220,7 +220,7 @@ public class ProgramTestsClass
         Organization? result = Program.BinarySearchByEmployeesCount(organizations, 0);
 
         // Assert
-        Assert.Equal(null, result);
+        Assert.Null(result);
     }
 
     [Fact]

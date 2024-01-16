@@ -219,11 +219,6 @@ for (i = 0, l = charts.length; i < l; i++) {
 
 var assemblies = [
   {
-    "name": "InputLibrary",
-    "classes": [
-      { "name": "InputLibrary.Input", "rp": "InputLibrary_Input.html", "cl": 0, "ucl": 22, "cal": 22, "tl": 35, "cb": 0, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-    ]},
-  {
     "name": "OrganizationsLibrary",
     "classes": [
       { "name": "OrganizationsLibrary.Factory", "rp": "OrganizationsLibrary_Factory.html", "cl": 31, "ucl": 20, "cal": 51, "tl": 78, "cb": 2, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },

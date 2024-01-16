@@ -1,0 +1,12 @@
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\bin\x64\Debug\net7.0\InputLibrary.deps.json
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\bin\x64\Debug\net7.0\InputLibrary.dll
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\bin\x64\Debug\net7.0\InputLibrary.pdb
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\obj\x64\Debug\net7.0\InputLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\obj\x64\Debug\net7.0\InputLibrary.AssemblyInfoInputs.cache
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\obj\x64\Debug\net7.0\InputLibrary.AssemblyInfo.cs
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\obj\x64\Debug\net7.0\InputLibrary.csproj.CoreCompileInputs.cache
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\obj\x64\Debug\net7.0\InputLibrary.sourcelink.json
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\obj\x64\Debug\net7.0\InputLibrary.dll
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\obj\x64\Debug\net7.0\refint\InputLibrary.dll
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\obj\x64\Debug\net7.0\InputLibrary.pdb
+C:\pryazha\labs\course_2\semester_1\oop\lab_10\InputLibrary\obj\x64\Debug\net7.0\ref\InputLibrary.dll

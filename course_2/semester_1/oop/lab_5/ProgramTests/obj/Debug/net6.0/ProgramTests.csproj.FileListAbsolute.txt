@@ -202,3 +202,4 @@ C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\ProgramTests\obj\Debug\net6.0\refi
 C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\ProgramTests\obj\Debug\net6.0\ProgramTests.pdb
 C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\ProgramTests\obj\Debug\net6.0\ProgramTests.genruntimeconfig.cache
 C:\Pryazha\Labs\course_2\semester_1\oop\lab_5\ProgramTests\obj\Debug\net6.0\ref\ProgramTests.dll
+C:\pryazha\labs\course_2\semester_1\oop\lab_5\ProgramTests\obj\Debug\net6.0\ProgramTests.sourcelink.json

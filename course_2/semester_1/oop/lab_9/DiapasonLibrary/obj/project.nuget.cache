@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x7cJZrBahSbuiVMfk5ZxFEKJ2alVRsWVh0x+Km/ptgtpY4j3nNW/vK3vgThg0cD2WyVP8FrqyrSjNiXjbGx6KA==",
+  "dgSpecHash": "WH4ZydZisWPZwEpZE8GqGCZK2WSl83LkrM0wxfFZ+PEfawboVw5oKx0jHaEsb6FWYju0k8RgElpR+4z6CN7vTQ==",
   "success": true,
-  "projectFilePath": "/home/pryazha/labs/course_2/semester_1/oop/lab_9/DiapasonLibrary/DiapasonLibrary.csproj",
-  "expectedPackageFiles": [
-    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_9\\DiapasonLibrary\\DiapasonLibrary.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
