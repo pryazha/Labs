@@ -84,4 +84,12 @@ public class Library : Organization, IInit, IComparable, ICloneable
         library.manager = new Manager(manager.Name);
         return library;
     }
+
+    public override string ToString()
+    {
+        return $"Название организации: {Name}\n" +
+               $"Адрес организации: {Address}\n" +
+               $"Количество сотрудников: {EmployeesCount}\n" +
+               $"Количество книг: {BooksCount}";
+    }
 }

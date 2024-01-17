@@ -29,6 +29,9 @@ namespace lab_10
                         break;
                 }
             } while (choose != 0);
+
+            Library lib = new Library();
+            Console.WriteLine(lib.ToString());
         }
 
         static void PrintMenu(String[] menu) {
@@ -385,7 +388,14 @@ namespace lab_10
             };
 
             Console.WriteLine("1. RandomInit.\n2. Init.");
-            int choose = Input.IntInput("> ");
+            int choose;
+            do
+            {
+                choose = Input.IntInput("> ");
+                if (choose != 1 || choose != 2)
+                    Console.WriteLine("Такого выбора не существует.");
+            } while (choose != 1 || choose != 2);
+
             foreach (var item in objects) {
                 if (choose == 1)
                     item.RandomInit();

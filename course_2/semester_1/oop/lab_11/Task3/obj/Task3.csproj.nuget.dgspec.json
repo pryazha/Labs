@@ -1,0 +1,246 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj": {}
+  },
+  "projects": {
+    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj",
+        "projectName": "InputLibrary",
+        "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj",
+        "projectName": "OrganizationsLibrary",
+        "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {
+                "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj",
+        "projectName": "Lab11_libs",
+        "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
+                "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj",
+        "projectName": "Task3",
+        "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {
+                "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj"
+              },
+              "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
+                "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
+              },
+              "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj": {
+                "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
