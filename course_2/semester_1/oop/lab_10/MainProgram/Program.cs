@@ -29,9 +29,6 @@ namespace lab_10
                         break;
                 }
             } while (choose != 0);
-
-            Library lib = new Library();
-            Console.WriteLine(lib.ToString());
         }
 
         static void PrintMenu(String[] menu) {
@@ -199,11 +196,17 @@ namespace lab_10
                         break;
 
                     case 4:
-                        int employeesCount;
-                        employeesCount = Input.IntInput("Введите количество сотрудников\n> ");
+                        if (arr.Length == 0)
+                        {
+                            Console.WriteLine("Массив организаций пуст.");
+                            break;
+                        }
+                        int employeesCount = Input.IntInput("Введите количество сотрудников\n> ");
                         var result = BinarySearchByEmployeesCount(arr, employeesCount);
                         if (result != null)
                             result.Show();
+                        else
+                            Console.WriteLine("Такой организации не существует.");
                         break;
 
                     case 5:
@@ -392,9 +395,9 @@ namespace lab_10
             do
             {
                 choose = Input.IntInput("> ");
-                if (choose != 1 || choose != 2)
+                if (choose != 1 && choose != 2)
                     Console.WriteLine("Такого выбора не существует.");
-            } while (choose != 1 || choose != 2);
+            } while (choose != 1 && choose != 2);
 
             foreach (var item in objects) {
                 if (choose == 1)

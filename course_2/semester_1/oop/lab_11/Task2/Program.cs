@@ -17,7 +17,7 @@ class Program
             "Вывести все объекты типа Library.",
             "Подсчитать количество объектов типа ShipbuildingCompany.",
             "Подсчитать количество сотрудников объектов типа Factory.",
-            "Отсортировать Dictionary."
+            "Найти объект."
         };
 
         Dictionary<String, Organization> dict = new Dictionary<String, Organization>();
@@ -31,7 +31,6 @@ class Program
             switch (choose)
             {
                 case 1:
-                    Organization org = new Organization();
                     key = Input.StringInput("Введите ключ: ");
                     if (dict.ContainsKey(key))
                     {
@@ -45,16 +44,17 @@ class Program
                         Console.WriteLine("1. Случайный объект.\n2. Создать объект вручную");
                         orgChoose = Input.IntInput("> ");
                         if (choose < 1 || choose > 2)
-                            Console.WriteLine("Такого выбора не существует.");
+                            Console.WriteLine("Такого выбора не существует.\n");
                     } while (orgChoose < 1 || orgChoose > 2);
 
+                    Organization org;
                     if (orgChoose == 1)
                         org = CreateRandomOrg();
                     else
                         org = CreateManualOrg();
 
                     dict.Add(key, org);
-                    Console.WriteLine($"Объект {org} успешно добавлен.\n");
+                    Console.WriteLine($"Объект {org.GetType()} успешно добавлен.\n");
                     break;
 
                 case 2:
@@ -78,37 +78,27 @@ class Program
                     break;
 
                 case 7:
-                    dict = SortDictionary(dict);
-                    PrintDictionary(dict);
+                    if (dict.Count == 0)
+                    {
+                        Console.WriteLine("Хеш-таблица не содержит объектов.\n");
+                        break;
+                    }
+                    key = Input.StringInput("Введите ключ: ");
+                    if (dict.ContainsKey(key))
+                    {
+                        dict[key].Show();
+                        Console.WriteLine();
+                    }
+                    else
+                        Console.WriteLine("Хеш-таблица не содержит данного ключа.\n");
                     break;
 
                 default:
                     if (choose != 0)
-                        Console.WriteLine("Такого выбора не существует.");
+                        Console.WriteLine("Такого выбора не существует.\n");
                     break;
             }
         } while (choose != 0);
-        
-        /*
-        hashtable = new Hashtable();
-        hashtable.Add("key", new Organization());
-        hashtable.Add("another_key", new Organization());
-        Console.WriteLine("Оригинальная хеш-таблица:");
-        PrintHashtable(hashtable);
-
-        Hashtable newHashtable = (Hashtable)hashtable.Clone();
-        Console.WriteLine("Новая клонированная хеш-таблица:");
-        PrintHashtable(newHashtable);
-
-        Organization? item = (Organization?)newHashtable["key"];
-        if (item != null)
-            item.Name = "New organization name";
-
-        Console.WriteLine("Старая хеш-таблица после изменения названия объекта с ключом \"key\" новой хеш-таблицы:");
-        PrintHashtable(hashtable);
-        Console.WriteLine("Новая хеш-таблица:");
-        PrintHashtable(newHashtable);
-        */
     }
 
     static Organization CreateRandomOrg() {
@@ -149,7 +139,7 @@ class Program
                 "5. Library.");
             choose = Input.IntInput("> ");
             if (choose < 1 || choose > 5)
-                Console.WriteLine("Такого выбора не существует.");
+                Console.WriteLine("Такого выбора не существует.\n");
         } while (choose < 1 || choose > 5);
 
         Organization org = new Organization();
@@ -286,7 +276,7 @@ class Program
             Console.WriteLine($"Количество всех сотрудников типа Factory: {employeesCount}\n");
     }
 
-    static Dictionary<String, Organization> SortDictionary(Dictionary<String, Organization> dict)
+    static Dictionary<String, Organization> SortDictionaryByKey(Dictionary<String, Organization> dict)
     {
         if (dict.Count == 0)
         {
@@ -294,25 +284,25 @@ class Program
             return dict;
         }
 
-        Organization[] orgs = new Organization[dict.Count];
+        String[] keys = new String[dict.Count];
 
         int i = 0;
-        foreach (var org in dict.Values)
+        foreach (var key in dict.Keys)
         {
-            orgs[i++] = org;
+            keys[i++] = key;
         }
 
-        Array.Sort(orgs);
+        Array.Sort(keys);
 
         Dictionary<String, Organization> sortedDict = new Dictionary<string, Organization>();
 
-        foreach (var org in orgs)
+        foreach (var key in keys)
         {
             foreach (var item in dict)
             {
-                if (item.Value.Equals(org))
+                if (item.Key.Equals(key))
                 {
-                    sortedDict.Add(item.Key, org);
+                    sortedDict.Add(key, item.Value);
                     break;
                 }
             }

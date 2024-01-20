@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-
+using System.Collections.Immutable;
 using InputLibrary;
 using OrganizationsLibrary;
 
@@ -16,7 +16,7 @@ class Program
             "Вывести все объекты типа Library.",
             "Подсчитать количество объектов типа ShipbuildingCompany.",
             "Подсчитать количество сотрудников объектов типа Factory.",
-            "Найти заданный элемент."
+            "Найти объект."
         };
 
         Hashtable hashtable = new Hashtable();
@@ -44,7 +44,7 @@ class Program
                         Console.WriteLine("1. Случайный объект.\n2. Создать объект вручную");
                         orgChoose = Input.IntInput("> ");
                         if (choose < 1 || choose > 2)
-                            Console.WriteLine("Такого выбора не существует.");
+                            Console.WriteLine("Такого выбора не существует.\n");
                     } while (orgChoose < 1 || orgChoose > 2);
 
                     if (orgChoose == 1)
@@ -53,7 +53,7 @@ class Program
                         org = CreateManualOrg();
 
                     hashtable.Add(key, org);
-                    Console.WriteLine($"Объект {org} успешно добавлен.\n");
+                    Console.WriteLine($"Объект {org.GetType()} успешно добавлен.\n");
                     break;
 
                 case 2:
@@ -66,7 +66,7 @@ class Program
 
                 case 4:
                     PrintHashtableLibraries(hashtable);
-                    break; 
+                    break;
 
                 case 5:
                     CountShipbuildCompanies(hashtable);
@@ -82,46 +82,36 @@ class Program
                         Console.WriteLine("Хеш-таблица не содержит объектов.\n");
                         break;
                     }
-                    Organization findingOrg = CreateManualOrg();
-                    if (hashtable.ContainsValue(findingOrg))
-                        Console.WriteLine("Хеш-таблица содержит заданную организацию.\n");
+                    key = Input.StringInput("Введите ключ: ");
+                    if (hashtable.ContainsKey(key))
+                    {
+                        Organization? foundOrg = (Organization?)hashtable[key];
+                        if (foundOrg != null)
+                        {
+                            foundOrg.Show();
+                            Console.WriteLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Организация пуста");
+                        }
+                    }
                     else
-                        Console.WriteLine("Хеш-таблица не содержит заданной организации.\n");
+                        Console.WriteLine("Хеш-таблица не содержит данного ключа.\n");
                     break;
 
                 default:
                     if (choose != 0)
-                        Console.WriteLine("Такого выбора не существует.");
+                        Console.WriteLine("Такого выбора не существует.\n");
                     break;
             }
         } while (choose != 0);
-
-        /*
-        hashtable = new Hashtable();
-        hashtable.Add("key", new Organization());
-        hashtable.Add("another_key", new Organization());
-        Console.WriteLine("Оригинальная хеш-таблица:");
-        PrintHashtable(hashtable);
-
-        Hashtable newHashtable = (Hashtable)hashtable.Clone();
-        Console.WriteLine("Новая клонированная хеш-таблица:");
-        PrintHashtable(newHashtable);
-
-        Organization? item = (Organization?)newHashtable["key"];
-        if (item != null)
-            item.Name = "New organization name";
-
-        Console.WriteLine("Старая хеш-таблица после изменения названия объекта с ключом \"key\" новой хеш-таблицы:");
-        PrintHashtable(hashtable);
-        Console.WriteLine("Новая хеш-таблица:");
-        PrintHashtable(newHashtable);
-        */
     }
 
     static Organization CreateRandomOrg() {
         var rnd = new Random();
         int item = rnd.Next(1, 6);
-        Organization org = new Organization();;
+        Organization org = new Organization(); ;
         switch (item)
         {
             case 1:
@@ -146,21 +136,24 @@ class Program
     static Organization CreateManualOrg()
     {
         int choose;
-        do 
+        do
         {
             Console.WriteLine(
                 "1. Organization.\n" +
                 "2. InsuranceCompany.\n" +
                 "3. ShipbuildingCompany.\n" +
                 "4. Factory.\n" +
-                "5. Library.");
+                "5. Library.\n" +
+                "0. Выход.");
             choose = Input.IntInput("> ");
             if (choose < 1 || choose > 5)
-                Console.WriteLine("Такого выбора не существует.");
+                Console.WriteLine("Такого выбора не существует.\n");
+            if (choose == 0)
+                return new Organization();
         } while (choose < 1 || choose > 5);
 
         Organization org = new Organization();
-        switch (choose) 
+        switch (choose)
         {
             case 1:
                 org.Init();
@@ -184,7 +177,7 @@ class Program
         }
         return org;
     }
-    
+
     static void DeleteItem(ref Hashtable hashtable)
     {
         if (hashtable.Count == 0)
@@ -238,11 +231,11 @@ class Program
             return;
         }
 
+        int count = 0;
         foreach (DictionaryEntry item in hashtable)
         {
-            String key = (String) item.Key;
+            String key = (String)item.Key;
             Organization? org = (Organization?)item.Value;
-            int count = 0;
             if (org != null)
             {
                 if (org is Library)
@@ -252,10 +245,11 @@ class Program
                     count++;
                 }
             }
-            if (count == 0)
-                Console.WriteLine("Хеш-таблица не содержит объектов типа Library.");
-            Console.WriteLine();
         }
+
+        if (count == 0)
+            Console.WriteLine("Хеш-таблица не содержит объектов типа Library.\n");
+        Console.WriteLine();
     }
 
     static void CountShipbuildCompanies(Hashtable hashtable)
@@ -292,7 +286,7 @@ class Program
         {
             if (value is Factory)
             {
-                Factory factory = (Factory) value;
+                Factory factory = (Factory)value;
                 employeesCount += factory.EmployeesCount;
             }
         }
@@ -301,15 +295,5 @@ class Program
             Console.WriteLine("Хеш-таблица не содержит объектов типа Factory.\n");
         else
             Console.WriteLine($"Количество всех сотрудников типа Factory: {employeesCount}\n");
-    }
-
-    static bool FindOrganizationInHashtable(Hashtable hashtable, Organization target)
-    {
-        foreach (var org in hashtable.Values)
-        {
-            if (org.Equals(target))
-                return true;
-        }
-        return false;
     }
 }

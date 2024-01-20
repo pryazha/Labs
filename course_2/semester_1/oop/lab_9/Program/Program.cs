@@ -43,7 +43,7 @@ class Program
         DiapasonArray darr2 = new DiapasonArray(5);
         Console.WriteLine("Конструктор с параметром length: darr2:"); darr2.Print();
         darr2[2] = new Diapason(4, 100.4);
-        Console.WriteLine("darr2:"); darr2.Print();
+        Console.WriteLine("darr2 после изменения darr2[2]:"); darr2.Print();
 
         Console.WriteLine("Попытка обращения к элементу darr[5]");
         darr2[5] = new Diapason(5, 10);

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj": {}
+    "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj": {}
   },
   "projects": {
     "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {
@@ -118,14 +118,14 @@
         }
       }
     },
-    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj": {
+    "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj",
+        "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj",
         "projectName": "Lab11_libs",
-        "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj",
+        "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\obj\\",
+        "outputPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -142,8 +142,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
-                "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
+              "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
+                "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
               }
             }
           }
@@ -177,14 +177,14 @@
         }
       }
     },
-    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj": {
+    "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj",
+        "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj",
         "projectName": "Task3",
-        "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj",
+        "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\Task3.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\obj\\",
+        "outputPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Task3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -201,14 +201,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {
-                "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj"
+              "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {
+                "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj"
               },
-              "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
-                "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
+              "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
+                "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
               },
-              "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj": {
-                "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj"
+              "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj": {
+                "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_11\\Lab11_libs\\Lab11_libs.csproj"
               }
             }
           }
