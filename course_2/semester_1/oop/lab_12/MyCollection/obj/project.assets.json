@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "InputLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/InputLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InputLibrary.dll": {}
+        }
+      },
+      "OrganizationsLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "InputLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OrganizationsLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OrganizationsLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InputLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../lab_10/InputLibrary/InputLibrary.csproj",
+      "msbuildProject": "../../lab_10/InputLibrary/InputLibrary.csproj"
+    },
+    "OrganizationsLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../lab_10/OrganizationsLibrary/OrganizationsLibrary.csproj",
+      "msbuildProject": "../../lab_10/OrganizationsLibrary/OrganizationsLibrary.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "OrganizationsLibrary >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\user\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_12\\MyCollection\\MyCollection.csproj",
+      "projectName": "MyCollection",
+      "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_12\\MyCollection\\MyCollection.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_12\\MyCollection\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
+              "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

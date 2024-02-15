@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {}
+    "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {}
   },
   "projects": {
-    "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {
+    "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj",
+        "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj",
         "projectName": "InputLibrary",
-        "projectPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj",
+        "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "c:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\obj\\",
+        "outputPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\InputLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

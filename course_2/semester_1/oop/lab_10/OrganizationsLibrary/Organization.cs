@@ -95,7 +95,7 @@ public class Organization : IInit, IComparable, ICloneable
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(Name, Address, EmployeesCount);
+        return employeesCount;
     }
 
     public int CompareTo(object? obj)
@@ -119,6 +119,13 @@ public class Organization : IInit, IComparable, ICloneable
         var other =  new Organization(Name, Address, EmployeesCount);
         other.manager = new Manager(manager.Name);
         return other;
+    }
+
+    public override string ToString()
+    {
+        return $"Название организации: {Name}\n" +
+               $"Адрес организации: {Address}\n" +
+               $"Количество сотрудников: {EmployeesCount}\n";
     }
 }
 

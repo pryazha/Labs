@@ -59,4 +59,9 @@ public class InsuranceCompany : Organization, IInit, IComparable, ICloneable
         insComp.manager = new Manager(manager.Name);
         return insComp;
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $"Тип страхования: {InsuranceType}";
+    }
 }

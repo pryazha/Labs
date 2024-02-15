@@ -202,12 +202,15 @@ namespace lab_10
                             break;
                         }
                         int employeesCount = Input.IntInput("Введите количество сотрудников\n> ");
-                        var result = BinarySearchByEmployeesCount(arr, employeesCount);
-                        if (result != null)
-                            result.Show();
+                        Array.Sort(arr, new SortByEmployeesCount());
+
+                        int result = Array.BinarySearch(arr, new Organization("", "", employeesCount), new SortByEmployeesCount());
+                        if (result > 0)
+                            arr[result].Show();
                         else
                             Console.WriteLine("Такой организации не существует.");
                         break;
+
 
                     case 5:
                         DisplayIInit();
@@ -342,40 +345,15 @@ namespace lab_10
             {
                 if (item is Library)
                 {
-                    var temp = item as Library;
-                    booksCount += temp.BooksCount;
+                    Library? temp = (Library?)item;
+                    if (temp != null)
+                    {
+                        booksCount += temp.BooksCount;
+                    }
                 }
             }
 
             return booksCount;
-        }
-
-        public static Organization? BinarySearchByEmployeesCount(Organization[] organizations, int target)
-        {
-            if (organizations is null || organizations.Length == 0)
-            {
-                Console.WriteLine("Массив организаций пуст.");
-                return null;
-            }
-
-            int left = 0;
-            int right = organizations.Length - 1;
-
-            while (left <= right)
-            {
-                int mid = (left + right) / 2;
-                int diff = organizations[mid].EmployeesCount.CompareTo(target);
-
-                if (diff == 0)
-                    return organizations[mid];
-
-                if (diff < 0)
-                    left = mid + 1;
-                else
-                    right = mid - 1;
-            }
-
-            return null;
         }
 
         static void DisplayIInit()

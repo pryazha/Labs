@@ -75,4 +75,9 @@ public class Factory : Organization, IInit, IComparable, ICloneable
         factory.manager = new Manager(manager.Name);
         return factory;
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $"Количество созданных товаров: {CreatedProducts}";
+    }
 }

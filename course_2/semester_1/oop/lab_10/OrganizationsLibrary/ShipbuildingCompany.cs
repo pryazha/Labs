@@ -75,4 +75,9 @@ public class ShipbuildingCompany : Organization, IInit, IComparable, ICloneable
         shipComp.manager = new Manager(manager.Name);
         return shipComp;
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $"Количество построенных судов: {ShipsCount}";
+    }
 }
