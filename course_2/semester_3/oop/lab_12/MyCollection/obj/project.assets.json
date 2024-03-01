@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_12\\MyCollection\\MyCollection.csproj",
+      "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_12\\MyCollection\\MyCollection.csproj",
       "projectName": "MyCollection",
-      "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_12\\MyCollection\\MyCollection.csproj",
+      "projectPath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_12\\MyCollection\\MyCollection.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_12\\MyCollection\\obj\\",
+      "outputPath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_12\\MyCollection\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,8 +71,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
-              "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
+            "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
+              "projectPath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
             }
           }
         }

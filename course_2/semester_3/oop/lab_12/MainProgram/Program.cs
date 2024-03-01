@@ -8,6 +8,7 @@ public class Program
 {
     public static void Main()
     {
+        /*
         string[] menu = {
             "Создать хеш-таблицу.",
             "Вывести хеш-таблицу.",
@@ -78,13 +79,12 @@ public class Program
             }
             Console.WriteLine();
         } while (choice != 0);
+        */
 
-        MyGenericHashtable<int, Organization> hst = new MyGenericHashtable<int, Organization>(5);
-        hst.Add(0, new Organization());
-        hst.Add(1, new Organization());
-        hst.Add(2, new Organization());
-        hst.Add(3, new Organization());
-        hst.Add(4, new Organization());
+        // TODO(pryazha): Now I just want to implement MyGenericHashtable, after that I can make a working menu.
+        MyGenericHashtable<int, Organization> hst = new MyGenericHashtable<int, Organization>(1);
+        hst.Add(0, new Library());
+        Console.WriteLine("Hst:");
         hst.Print();
     }
 
