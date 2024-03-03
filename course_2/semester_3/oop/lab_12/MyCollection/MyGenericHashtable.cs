@@ -69,11 +69,12 @@ public class MyGenericHashtable<TKey, TValue>
         buckets = other.CloneBuckets();
     }
 
-    public TValue this[TKey key]
+    public TValue? this[TKey key]
     {
         get
         {
-            if (key != null &&
+            if (buckets != null &&
+                key != null &&
                 Contains(key))
             {
                 int index = Math.Abs(key.GetHashCode() % Capacity);
@@ -93,16 +94,18 @@ public class MyGenericHashtable<TKey, TValue>
 
         set
         {
-            if (Contains(key))
+            if (buckets != null &&
+                key != null &&
+                Contains(key))
             {
                 int index = Math.Abs(key.GetHashCode() % Capacity);
                 MyGenericElement<TKey, TValue>? cur = buckets[index];
                 while (cur != null &&
-                       cur.Key != null &&
-                       cur.Value != null)
+                       cur.Key != null)
                 {
                     if (String.Compare(cur.Key.ToString(), key.ToString()) == 0)
-                        cur.Value = value;
+                        if (value != null)
+                            cur.Value = value;
                     cur = cur.Next;
                 }
             }
@@ -115,7 +118,7 @@ public class MyGenericHashtable<TKey, TValue>
             elem.Key != null &&
             elem.Value != null)
         {
-            this.Add(elem.Key, elem.Value);
+            Add(elem.Key, elem.Value);
         }
     }
 
@@ -223,7 +226,6 @@ public class MyGenericHashtable<TKey, TValue>
         return false;
     }
 
-    // TODO(pryazha): Implement CopyTo for ICollection
     public void CopyTo(MyGenericElement<TKey, TValue>[] array, int arrayIndex)
     {
         if (array == null)

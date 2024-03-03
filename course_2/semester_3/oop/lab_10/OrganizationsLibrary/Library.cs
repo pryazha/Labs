@@ -87,6 +87,6 @@ public class Library : Organization, IInit, IComparable, ICloneable
 
     public override string ToString()
     {
-        return base.ToString() + $"Количество книг: {BooksCount}\n";
+        return base.ToString() + $"\nКоличество книг: {BooksCount}";
     }
 }

@@ -125,7 +125,7 @@ public class Organization : IInit, IComparable, ICloneable
     {
         return $"Название организации: {Name}\n" +
                $"Адрес организации: {Address}\n" +
-               $"Количество сотрудников: {EmployeesCount}\n";
+               $"Количество сотрудников: {EmployeesCount}";
     }
 }
 

@@ -6241,11 +6241,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\Tests\\ProgramTests\\ProgramTests.csproj",
+      "projectUniqueName": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\Tests\\ProgramTests\\ProgramTests.csproj",
       "projectName": "ProgramTests",
-      "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\Tests\\ProgramTests\\ProgramTests.csproj",
+      "projectPath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\Tests\\ProgramTests\\ProgramTests.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\Tests\\ProgramTests\\obj\\",
+      "outputPath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\Tests\\ProgramTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6262,11 +6262,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\MainProgram\\MainProgram.csproj": {
-              "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\MainProgram\\MainProgram.csproj"
+            "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\MainProgram\\MainProgram.csproj": {
+              "projectPath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\MainProgram\\MainProgram.csproj"
             },
-            "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
-              "projectPath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
+            "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj": {
+              "projectPath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj"
             }
           }
         }

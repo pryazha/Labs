@@ -78,6 +78,6 @@ public class ShipbuildingCompany : Organization, IInit, IComparable, ICloneable
 
     public override string ToString()
     {
-        return base.ToString() + $"Количество построенных судов: {ShipsCount}";
+        return base.ToString() + $"\nКоличество построенных судов: {ShipsCount}";
     }
 }

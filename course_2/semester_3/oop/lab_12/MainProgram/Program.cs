@@ -8,15 +8,16 @@ public class Program
 {
     public static void Main()
     {
-        /*
         string[] menu = {
             "Создать хеш-таблицу.",
             "Вывести хеш-таблицу.",
             "Добавить элемент.",
             "Удалить элемент.",
             "Найти элемент",
+            "Вывод с помощью foreach",
         };
-        MyHashtable hstable = new MyHashtable();
+
+        var hst = new MyGenericHashtable<int, Organization>(1);
         int choice;
         do
         {
@@ -26,49 +27,54 @@ public class Program
             {
                 case 1:
                     int size = Input.IntInput("Введите размер: ");
-                    hstable = CreateRandomMyHashtable(size);
+                    hst = CreateRandomHst(size);
                     break;
 
                 case 2:
-                    hstable.Print();
+                    hst.Print();
                     break;
 
                 case 3:
                 {
-                    if (hstable.size == 0)
-                    {
-                        Console.WriteLine("Хеш-таблица пуста.");
-                        break;
-                    }
                     int key = Input.IntInput("Введите ключ: ");
-                    Organization value = new Organization();
-                    value.Init();
-                    if (hstable.Add(key, value))
+                    Organization org = new Organization();
+                    org.Init();
+                    if (hst.Add(key, org))
                     {
                         Console.WriteLine("Элемент успешно добавлен.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Не удалось добавить элемент.");
                     }
                 } break;
 
                 case 4:
                 {
-                    if (hstable.size == 0)
-                    {
-                        Console.WriteLine("Хеш-таблица пуста.");
-                        break;
-                    }
                     int key = Input.IntInput("Введите ключ: ");
-                    hstable.Delete(key);
+                    if (hst.Remove(key))
+                    {
+                        Console.WriteLine("Элемент успешно удален.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Не удалось удалить элемент.");
+                    }
                 } break;
 
                 case 5:
                 {
-                    if (hstable.size == 0)
-                    {
-                        Console.WriteLine("Хеш-таблица пуста.");
-                        break;
-                    }
                     int key = Input.IntInput("Введите ключ: ");
-                    hstable.Find(key);
+                    if (hst[key] != null)
+                    {
+                        Console.WriteLine(hst[key] + "\n");
+                    }
+                } break;
+
+                case 6:
+                {
+                    foreach (var item in hst)
+                        Console.WriteLine(item);
                 } break;
 
                 case 0:
@@ -79,13 +85,6 @@ public class Program
             }
             Console.WriteLine();
         } while (choice != 0);
-        */
-
-        // TODO(pryazha): Now I just want to implement MyGenericHashtable, after that I can make a working menu.
-        MyGenericHashtable<int, Organization> hst = new MyGenericHashtable<int, Organization>(1);
-        hst.Add(0, new Library());
-        Console.WriteLine("Hst:");
-        hst.Print();
     }
 
     static void PrintMenu(string[] menu)
@@ -95,9 +94,9 @@ public class Program
         Console.WriteLine("0. Выход");
     }
 
-    static MyHashtable CreateRandomMyHashtable(int size)
+    static MyGenericHashtable<int, Organization> CreateRandomHst(int size)
     {
-        MyHashtable result = new MyHashtable(size);
+        var result = new MyGenericHashtable<int, Organization>(size);
         for (int i = 0; i < size; i++)
         {
             var rnd = new Random();

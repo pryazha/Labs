@@ -78,6 +78,6 @@ public class Factory : Organization, IInit, IComparable, ICloneable
 
     public override string ToString()
     {
-        return base.ToString() + $"Количество созданных товаров: {CreatedProducts}";
+        return base.ToString() + $"\nКоличество созданных товаров: {CreatedProducts}";
     }
 }

@@ -62,6 +62,6 @@ public class InsuranceCompany : Organization, IInit, IComparable, ICloneable
 
     public override string ToString()
     {
-        return base.ToString() + $"Тип страхования: {InsuranceType}";
+        return base.ToString() + $"\nТип страхования: {InsuranceType}";
     }
 }

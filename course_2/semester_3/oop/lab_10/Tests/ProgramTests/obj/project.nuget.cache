@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "66xbUI+J3QNuk7m39NnaD2yQcFtqeCRMTRXY884JmOB131LzWIacXQEP6sOLlxZsWHcK2muuI3w2F67Ma9l1NQ==",
+  "dgSpecHash": "G4w0xxmlG0PiReJIymGe2AEi138YuUxKaBY1PyJzmcakXK2H8vC6H8/9LZGhSUt9U0zugKbK/mZ9FY3r9EHcTg==",
   "success": true,
-  "projectFilePath": "C:\\pryazha\\labs\\course_2\\semester_1\\oop\\lab_10\\Tests\\ProgramTests\\ProgramTests.csproj",
+  "projectFilePath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\Tests\\ProgramTests\\ProgramTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\coverlet.msbuild\\6.0.0\\coverlet.msbuild.6.0.0.nupkg.sha512",
