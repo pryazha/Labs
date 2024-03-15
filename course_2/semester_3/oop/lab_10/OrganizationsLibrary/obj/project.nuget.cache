@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "toJDrLG+y8CD+NHeEqDdbRNr7VsWGj9B32zncgdjqTauq/70g1e21jhi1LzQeJYCaPOTy8Nd2qJFLuObJflZxQ==",
+  "dgSpecHash": "P7PEmoggp3exbDY7AkNHXdqytfwjChYTXURQ5Hpf1QbqP9LXDKsPorv4F0Hybi3ZCUuBfijfQrdMub9ULhMHoA==",
   "success": true,
-  "projectFilePath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\OrganizationsLibrary\\OrganizationsLibrary.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/pryazha/labs/course_2/semester_3/oop/lab_10/OrganizationsLibrary/OrganizationsLibrary.csproj",
+  "expectedPackageFiles": [
+    "/home/pryazha/.nuget/packages/microsoft.netcore.app.ref/7.0.17/microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.17/microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512"
+  ],
   "logs": []
 }

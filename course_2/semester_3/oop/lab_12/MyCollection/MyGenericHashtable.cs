@@ -52,6 +52,7 @@ public class MyGenericHashtable<TKey, TValue>
     public MyGenericHashtable()
     {
         Capacity = 0;
+        Count = 0;
         buckets = null;
     }
     public MyGenericHashtable(int capacity)
@@ -60,6 +61,7 @@ public class MyGenericHashtable<TKey, TValue>
         {
             buckets = new MyGenericElement<TKey, TValue>[capacity];
             Capacity = capacity;
+            Count = 0;
         }
     }
     public MyGenericHashtable(MyGenericHashtable<TKey, TValue> other)

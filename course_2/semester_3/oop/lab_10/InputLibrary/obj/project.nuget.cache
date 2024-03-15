@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BmdKl9wEzINu4cDnThIpC6Ro/V8WTd7e+xrejK7P3dffA9VILn56eUeL0OB8oz2FX6hlkWynSmpdBteFaPrHpA==",
+  "dgSpecHash": "uZ085/ScrWFjXM8rlFqbXQA5434yeXOLCqwZ8mbk0B7oSTsbRaqCsmvbbv751JyrANLJu7Y7n8h818UXRX0lVw==",
   "success": true,
-  "projectFilePath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\InputLibrary\\InputLibrary.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/pryazha/labs/course_2/semester_3/oop/lab_10/InputLibrary/InputLibrary.csproj",
+  "expectedPackageFiles": [
+    "/home/pryazha/.nuget/packages/microsoft.netcore.app.ref/7.0.17/microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.17/microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512"
+  ],
   "logs": []
 }
