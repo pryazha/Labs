@@ -227,7 +227,7 @@ var assemblies = [
     "name": "MyCollection",
     "classes": [
       { "name": "MyCollection.MyGenericElement<T1, T2>", "rp": "MyCollection_MyGenericElement_2.html", "cl": 23, "ucl": 0, "cal": 23, "tl": 428, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "MyCollection.MyGenericHashtable<T1, T2>", "rp": "MyCollection_MyGenericHashtable_2.html", "cl": 54, "ucl": 240, "cal": 294, "tl": 428, "cb": 19, "tb": 160, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "MyCollection.MyGenericHashtable<T1, T2>", "rp": "MyCollection_MyGenericHashtable_2.html", "cl": 200, "ucl": 94, "cal": 294, "tl": 428, "cb": 105, "tb": 160, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "OrganizationsLibrary",
@@ -237,7 +237,7 @@ var assemblies = [
       { "name": "OrganizationsLibrary.Library", "rp": "OrganizationsLibrary_Library.html", "cl": 0, "ucl": 56, "cal": 56, "tl": 92, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "OrganizationsLibrary.Manager", "rp": "OrganizationsLibrary_Manager.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 136, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "OrganizationsLibrary.NotHierarchicalClass", "rp": "OrganizationsLibrary_NotHierarchicalClass.html", "cl": 0, "ucl": 19, "cal": 19, "tl": 39, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "OrganizationsLibrary.Organization", "rp": "OrganizationsLibrary_Organization.html", "cl": 14, "ucl": 73, "cal": 87, "tl": 136, "cb": 1, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "OrganizationsLibrary.Organization", "rp": "OrganizationsLibrary_Organization.html", "cl": 41, "ucl": 46, "cal": 87, "tl": 136, "cb": 6, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "OrganizationsLibrary.ShipbuildingCompany", "rp": "OrganizationsLibrary_ShipbuildingCompany.html", "cl": 0, "ucl": 54, "cal": 54, "tl": 83, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "OrganizationsLibrary.SortByEmployeesCount", "rp": "OrganizationsLibrary_SortByEmployeesCount.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 25, "cb": 0, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
@@ -254,58 +254,16 @@ var riskHotspotMetrics = [
 
 var riskHotspots = [
   {
-    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "Remove(TKey)", "methodShortName": "Remove(...)", "fileIndex": 0, "line": 270,
-    "metrics": [
-      { "value": 506, "exceeded": true },
-      { "value": 22, "exceeded": false },
-    ]},
-  {
-    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "Contains(MyCollection.MyGenericElement`2<TKey,TValue>)", "methodShortName": "Contains(...)", "fileIndex": 0, "line": 172,
-    "metrics": [
-      { "value": 420, "exceeded": true },
-      { "value": 20, "exceeded": false },
-    ]},
-  {
-    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "CloneBuckets()", "methodShortName": "CloneBuckets()", "fileIndex": 0, "line": 391,
-    "metrics": [
-      { "value": 272, "exceeded": true },
-      { "value": 16, "exceeded": false },
-    ]},
-  {
-    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "get_Item(TKey)", "methodShortName": "get_Item(...)", "fileIndex": 0, "line": 77,
-    "metrics": [
-      { "value": 210, "exceeded": true },
-      { "value": 14, "exceeded": false },
-    ]},
-  {
-    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "set_Item(TKey,TValue)", "methodShortName": "set_Item(...)", "fileIndex": 0, "line": 98,
-    "metrics": [
-      { "value": 210, "exceeded": true },
-      { "value": 14, "exceeded": false },
-    ]},
-  {
     "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "CopyTo(MyCollection.MyGenericElement`2<TKey,TValue>[],System.Int32)", "methodShortName": "CopyTo(...)", "fileIndex": 0, "line": 232,
     "metrics": [
       { "value": 110, "exceeded": true },
       { "value": 10, "exceeded": false },
     ]},
   {
-    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "GetEnumerator()", "methodShortName": "GetEnumerator()", "fileIndex": 0, "line": 321,
+    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "Remove(TKey)", "methodShortName": "Remove(...)", "fileIndex": 0, "line": 270,
     "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "OrganizationsLibrary", "class": "OrganizationsLibrary.Organization", "reportPath": "OrganizationsLibrary_Organization.html", "methodName": "CompareTo(System.Object)", "methodShortName": "CompareTo(...)", "fileIndex": 0, "line": 102,
-    "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "Remove(MyCollection.MyGenericElement`2<TKey,TValue>)", "methodShortName": "Remove(...)", "fileIndex": 0, "line": 252,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
+      { "value": 103.72, "exceeded": true },
+      { "value": 22, "exceeded": false },
     ]},
   {
     "assembly": "OrganizationsLibrary", "class": "OrganizationsLibrary.Organization", "reportPath": "OrganizationsLibrary_Organization.html", "methodName": "Equals(System.Object)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 84,
@@ -321,12 +279,6 @@ var riskHotspots = [
     ]},
   {
     "assembly": "InputLibrary", "class": "InputLibrary.Input", "reportPath": "InputLibrary_Input.html", "methodName": "StringInput(System.String)", "methodShortName": "StringInput(...)", "fileIndex": 0, "line": 22,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "Add(MyCollection.MyGenericElement`2<TKey,TValue>)", "methodShortName": "Add(...)", "fileIndex": 0, "line": 118,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
@@ -350,9 +302,21 @@ var riskHotspots = [
       { "value": 4, "exceeded": false },
     ]},
   {
+    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "Contains(MyCollection.MyGenericElement`2<TKey,TValue>)", "methodShortName": "Contains(...)", "fileIndex": 0, "line": 172,
+    "metrics": [
+      { "value": 20, "exceeded": true },
+      { "value": 20, "exceeded": false },
+    ]},
+  {
+    "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "CloneBuckets()", "methodShortName": "CloneBuckets()", "fileIndex": 0, "line": 391,
+    "metrics": [
+      { "value": 19.25, "exceeded": true },
+      { "value": 16, "exceeded": false },
+    ]},
+  {
     "assembly": "MyCollection", "class": "MyCollection.MyGenericHashtable<T1, T2>", "reportPath": "MyCollection_MyGenericHashtable_2.html", "methodName": "Add(TKey,TValue)", "methodShortName": "Add(...)", "fileIndex": 0, "line": 128,
     "metrics": [
-      { "value": 17.06, "exceeded": true },
+      { "value": 15.12, "exceeded": true },
       { "value": 14, "exceeded": false },
     ]},
 ];

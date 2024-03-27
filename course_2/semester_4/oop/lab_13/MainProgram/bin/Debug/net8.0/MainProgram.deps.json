@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MainProgram/1.0.0": {
+        "dependencies": {
+          "MyCollection": "1.0.0"
+        },
+        "runtime": {
+          "MainProgram.dll": {}
+        }
+      },
+      "InputLibrary/1.0.0": {
+        "runtime": {
+          "InputLibrary.dll": {}
+        }
+      },
+      "MyCollection/1.0.0": {
+        "dependencies": {
+          "OrganizationsLibrary": "1.0.0"
+        },
+        "runtime": {
+          "MyCollection.dll": {}
+        }
+      },
+      "OrganizationsLibrary/1.0.0": {
+        "dependencies": {
+          "InputLibrary": "1.0.0"
+        },
+        "runtime": {
+          "OrganizationsLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MainProgram/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InputLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyCollection/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OrganizationsLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "InputLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/InputLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InputLibrary.dll": {}
+        }
+      },
+      "MyCollection/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "OrganizationsLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MyCollection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyCollection.dll": {}
+        }
+      },
+      "OrganizationsLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "InputLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OrganizationsLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OrganizationsLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InputLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../../../semester_3/oop/lab_10/InputLibrary/InputLibrary.csproj",
+      "msbuildProject": "../../../../semester_3/oop/lab_10/InputLibrary/InputLibrary.csproj"
+    },
+    "MyCollection/1.0.0": {
+      "type": "project",
+      "path": "../../../../semester_3/oop/lab_12/MyCollection/MyCollection.csproj",
+      "msbuildProject": "../../../../semester_3/oop/lab_12/MyCollection/MyCollection.csproj"
+    },
+    "OrganizationsLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../../../semester_3/oop/lab_10/OrganizationsLibrary/OrganizationsLibrary.csproj",
+      "msbuildProject": "../../../../semester_3/oop/lab_10/OrganizationsLibrary/OrganizationsLibrary.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "MyCollection >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/pryazha/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/pryazha/labs/course_2/semester_4/oop/lab_13/MainProgram/MainProgram.csproj",
+      "projectName": "MainProgram",
+      "projectPath": "/home/pryazha/labs/course_2/semester_4/oop/lab_13/MainProgram/MainProgram.csproj",
+      "packagesPath": "/home/pryazha/.nuget/packages/",
+      "outputPath": "/home/pryazha/labs/course_2/semester_4/oop/lab_13/MainProgram/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/pryazha/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/home/pryazha/labs/course_2/semester_3/oop/lab_12/MyCollection/MyCollection.csproj": {
+              "projectPath": "/home/pryazha/labs/course_2/semester_3/oop/lab_12/MyCollection/MyCollection.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.3, 8.0.3]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
