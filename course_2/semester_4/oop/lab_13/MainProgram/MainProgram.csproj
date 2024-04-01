@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\semester_3\oop\lab_12\MyCollection\MyCollection.csproj" />
+    <ProjectReference Include="..\..\..\..\semester_3\oop\lab_10\OrganizationsLibrary\OrganizationsLibrary.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

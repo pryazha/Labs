@@ -59,7 +59,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "MyCollection >= 1.0.0"
+      "MyCollection >= 1.0.0",
+      "OrganizationsLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -87,6 +88,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "/home/pryazha/labs/course_2/semester_3/oop/lab_10/OrganizationsLibrary/OrganizationsLibrary.csproj": {
+              "projectPath": "/home/pryazha/labs/course_2/semester_3/oop/lab_10/OrganizationsLibrary/OrganizationsLibrary.csproj"
+            },
             "/home/pryazha/labs/course_2/semester_3/oop/lab_12/MyCollection/MyCollection.csproj": {
               "projectPath": "/home/pryazha/labs/course_2/semester_3/oop/lab_12/MyCollection/MyCollection.csproj"
             }
