@@ -95,7 +95,7 @@ public class Organization : IInit, IComparable, ICloneable
 
     public override int GetHashCode()
     {
-        return employeesCount;
+        return Name.GetHashCode();
     }
 
     public int CompareTo(object? obj)

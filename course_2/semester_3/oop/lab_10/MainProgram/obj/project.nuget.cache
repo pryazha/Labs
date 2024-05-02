@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "FvEMSWPQZCbBC2d5rOf4Ygp6DUT6EZaq6o5i+b5dQAMTmRIpGOcSJjzA6HW2Jl59ng4CqNpgXknBUGt0kKYhRA==",
+  "dgSpecHash": "QtHTqYf1W68a/MAAID1mIbohsTb+Jxb1aLibGsxSeH5RMuvsv4552K2zBPvS+kPzvyKrgxi4XOIr1W7tq2hIJA==",
   "success": true,
-  "projectFilePath": "C:\\pryazha\\labs\\course_2\\semester_3\\oop\\lab_10\\MainProgram\\MainProgram.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/pryazha/labs/course_2/semester_3/oop/lab_10/MainProgram/MainProgram.csproj",
+  "expectedPackageFiles": [
+    "/home/pryazha/.nuget/packages/microsoft.netcore.app.ref/7.0.18/microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.18/microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512",
+    "/home/pryazha/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.18/microsoft.netcore.app.host.linux-x64.7.0.18.nupkg.sha512"
+  ],
   "logs": []
 }

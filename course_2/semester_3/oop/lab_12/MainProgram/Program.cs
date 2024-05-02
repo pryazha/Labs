@@ -17,7 +17,7 @@ public class Program
             "Вывод с помощью foreach",
         };
 
-        var hst = new MyGenericHashtable<int, Organization>(1);
+        var hst = new MyGenericHashtable<Organization>(1);
         int choice;
         do
         {
@@ -36,10 +36,9 @@ public class Program
 
                 case 3:
                 {
-                    int key = Input.IntInput("Введите ключ: ");
                     Organization org = new Organization();
                     org.Init();
-                    if (hst.Add(key, org))
+                    if (hst.Add(org))
                     {
                         Console.WriteLine("Элемент успешно добавлен.");
                     }
@@ -51,7 +50,7 @@ public class Program
 
                 case 4:
                 {
-                    int key = Input.IntInput("Введите ключ: ");
+                    string key = Input.StringInput("Введите название организации: ");
                     if (hst.Remove(key))
                     {
                         Console.WriteLine("Элемент успешно удален.");
@@ -64,11 +63,11 @@ public class Program
 
                 case 5:
                 {
-                    int key = Input.IntInput("Введите ключ: ");
+                    string key = Input.StringInput("Введите название организации: ");
                     if (hst[key] != null)
-                    {
                         Console.WriteLine(hst[key] + "\n");
-                    }
+                    else
+                        Console.WriteLine("Не удалось найти элемент");
                 } break;
 
                 case 6:
@@ -94,9 +93,9 @@ public class Program
         Console.WriteLine("0. Выход");
     }
 
-    static MyGenericHashtable<int, Organization> CreateRandomHst(int size)
+    static MyGenericHashtable<Organization> CreateRandomHst(int size)
     {
-        var result = new MyGenericHashtable<int, Organization>(size);
+        var result = new MyGenericHashtable<Organization>(size);
         for (int i = 0; i < size; i++)
         {
             var rnd = new Random();
@@ -104,19 +103,19 @@ public class Program
             switch (item)
             {
                 case 1:
-                    result.Add(i, new Organization());
+                    result.Add(new Organization());
                     break;
                 case 2:
-                    result.Add(i, new InsuranceCompany());
+                    result.Add(new InsuranceCompany());
                     break;
                 case 3:
-                    result.Add(i, new ShipbuildingCompany());
+                    result.Add(new ShipbuildingCompany());
                     break;
                 case 4:
-                    result.Add(i, new Factory());
+                    result.Add(new Factory());
                     break;
                 case 5:
-                    result.Add(i, new Library());
+                    result.Add(new Library());
                     break;
             }
         }

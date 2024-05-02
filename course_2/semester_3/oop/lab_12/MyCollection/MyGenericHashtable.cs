@@ -1,35 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
 
 namespace MyCollection;
 
-public class MyGenericElement<TKey, TValue>
+public class MyGenericElement<T>
 {
-    public TKey Key { get; private set; }
-    public TValue Value { get; set; }
-    public MyGenericElement<TKey, TValue>? Next { get; set; }
+    public int Key { get; private set; }
+    public T Value { get; set; }
+    public MyGenericElement<T>? Next { get; set; }
 
-    public MyGenericElement(TKey key, TValue value)
+    public MyGenericElement(T value)
     {
-        Key = key;
         Value = value;
+        Key = GetHashCode();
         Next = null;
     }
 
     public override int GetHashCode()
     {
-        if (Key == null)
-            return -1;
-        return Key.GetHashCode();
+        if (Value != null)
+            return Value.GetHashCode();
+        return -1;
     }
 
     public override string ToString()
     {
-        if (Key != null &&
-            Value != null)
+        if (Value != null)
         {
             return "Ключ: " + Key.ToString() + "\n" +
-                   "Значение: " + Value.ToString();
+                   "Значение:\n" + Value.ToString();
         }
         else
         {
@@ -38,16 +36,16 @@ public class MyGenericElement<TKey, TValue>
     }
 }
 
-public class MyGenericHashtable<TKey, TValue>
-    : ICollection<MyGenericElement<TKey, TValue>>,
-      IEnumerable<MyGenericElement<TKey, TValue>>,
+public class MyGenericHashtable<T>
+    : ICollection<MyGenericElement<T>>,
+      IEnumerable<MyGenericElement<T>>,
       ICloneable
-    where TValue : ICloneable
+    where T : ICloneable
 {
-    public int Capacity { get; private set; }
-    public int Count { get; private set; }
+    public int Capacity { get; protected set; }
+    public int Count { get; protected set; }
     public bool IsReadOnly => false;
-    private MyGenericElement<TKey, TValue>?[]? buckets;
+    protected MyGenericElement<T>?[]? buckets;
 
     public MyGenericHashtable()
     {
@@ -59,53 +57,49 @@ public class MyGenericHashtable<TKey, TValue>
     {
         if (capacity > 0)
         {
-            buckets = new MyGenericElement<TKey, TValue>[capacity];
+            buckets = new MyGenericElement<T>[capacity];
             Capacity = capacity;
             Count = 0;
         }
     }
-    public MyGenericHashtable(MyGenericHashtable<TKey, TValue> other)
+    public MyGenericHashtable(MyGenericHashtable<T> other)
     {
         Capacity = other.Capacity;
         Count = other.Count;
         buckets = other.CloneBuckets();
     }
 
-    public TValue? this[TKey key]
+    public virtual T? this[string Key]
     {
         get
         {
-            if (buckets != null &&
-                key != null &&
-                Contains(key))
+            if (buckets != null)
             {
-                int index = Math.Abs(key.GetHashCode() % Capacity);
-                MyGenericElement<TKey, TValue>? cur = buckets[index];
+                int key = Key.GetHashCode();
+                int index = Math.Abs(key % Capacity);
+                MyGenericElement<T>? cur = buckets[index];
                 while (cur != null &&
-                       cur.Key != null &&
                        cur.Value != null)
                 {
-                    if (String.Compare(cur.Key.ToString(), key.ToString()) == 0)
+                    if (cur.Key == key)
                         return cur.Value;
                     cur = cur.Next;
                 }
             }
 
-            return default(TValue);
+            return default(T);
         }
 
         set
         {
-            if (buckets != null &&
-                key != null &&
-                Contains(key))
+            if (buckets != null)
             {
+                int key = Key.GetHashCode();
                 int index = Math.Abs(key.GetHashCode() % Capacity);
-                MyGenericElement<TKey, TValue>? cur = buckets[index];
-                while (cur != null &&
-                       cur.Key != null)
+                MyGenericElement<T>? cur = buckets[index];
+                while (cur != null)
                 {
-                    if (String.Compare(cur.Key.ToString(), key.ToString()) == 0)
+                    if (cur.Key == key.GetHashCode())
                         if (value != null)
                             cur.Value = value;
                     cur = cur.Next;
@@ -114,28 +108,26 @@ public class MyGenericHashtable<TKey, TValue>
         }
     }
 
-    public void Add(MyGenericElement<TKey, TValue>? elem)
+    public void Add(MyGenericElement<T>? elem)
     {
         if (elem != null &&
-            elem.Key != null &&
             elem.Value != null)
         {
-            Add(elem.Key, elem.Value);
+            Add(elem.Value);
         }
     }
 
-    public bool Add(TKey key, TValue value)
+    public virtual bool Add(T value)
     {
-        if (key == null ||
-            buckets == null ||
-            Contains(key))
+        if (buckets == null ||
+            Contains(value))
         {
             return false;
         }
 
-        int index = Math.Abs(key.GetHashCode() % Capacity);
-        MyGenericElement<TKey, TValue> newElem =
-            new MyGenericElement<TKey, TValue>(key, value);
+        int index = Math.Abs(value.GetHashCode() % Capacity);
+        MyGenericElement<T> newElem =
+            new MyGenericElement<T>(value);
 
         if (buckets[index] == null)
         {
@@ -144,14 +136,11 @@ public class MyGenericHashtable<TKey, TValue>
             return true;
         }
 
-        MyGenericElement<TKey, TValue>? cur = buckets[index];
-        if (cur != null &&
-            cur.Key != null)
+        MyGenericElement<T>? cur = buckets[index];
+        if (cur != null)
         {
             while (cur.Next != null)
-            {
                 cur = cur.Next;
-            }
             cur.Next = newElem;
             ++Count;
             return true;
@@ -168,140 +157,108 @@ public class MyGenericHashtable<TKey, TValue>
         buckets = null;
     }
 
-    public bool Contains(MyGenericElement<TKey, TValue>? item)
+    public bool Contains(MyGenericElement<T>? item)
     {
         if (buckets == null ||
             item == null ||
-            item.Key == null ||
             item.Value == null)
         {
             return false;
         }
 
-        int index = Math.Abs(item.Key.GetHashCode() % Capacity);
+        int index = Math.Abs(item.Key % Capacity);
         if (buckets[index] == null)
-        {
             return false;
-        }
 
-        MyGenericElement<TKey, TValue>? cur = buckets[index];
+        MyGenericElement<T>? cur = buckets[index];
         while (cur != null &&
-               cur.Key != null &&
                cur.Value != null)
         {
-            if (String.Compare(cur.Key.ToString(), item.Key.ToString()) == 0 &&
-                String.Compare(cur.Value.ToString(), item.Value.ToString()) == 0)
-            {
+            if (String.Compare(cur.Value.ToString(), item.Value.ToString()) == 0)
                 return true;
-            }
             cur = cur.Next;
         }
 
         return false;
     }
 
-    public bool Contains(TKey key)
+    public bool Contains(T value)
     {
-        if (key == null ||
-            buckets == null)
-        {
+        if (value == null || buckets == null)
             return false;
-        }
 
-        int index = Math.Abs(key.GetHashCode() % Capacity);
+        int key = value.GetHashCode();
+        int index = Math.Abs(key % Capacity);
         if (buckets[index] == null)
-        {
             return false;
-        }
 
-        MyGenericElement<TKey, TValue>? cur = buckets[index];
-        while (cur != null &&
-               cur.Key != null)
+        MyGenericElement<T>? cur = buckets[index];
+        while (cur != null)
         {
-            if (String.Compare(cur.Key.ToString(), key.ToString()) == 0)
-            {
+            if (cur.Key == key)
                 return true;
-            }
             cur = cur.Next;
         }
 
         return false;
     }
 
-    public void CopyTo(MyGenericElement<TKey, TValue>[] array, int arrayIndex)
+    public void CopyTo(MyGenericElement<T>[] array, int arrayIndex)
     {
         if (array == null)
-        {
             throw new ArgumentNullException(nameof(array));
-        }
         if (arrayIndex < 0 || arrayIndex >= array.Length)
-        {
             throw new ArgumentOutOfRangeException(nameof(arrayIndex));
-        }
         if (array.Length - arrayIndex < Count)
-        {
             throw new ArgumentException("Недостаточно места для копирования.");
-        }
-
-        for (int i = 0; i < Capacity; ++i)
-        {
-        }
     }
 
-    public bool Remove(MyGenericElement<TKey, TValue> item)
+    public bool Remove(MyGenericElement<T> item)
     {
-        if (item == null ||
-            item.Key == null ||
-            item.Value == null)
+        if (item != null &&
+            item.Value != null)
+        {
+            if (Contains(item))
+            {
+                Remove(item.Value.ToString());
+                return true;
+            }
+
+            return false;
+        }
+        else
         {
             return false;
         }
-
-        if (Contains(item))
-        {
-            Remove(item.Key);
-            return true;
-        }
-
-        return false;
     }
 
-    public bool Remove(TKey key)
+    public virtual bool Remove(string value)
     {
-        if (key == null || buckets == null)
-        {
+        if (value == null || buckets == null)
             return false;
-        }
 
-        int index = Math.Abs(key.GetHashCode() % Capacity);
+        int key = value.GetHashCode();
+        int index = Math.Abs(value.GetHashCode() % Capacity);
         if (buckets[index] == null)
-        {
             return false;
-        }
 
-        MyGenericElement<TKey, TValue>? cur = buckets[index];
-        if (cur != null &&
-            cur.Key != null)
+        MyGenericElement<T>? cur = buckets[index];
+        if (cur != null)
         {
-            if (String.Compare(cur.Key.ToString(), key.ToString()) == 0)
+            if (cur.Key == key)
             {
                 if (cur.Next == null)
-                {
                     buckets[index] = null;
-                }
                 else
-                {
                     buckets[index] = cur.Next;
-                }
                 --Count;
                 return true;
             }
 
             while (cur.Next != null)
             {
-                if (cur.Next.Key != null)
-                    if (String.Compare(cur.Next.Key.ToString(), key.ToString()) == 0)
-                        break;
+                if (cur.Next.Key == key)
+                    break;
                 cur = cur.Next;
             }
 
@@ -317,15 +274,14 @@ public class MyGenericHashtable<TKey, TValue>
     }
 
 
-    public IEnumerator<MyGenericElement<TKey, TValue>> GetEnumerator()
+    public IEnumerator<MyGenericElement<T>> GetEnumerator()
     {
         if (buckets != null)
         {
             for (int i = 0; i < Capacity; ++i)
             {
-                MyGenericElement<TKey, TValue>? cur = buckets[i];
+                MyGenericElement<T>? cur = buckets[i];
                 while (cur != null &&
-                       cur.Key != null &&
                        cur.Value != null) 
                 {
                     yield return cur;
@@ -343,13 +299,11 @@ public class MyGenericHashtable<TKey, TValue>
     public void Print()
     {
         if (buckets == null)
-        {
             return;
-        }
 
         for (int i = 0; i < Capacity; ++i)
         {
-            MyGenericElement<TKey, TValue>? cur = buckets[i];
+            MyGenericElement<T>? cur = buckets[i];
             Console.WriteLine(i + ":");
             while (cur != null)
             {
@@ -362,20 +316,20 @@ public class MyGenericHashtable<TKey, TValue>
 
     public object ShallowCopy()
     {
-        return (MyGenericHashtable<TKey, TValue>)MemberwiseClone();
+        return (MyGenericHashtable<T>)MemberwiseClone();
     }
 
     public object Clone()
     {
-        MyGenericHashtable<TKey, TValue> result = new MyGenericHashtable<TKey, TValue>(Capacity);
+        MyGenericHashtable<T> result = new MyGenericHashtable<T>(Capacity);
         if (buckets != null)
         {
             for (int i = 0; i < Capacity; ++i)
             {
-                MyGenericElement<TKey, TValue>? cur = buckets[i];
+                MyGenericElement<T>? cur = buckets[i];
                 while (cur != null)
                 {
-                    result.Add(cur.Key, (TValue)cur.Value.Clone());
+                    result.Add((T)cur.Value.Clone());
                     cur = cur.Next;
                 }
             }
@@ -387,30 +341,28 @@ public class MyGenericHashtable<TKey, TValue>
         return (object)result;
     }
     
-    public MyGenericElement<TKey, TValue>?[]? CloneBuckets()
+    public MyGenericElement<T>?[]? CloneBuckets()
     {
         if (buckets != null)
         {
-            MyGenericElement<TKey, TValue>[] result =
-                new MyGenericElement<TKey, TValue>[Capacity];
+            MyGenericElement<T>[] result =
+                new MyGenericElement<T>[Capacity];
 
             for (int i = 0; i < Capacity; ++i)
             {
-                MyGenericElement<TKey, TValue>? cur = buckets[i];
+                MyGenericElement<T>? cur = buckets[i];
                 if (cur != null &&
-                    cur.Key != null &&
                     cur.Value != null) 
                 {
-                    MyGenericElement<TKey, TValue>? newElem =
-                        new MyGenericElement<TKey, TValue>(cur.Key, (TValue)cur.Value.Clone());
+                    MyGenericElement<T>? newElem =
+                        new MyGenericElement<T>((T)cur.Value.Clone());
 
-                    MyGenericElement<TKey, TValue>? nextElem = newElem;
+                    MyGenericElement<T>? nextElem = newElem;
 
                     while (cur.Next != null &&
-                           cur.Next.Key != null &&
                            cur.Next.Value != null)
                     {
-                        nextElem.Next = new MyGenericElement<TKey, TValue>(cur.Next.Key, (TValue)cur.Next.Value.Clone());
+                        nextElem.Next = new MyGenericElement<T>((T)cur.Next.Value.Clone());
                         nextElem = nextElem.Next;
                         cur = cur.Next;
                     }
