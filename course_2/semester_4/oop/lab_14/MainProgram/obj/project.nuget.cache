@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7Neyce9MPDvFp/ybP8DfDwzB2lIqFDCniXHYAfkc91RQ+eR6kPF3nDkuaXw0fd/EurAogYpP8Qn3v559xWUKkA==",
+  "success": true,
+  "projectFilePath": "/home/pryazha/labs/course_2/semester_4/oop/lab_14/MainProgram/MainProgram.csproj",
+  "expectedPackageFiles": [
+    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.4/microsoft.aspnetcore.app.ref.8.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
