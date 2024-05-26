@@ -4,14 +4,12 @@ namespace MyCollection;
 
 public class MyGenericElement<T>
 {
-    public int Key { get; private set; }
     public T Value { get; set; }
     public MyGenericElement<T>? Next { get; set; }
 
     public MyGenericElement(T value)
     {
         Value = value;
-        Key = GetHashCode();
         Next = null;
     }
 
@@ -25,14 +23,9 @@ public class MyGenericElement<T>
     public override string ToString()
     {
         if (Value != null)
-        {
-            return "Ключ: " + Key.ToString() + "\n" +
-                   "Значение:\n" + Value.ToString();
-        }
+            return "Значение:\n" + Value.ToString();
         else
-        {
-            return "Ключ:\nЗначение:";
-        }
+            return "Значение:";
     }
 }
 
@@ -81,13 +74,14 @@ public class MyGenericHashtable<T>
                 while (cur != null &&
                        cur.Value != null)
                 {
-                    if (cur.Key == key)
+                    int curKey = cur.GetHashCode();
+                    if (curKey == key)
                         return cur.Value;
                     cur = cur.Next;
                 }
             }
 
-            return default(T);
+            return default;
         }
 
         set
@@ -99,7 +93,8 @@ public class MyGenericHashtable<T>
                 MyGenericElement<T>? cur = buckets[index];
                 while (cur != null)
                 {
-                    if (cur.Key == key.GetHashCode())
+                    int curKey = cur.GetHashCode();
+                    if (curKey == key.GetHashCode())
                         if (value != null)
                             cur.Value = value;
                     cur = cur.Next;
@@ -166,7 +161,7 @@ public class MyGenericHashtable<T>
             return false;
         }
 
-        int index = Math.Abs(item.Key % Capacity);
+        int index = Math.Abs(item.GetHashCode() % Capacity);
         if (buckets[index] == null)
             return false;
 
@@ -195,7 +190,7 @@ public class MyGenericHashtable<T>
         MyGenericElement<T>? cur = buckets[index];
         while (cur != null)
         {
-            if (cur.Key == key)
+            if (cur.GetHashCode() == key)
                 return true;
             cur = cur.Next;
         }
@@ -211,6 +206,25 @@ public class MyGenericHashtable<T>
             throw new ArgumentOutOfRangeException(nameof(arrayIndex));
         if (array.Length - arrayIndex < Count)
             throw new ArgumentException("Недостаточно места для копирования.");
+        if (buckets == null)
+            throw new ArgumentNullException(nameof(buckets));
+
+        MyGenericElement<T>[] result = new MyGenericElement<T>[Count];
+        int resultIndex = 0;
+        for (int i = 0; i < Capacity; ++i)
+        {
+            MyGenericElement<T>? cur = buckets[i];
+            while (cur != null &&
+                   cur.Value != null) 
+            {
+                result[resultIndex++] = cur;
+                cur = cur.Next;
+            }
+        }
+
+        resultIndex = 0;
+        for (int i = arrayIndex; i < Count; ++i)
+            array[i] = result[resultIndex++];
     }
 
     public bool Remove(MyGenericElement<T> item)
@@ -232,7 +246,7 @@ public class MyGenericHashtable<T>
         }
     }
 
-    public virtual bool Remove(string value)
+    public virtual bool Remove(string? value)
     {
         if (value == null || buckets == null)
             return false;
@@ -245,7 +259,7 @@ public class MyGenericHashtable<T>
         MyGenericElement<T>? cur = buckets[index];
         if (cur != null)
         {
-            if (cur.Key == key)
+            if (cur.GetHashCode() == key)
             {
                 if (cur.Next == null)
                     buckets[index] = null;
@@ -257,7 +271,7 @@ public class MyGenericHashtable<T>
 
             while (cur.Next != null)
             {
-                if (cur.Next.Key == key)
+                if (cur.Next.GetHashCode() == key)
                     break;
                 cur = cur.Next;
             }
@@ -273,22 +287,12 @@ public class MyGenericHashtable<T>
         return false;
     }
 
-
     public IEnumerator<MyGenericElement<T>> GetEnumerator()
     {
         if (buckets != null)
-        {
-            for (int i = 0; i < Capacity; ++i)
-            {
-                MyGenericElement<T>? cur = buckets[i];
-                while (cur != null &&
-                       cur.Value != null) 
-                {
-                    yield return cur;
-                    cur = cur.Next;
-                }
-            }
-        }
+            return new MyEnumerator<T>(buckets);
+        else
+            return Enumerable.Empty<MyGenericElement<T>>().GetEnumerator();
     }
 
     IEnumerator IEnumerable.GetEnumerator()
@@ -377,4 +381,60 @@ public class MyGenericHashtable<T>
             return null;
         }
     }
+}
+
+public class MyEnumerator<T> : IEnumerator<MyGenericElement<T>>
+{
+    public MyGenericElement<T>[] elements;
+
+    int position = -1;
+
+    public MyEnumerator(MyGenericElement<T>?[] buckets)
+    {
+        int count = 0; 
+        for (int i = 0; i < buckets.Length; ++i)
+        {
+            MyGenericElement<T>? cur = buckets[i];
+            while (cur != null &&
+                    cur.Value != null) 
+            {
+                ++count;
+                cur = cur.Next;
+            }
+        }
+        elements = new MyGenericElement<T>[count];
+        int j = 0;
+        for (int i = 0; i < buckets.Length; ++i)
+        {
+            MyGenericElement<T>? cur = buckets[i];
+            while (cur != null &&
+                    cur.Value != null) 
+            {
+                elements[j++] = cur;
+                cur = cur.Next;
+            }
+        }
+    }
+
+    public MyGenericElement<T> Current
+    {
+        get
+        {
+            if (position == -1 || position >= elements.Length)
+                throw new ArgumentException();
+            return elements[position];
+        }
+    }
+
+    object IEnumerator.Current => Current;
+
+    public bool MoveNext()
+    {
+        position++;
+        return (position < elements.Length);
+    }
+
+    public void Reset() => position = -1;
+
+    public void Dispose() {}
 }

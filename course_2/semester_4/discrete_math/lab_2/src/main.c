@@ -156,7 +156,7 @@ void Print(Edge edges[MAX_EDGES])
 
 int main(void)
 {
-    LoadGraph("g23.txt");
+    LoadGraph("g22.txt");
     printf("    ");
     for (int col = 0; col < MAX_VERTICES; ++col)
         printf("%2d ", col + 1);
