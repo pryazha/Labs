@@ -35,6 +35,8 @@ class Program
         }
 
         FirstMethod(hs);
+        SecondMethod(hs);
+        ThirdMethod(hs);
     }
 
     static void FillQueue(Queue<Library> queue, int queueSize)
@@ -108,14 +110,14 @@ class Program
         Console.WriteLine("Libraries with more than 5000 books:");
 
         var librariesLINQ = (from queue in sortDict.Values
-                                   from lib in queue
-                                   where lib.BooksCount > 5000 select lib.Name).Count();
+                             from lib in queue
+                             where lib.BooksCount > 5000 select lib.Name).Count();
 
         Console.WriteLine("LINQ: " + librariesLINQ);
 
         var librariesMethods = (sortDict.Values.SelectMany(q => q)
-                                                     .Where(lib => lib.BooksCount > 5000)
-                                                     .Select(lib => lib.Name)).Count();
+                                               .Where(lib => lib.BooksCount > 5000)
+                                               .Select(lib => lib.Name)).Count();
 
         Console.WriteLine("Extension Methods: " + librariesMethods);
         Console.WriteLine();
@@ -166,7 +168,7 @@ class Program
         Console.WriteLine("LINQ:\n" + maxBooksLibLINQ);
 
         var maxBooksLibMethods = sortDict.Values.SelectMany(q => q)
-                                                .OrderByDescending(lib => lib.EmployeesCount)
+                                                .OrderByDescending(lib => lib.BooksCount)
                                                 .FirstOrDefault();
 
         Console.WriteLine("Extension Methods:\n" + maxBooksLibMethods);
@@ -180,7 +182,7 @@ class Program
         var groupLINQ = from queue in sortDict.Values
                         from lib in queue
                         group lib by lib.Name;
-        /* into g
+                        /* into g
                         select new { Name = g.Key, Count = g.Count() };
                         */
 
@@ -194,8 +196,8 @@ class Program
         }
 
         var groupMethods = sortDict.Values.SelectMany(q => q)
-                                            .GroupBy(lib => lib.Name)
-                                            .Select(g => new { Name = g.Key, Count = g.Count() });
+                                          .GroupBy(lib => lib.Name)
+                                          .Select(g => new { Name = g.Key, Count = g.Count() });
 
         Console.WriteLine("Extension Methods:");
         foreach (var item in groupMethods)
@@ -206,9 +208,25 @@ class Program
     static void FirstMethod(MyGenericHashtable<Organization> hs)
     {
         Console.WriteLine("Names with number 8:");
-        var elems = hs.Where(elem => elem.Value.Name.Contains('8'));
+        var elems = hs.SelectWhere(elem => elem.Name.Contains('8'));
         foreach (var elem in elems)
             Console.WriteLine(elem.Value.Name);
         Console.WriteLine();
+    }
+
+    static void SecondMethod(MyGenericHashtable<Organization> hs)
+    {
+        var result = hs.CountOrgs(elem => elem.EmployeesCount > 100);
+        Console.WriteLine("Organizations with employees more than 100: " + result);
+    }
+
+    static void ThirdMethod(MyGenericHashtable<Organization> hs)
+    {
+        Console.WriteLine("Sort by employees count:");
+        var result = hs.SortOrgsBy(org => org.EmployeesCount)
+                       .Select(elem => new { elem.Value.Name, elem.Value.EmployeesCount });
+        foreach (var item in result)
+            Console.WriteLine("Название организации: " + item.Name +
+                              "\nКоличество сотрудников: " + item.EmployeesCount);
     }
 };
