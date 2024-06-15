@@ -5,7 +5,7 @@ namespace MainProgram;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         var sortDict = new SortedDictionary<Organization, Queue<Library>>();
         FillSortDictionary(sortDict, 2, 3);
@@ -14,7 +14,7 @@ class Program
         foreach (var item in sortDict)
         {
             Console.WriteLine("Key:\n" + item.Key);
-            Console.WriteLine("Queue elements:");
+            Console.WriteLine("\nQueue elements:");
             foreach (var value in item.Value)
                 Console.WriteLine(value);
             Console.WriteLine();
@@ -181,18 +181,13 @@ class Program
 
         var groupLINQ = from queue in sortDict.Values
                         from lib in queue
-                        group lib by lib.Name;
-                        /* into g
-                        select new { Name = g.Key, Count = g.Count() };
-                        */
+                        group lib by lib.Name
+                        into g select new { Name = g.Key, Count = g.Count() };
 
         Console.WriteLine("LINQ:");
         foreach (var group in groupLINQ)
         {
-            Console.WriteLine("Count: " + group.Count());
-            foreach (var item in group)
-                 // Console.WriteLine(item.Name + " : " + item.Count);
-                 Console.WriteLine(item.Name);
+            Console.WriteLine(group.Name + " : " + group.Count);
         }
 
         var groupMethods = sortDict.Values.SelectMany(q => q)
@@ -210,7 +205,10 @@ class Program
         Console.WriteLine("Names with number 8:");
         var elems = hs.SelectWhere(elem => elem.Name.Contains('8'));
         foreach (var elem in elems)
-            Console.WriteLine(elem.Value.Name);
+            if (elem.Value != null)
+                Console.WriteLine(elem.Value.Name);
+        if (!elems.Any())
+            Console.WriteLine("None");
         Console.WriteLine();
     }
 
@@ -218,6 +216,7 @@ class Program
     {
         var result = hs.CountOrgs(elem => elem.EmployeesCount > 100);
         Console.WriteLine("Organizations with employees more than 100: " + result);
+        Console.WriteLine();
     }
 
     static void ThirdMethod(MyGenericHashtable<Organization> hs)

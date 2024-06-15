@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfMyGenericElementOfOrganization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MyGenericElementOfOrganization>
+    <Value>
+      <Name>2</Name>
+      <Address>2</Address>
+      <EmployeesCount>2</EmployeesCount>
+    </Value>
+  </MyGenericElementOfOrganization>
+</ArrayOfMyGenericElementOfOrganization>

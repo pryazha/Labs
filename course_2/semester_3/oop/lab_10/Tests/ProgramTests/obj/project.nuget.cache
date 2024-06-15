@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MPiFRb8HCo8v+11m4w3TByyplbgMIel1lyh59iltdtB3bH81Po7I7iyPyz6weMDwjtW0Ms7rs/zuIF0oPNivbQ==",
+  "dgSpecHash": "9JoiO03Ip9XpxsU/C6VHl221kq+BLwmMH713OzoMvA9Xe/VF4NGgsgsieLwcnL+M72PU/mi8OoUSQQnrrP3saA==",
   "success": true,
   "projectFilePath": "/home/pryazha/labs/course_2/semester_3/oop/lab_10/Tests/ProgramTests/ProgramTests.csproj",
   "expectedPackageFiles": [
@@ -97,8 +97,8 @@
     "/home/pryazha/.nuget/packages/xunit.extensibility.core/2.4.2/xunit.extensibility.core.2.4.2.nupkg.sha512",
     "/home/pryazha/.nuget/packages/xunit.extensibility.execution/2.4.2/xunit.extensibility.execution.2.4.2.nupkg.sha512",
     "/home/pryazha/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512",
-    "/home/pryazha/.nuget/packages/microsoft.netcore.app.ref/7.0.18/microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
-    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.18/microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512"
+    "/home/pryazha/.nuget/packages/microsoft.netcore.app.ref/7.0.19/microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "/home/pryazha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.19/microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
   ],
   "logs": []
 }

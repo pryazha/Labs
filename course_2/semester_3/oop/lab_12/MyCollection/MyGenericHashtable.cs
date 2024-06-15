@@ -2,10 +2,13 @@ using System.Collections;
 
 namespace MyCollection;
 
+[Serializable]
 public class MyGenericElement<T>
 {
     public T Value { get; set; }
     public MyGenericElement<T>? Next { get; set; }
+
+    public MyGenericElement() {}
 
     public MyGenericElement(T value)
     {
@@ -38,6 +41,7 @@ public class MyGenericHashtable<T>
     public int Capacity { get; protected set; }
     public int Count { get; protected set; }
     public bool IsReadOnly => false;
+
     protected MyGenericElement<T>?[]? buckets;
 
     public MyGenericHashtable()
@@ -115,6 +119,7 @@ public class MyGenericHashtable<T>
     public virtual bool Add(T value)
     {
         if (buckets == null ||
+            value == null ||
             Contains(value))
         {
             return false;
@@ -230,12 +235,41 @@ public class MyGenericHashtable<T>
     public bool Remove(MyGenericElement<T> item)
     {
         if (item != null &&
-            item.Value != null)
+            item.Value != null &&
+            buckets != null)
         {
-            if (Contains(item))
+            int key = item.Value.GetHashCode();
+            int index = Math.Abs(item.Value.GetHashCode() % Capacity);
+
+            if (buckets[index] == null)
+                return false;
+
+            MyGenericElement<T>? cur = buckets[index];
+            if (cur != null)
             {
-                Remove(item.Value.ToString());
-                return true;
+                if (cur.GetHashCode() == key)
+                {
+                    if (cur.Next == null)
+                        buckets[index] = null;
+                    else
+                        buckets[index] = cur.Next;
+                    --Count;
+                    return true;
+                }
+
+                while (cur.Next != null)
+                {
+                    if (cur.Next.GetHashCode() == key)
+                        break;
+                    cur = cur.Next;
+                }
+
+                if (cur.Next != null)
+                {
+                    cur.Next = cur.Next.Next;
+                    --Count;
+                    return true;
+                }
             }
 
             return false;
@@ -331,7 +365,8 @@ public class MyGenericHashtable<T>
             for (int i = 0; i < Capacity; ++i)
             {
                 MyGenericElement<T>? cur = buckets[i];
-                while (cur != null)
+                while (cur != null &&
+                       cur.Value != null)
                 {
                     result.Add((T)cur.Value.Clone());
                     cur = cur.Next;

@@ -1,0 +1,79 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:lab_16.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="lab_16.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Width="1280" Height="720"
+        Title="lab_16">
+
+    <DockPanel>
+
+        <StackPanel Margin="30">
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Command="{Binding FillHashtableCommand}">Add 10 organizations</Button>
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Command="{Binding RemoveAllOrgsCommand}">Remove all organizations</Button>
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Command="{Binding AddNewOrgCommand}">Add new organization</Button>
+
+            <TextBlock Margin="10" Text="Organization name:"/>
+            <TextBox Margin="10" Text="{Binding OrgName}"/>
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Command="{Binding RemoveOrgCommand}">Remove organization</Button>
+
+            <StackPanel Margin="10" Orientation="Horizontal">
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Click="SaveFileButton_Clicked">Save to file</Button>
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Click="OpenFileButton_Clicked">Load from file</Button>
+            <ComboBox Margin="10"
+                      ItemsSource="{Binding FileTypes}"
+                      SelectedItem="{Binding SelectedType}"/>
+            </StackPanel>
+
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Command="{Binding ShowOrgsCommand}">Show all organizations</Button>
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Command="{Binding SortOrgsCommand}">Sort organizations by employees count</Button>
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Command="{Binding SelectOrgsCommand}">Select organizations that contains 8</Button>
+            <Button Margin="10"
+                    HorizontalAlignment="Center"
+                    Command="{Binding SelectOrgsWithEmplCommand}">Select organizations with employees more than 100</Button>
+        </StackPanel>
+
+        <DockPanel Margin="30">
+        <TextBlock Margin="10"
+                   HorizontalAlignment="Center"
+                   DockPanel.Dock="Top"
+                   Text="Source Hashtable:"/>
+        <ListBox ItemsSource="{Binding HashtableItems}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Value.Name,
+                                   StringFormat='Название организации: {0}'}"/>
+                        <TextBlock Text="{Binding Value.Address,
+                                   StringFormat='Адрес: {0}'}"/>
+                        <TextBlock Text="{Binding Value.EmployeesCount,
+                                   StringFormat='Количество сотрудников: {0}'}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        </DockPanel>
+
+    </DockPanel>
+
+</Window>

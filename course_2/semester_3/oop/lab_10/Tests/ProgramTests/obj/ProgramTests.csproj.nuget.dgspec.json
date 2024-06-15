@@ -51,11 +51,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.19, 7.0.19]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.19, 7.0.19]"
             }
           ],
           "frameworkReferences": {
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.104/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.105/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -118,15 +118,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.19, 7.0.19]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.19, 7.0.19]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.19, 7.0.19]"
             }
           ],
           "frameworkReferences": {
@@ -134,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.104/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.105/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -189,11 +189,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.19, 7.0.19]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.19, 7.0.19]"
             }
           ],
           "frameworkReferences": {
@@ -201,7 +201,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.104/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.105/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -287,11 +287,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.19, 7.0.19]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.19, 7.0.19]"
             }
           ],
           "frameworkReferences": {
@@ -299,7 +299,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.104/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.105/RuntimeIdentifierGraph.json"
         }
       }
     }

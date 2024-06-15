@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:lab_16.ViewModels"
+        x:Class="lab_16.Views.AddOrganizationDialog"
+        x:DataType="vm:AddOrganizationDialogViewModel"
+        Width="400" Height="300"
+        Title="lab_16">
+
+    <StackPanel>
+
+        <TextBlock Text="Name"/>
+        <TextBox Text="{Binding Name}"/>
+
+        <TextBlock Text="Address"/>
+        <TextBox Text="{Binding Address}"/>
+
+        <TextBlock Text="Employees Count"/>
+        <TextBox Text="{Binding EmployeesCount}"/>
+
+        <TextBlock Text="{Binding ErrorMessage}"/>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="5"
+                    Click="OnCancelClick">Cancel</Button>
+            <Button Margin="5"
+                    Click="OnAcceptClick">Accept</Button>
+        </StackPanel>
+
+    </StackPanel>
+
+</Window>

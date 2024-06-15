@@ -2,6 +2,7 @@ using InputLibrary;
 
 namespace OrganizationsLibrary;
 
+[Serializable]
 public class InsuranceCompany : Organization, IInit, IComparable, ICloneable
 {
     public string InsuranceType { get; set; }

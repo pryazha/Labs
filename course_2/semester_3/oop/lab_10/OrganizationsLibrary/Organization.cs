@@ -1,13 +1,18 @@
-﻿using InputLibrary;
+﻿using System.Xml.Serialization;
+using InputLibrary;
 
 namespace OrganizationsLibrary;
 
+[Serializable]
+[XmlInclude(typeof(Factory)), XmlInclude(typeof(InsuranceCompany)), XmlInclude(typeof(Library)), XmlInclude(typeof(ShipbuildingCompany))]
 public class Organization : IInit, IComparable, ICloneable
 {
     public string Name { get; set; }
     public string Address { get; set; }
     int employeesCount;
 
+    [XmlIgnore]
+    [NonSerialized]
     public Manager manager;
 
     public int EmployeesCount

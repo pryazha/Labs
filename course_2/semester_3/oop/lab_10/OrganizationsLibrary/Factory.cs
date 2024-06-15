@@ -2,6 +2,7 @@ using InputLibrary;
 
 namespace OrganizationsLibrary;
 
+[Serializable]
 public class Factory : Organization, IInit, IComparable, ICloneable
 {
     int createdProducts;

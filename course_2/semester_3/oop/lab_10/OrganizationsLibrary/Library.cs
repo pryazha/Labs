@@ -2,6 +2,7 @@ using InputLibrary;
 
 namespace OrganizationsLibrary;
 
+[Serializable]
 public class Library : Organization, IInit, IComparable, ICloneable
 {
     int booksCount;

@@ -2,6 +2,7 @@ using InputLibrary;
 
 namespace OrganizationsLibrary;
 
+[Serializable]
 public class ShipbuildingCompany : Organization, IInit, IComparable, ICloneable
 {
     int shipsCount;

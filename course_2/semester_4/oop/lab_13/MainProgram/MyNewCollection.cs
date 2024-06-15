@@ -20,7 +20,7 @@ public class CollectionHandlerEventArgs<T> : EventArgs
     {
         return "Название коллекции: " + name +
                "\nДействие: " + eventType +
-               "\nИзменённый элемент:\n" + changedElement?.ToString() ?? "" + "\n";
+               "\nИзменённый элемент:\n" + changedElement?.ToString() ?? "" + "\n\n";
     }
 }
 
@@ -107,27 +107,6 @@ public class MyNewCollection<T> : MyGenericHashtable<T>
     }
 }
 
-public class JournalEntry<T> where T : ICloneable
-{
-    public string name;
-    public string eventType;
-    public T changedElement;
-
-    public JournalEntry(string name, string eventType, T changedElement)
-    {
-        this.name = name;
-        this.eventType = eventType;
-        this.changedElement = changedElement;
-    }
-
-    public override string ToString() 
-    {
-        return "Название коллекции: " + name +
-               "\nДействие: " + eventType +
-               "\nИзменённый элемент:\n" + changedElement.ToString() + "\n";
-    }
-}
-
 public class Journal<T> where T : ICloneable
 {
     private List<CollectionHandlerEventArgs<T>>? journal;
@@ -135,7 +114,8 @@ public class Journal<T> where T : ICloneable
     public void CollectionCountChanged(object source,
             CollectionHandlerEventArgs<T> args)
     {
-        var entry = new CollectionHandlerEventArgs<T>(args.name, args.eventType, args.changedElement);
+        var entry = new CollectionHandlerEventArgs<T>(args.name, args.eventType,
+                                                      args.changedElement);
         if (journal == null) {
             journal = new List<CollectionHandlerEventArgs<T>>();
         }
@@ -145,7 +125,8 @@ public class Journal<T> where T : ICloneable
     public void CollectionReferenceChanged(object source,
             CollectionHandlerEventArgs<T> args)
     {
-        var entry = new CollectionHandlerEventArgs<T>(args.name, args.eventType, args.changedElement);
+        var entry = new CollectionHandlerEventArgs<T>(args.name, args.eventType,
+                                                      args.changedElement);
         if (journal == null) {
             journal = new List<CollectionHandlerEventArgs<T>>();
         }
